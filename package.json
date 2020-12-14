@@ -1,0 +1,27 @@
+{
+  "name": "@lamnhan/unistylus",
+  "version": "0.0.1",
+  "description": "An SCSS theming system.",
+  "author": "Lam Nhan",
+  "homepage": "https://lamnhan.com",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "theming",
+    "angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamnhan/unistylus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lamnhan/unistylus/issues"
+  },
+  "dependencies": {}
+}
