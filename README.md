@@ -10,7 +10,7 @@ npm install --save @lamnhan/unistylus
 
 ## Usage
 
-Step 1: Add (https://github.com/lamnhan/unistylus/blob/master/theming.scss)[`theming.scss`] file css to your project.
+Step 1: Add [`theming.scss`](https://github.com/lamnhan/unistylus/blob/master/theming.scss) file css to your project.
 
 Change the variables to what you want.
 
