@@ -1,3 +1,10 @@
 @import './plugins.scss';
 @import './functions.scss';
-@import './mixins.scss';
+// mixins
+@import './mixins/common.scss';
+@import './mixins/button.scss';
+@import './mixins/list.scss';
+@import './mixins/form.scss';
+@import './mixins/content.scss';
+@import './mixins/skeleton.scss';
+@import './mixins/ui.scss';

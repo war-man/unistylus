@@ -1,0 +1,24 @@
+@mixin list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-inline {
+  @include list;
+  li {
+    display: inline-block;
+  }
+}
+
+@mixin list-flex {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin item-flex($num: 1, $pad: 0) {
+  width: calc((100% / #{$num}) - (#{$pad} * 2));
+  margin-left: $pad;
+  margin-right: $pad;
+}

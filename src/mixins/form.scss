@@ -1,0 +1,56 @@
+@mixin input($key: 'medium') {
+  @include border($key);
+  display: block;
+  border-radius: app-size('radius');
+  color: app-color('dark');
+  width: 100%;
+  padding: .5rem;
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin form($key: 'light') {
+  label {
+    display: block;
+    margin-top: .5rem;
+    span {
+      display: block;
+      color: app-color('medium');
+      font-size: 1rem;
+      padding: .5rem 0;
+    }
+    &.required {
+      span {
+        &::after {
+          content: '(*)';
+          display: inline-block;
+          margin-left: .3rem;
+          font-size: .8rem;
+          margin-top: -.1rem;
+          position: absolute;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  input, textarea {
+    @include input($key);
+  }
+  button {
+    @include button($key);
+  }
+  // advanced options
+  .advanced {
+    height: 3rem;
+    overflow: hidden;
+    .toggler {
+      padding: 1rem 1rem 0;
+      text-align: center;
+      font-style: italic;
+    }
+    &.active {
+      height: 100%;
+    }
+  }
+}

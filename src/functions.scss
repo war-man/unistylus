@@ -1,5 +1,9 @@
-@function app-type($key: 'body') {
-  @return map-get($types, $key);
+@function app-font($key: 'body') {
+  @return map-get($fonts, $key);
+}
+
+@function app-size($key: 'base') {
+  @return map-get($sizes, $key);
 }
 
 @function app-color($key: 'primary', $variant: 'base') {
@@ -21,6 +25,6 @@
   @return map-get($gradients, $key);
 }
 
-@function app-size($key: 'base') {
-  @return map-get($sizes, $key);
+@function app-value($key: 'foo') {
+  @return map-get($values, $key);
 }

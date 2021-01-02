@@ -1,0 +1,55 @@
+ @mixin button($key: 'primary', $size: 'normal', $style: 'normal') {
+  border-radius: app-size('radius');
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  @if $style == 'clear' {
+    background: none;
+    color: app-color($key);
+  } @else if $style == 'outline' {
+    @include border($key);
+    background: none;
+    color: app-color($key);
+  } @else {
+    background: app-color($key);
+    color: app-color($key, 'contrast');
+  }
+  @if $size == 'small' {
+    font-size: .8rem;
+    padding: .4rem .8rem;
+  } @else if $size == 'large' {
+    font-size: 1.2rem;
+    padding: .6rem 1.2rem;
+  } @else {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &[disabled] {
+    opacity: .5;
+  }
+}
+
+@mixin button-icon($key: 'primary', $size: 'normal', $style: 'normal') {
+  @include button($key, $size, $style);
+  @if $size == 'small' {
+    padding: .4rem;
+  } @else if $size == 'large' {
+    padding: .6rem;
+  } @else {
+    padding: .5rem;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    max-height: 2rem;
+    max-width: 2rem;
+  }
+}
+
+@mixin button-gradient($key: 'primary', $size: 'normal', $style: 'normal') {
+  @include button($key, $size, $style);
+  background: app-gradient($key);
+}

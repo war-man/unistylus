@@ -1,11 +1,13 @@
-$types: (
+$fonts: (
   head: #{'Poppins', sans-serif},
   body: #{'Roboto', sans-serif},
+  quote: #{'Charmonman', cursive},
+  code: #{'Source Code Pro', monospace},
 );
 
 $sizes: (
   base: 16px,
-  radius: 5px,
+  radius: 7px,
   border: 1px,
 );
 
@@ -57,4 +59,8 @@ $gradients: (
   light: linear-gradient(
     120deg, map-get($colors, light), darken(map-get($colors, light), 30)
   ),
+);
+
+$values: (
+  foo: #{'bar'}
 );

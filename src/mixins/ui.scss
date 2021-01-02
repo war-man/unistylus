@@ -1,0 +1,70 @@
+@mixin modal {
+  transition: .5s;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  z-index: -999;
+  opacity: 0;
+  .backdrop {
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background: app-color('dark');
+    opacity: 0;
+  }
+  .main {
+    transition: .5s;
+    overflow: hidden;
+    position: absolute;
+    background: app-color('light');
+    border-radius: app-size('radius');
+  }
+  &.active {
+    z-index: 999;
+    opacity: 1;
+    .backdrop {
+      opacity: .1;
+    }
+  }
+}
+
+@mixin nav-loading {
+  transition: .5s all ease;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: -5rem;
+  background: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .inner {
+    display: flex;
+    background: app-color('dark');
+    height: 3rem;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+
+    img {
+      width: 2rem;
+    }
+
+    span {
+      display: inline-block;
+      color: #FFF;
+      margin-left: .5rem;
+      margin-top: .3rem;
+    }
+  }
+
+  &.show {
+    bottom: 0;
+  }
+}

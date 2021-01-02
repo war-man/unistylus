@@ -1,0 +1,15 @@
+@mixin border($key: 'medium') {
+  border: #{app-size('border')} solid #{app-color($key)};
+}
+
+@mixin max-width($width) {
+  max-width: $width;
+  margin: auto;  
+}
+
+@mixin truncate($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
