@@ -1,5 +1,4 @@
- @mixin button($key: 'primary', $size: 'normal', $style: 'normal') {
-  border-radius: app-size('radius');
+ @mixin button($key: 'primary', $size: 'normal', $style: 'normal', $shape: 'sharp') {
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -7,7 +6,7 @@
     background: none;
     color: app-color($key);
   } @else if $style == 'outline' {
-    @include border($key);
+    @include border-all($key);
     background: none;
     color: app-color($key);
   } @else {
@@ -24,7 +23,26 @@
     font-size: 1rem;
     padding: .5rem 1rem;
   }
-  &:focus {
+  @if $shape == 'ease' {
+    border-radius: app-size('radius');
+  } @else if $shape == 'pill' {
+    border-radius: 500px;
+  } @else if $shape == 'round' {
+    @if $size == 'small' {
+      width: 24px;
+      height: 24px;
+    } @else if $size == 'large' {
+      width: 48px;
+      height: 48px;
+    } @else {
+      width: 32px;
+      height: 32px;
+    }
+    border-radius: 100%;
+  } @else {
+    border-radius: none;
+  }
+  &, &:focus {
     outline: 0;
   }
   &[disabled] {
@@ -32,7 +50,7 @@
   }
 }
 
-@mixin button-icon($key: 'primary', $size: 'normal', $style: 'normal') {
+@mixin button-icon($key: 'primary', $size: 'normal', $style: 'normal', $shape: 'sharp') {
   @include button($key, $size, $style);
   @if $size == 'small' {
     padding: .4rem;
@@ -41,7 +59,8 @@
   } @else {
     padding: .5rem;
   }
-  img {
+  img, i, .icon {
+    display: inline-block;
     width: 100%;
     height: 100%;
     max-height: 2rem;
@@ -49,7 +68,7 @@
   }
 }
 
-@mixin button-gradient($key: 'primary', $size: 'normal', $style: 'normal') {
+@mixin button-gradient($key: 'primary', $size: 'normal', $style: 'normal', $shape: 'sharp') {
   @include button($key, $size, $style);
   background: app-gradient($key);
 }

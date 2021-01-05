@@ -1,0 +1,10 @@
+@mixin table($key: 'primary') {
+  &, tr {
+    margin: 0;
+    padding: 0;
+  }
+  td {
+    @include border-all($key);
+    padding: app-size('padding');
+  }
+}
