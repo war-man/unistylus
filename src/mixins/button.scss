@@ -1,4 +1,9 @@
- @mixin button($key: 'primary', $size: 'normal', $style: 'normal', $shape: 'sharp') {
+@mixin button(
+  $key: 'primary',
+  $size: 'normal',
+  $style: 'normal',
+  $shape: 'sharp'
+) {
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -6,7 +11,7 @@
     background: none;
     color: app-color($key);
   } @else if $style == 'outline' {
-    @include border-all($key);
+    @include border($key);
     background: none;
     color: app-color($key);
   } @else {
@@ -48,17 +53,6 @@
   &[disabled] {
     opacity: .5;
   }
-}
-
-@mixin button-icon($key: 'primary', $size: 'normal', $style: 'normal', $shape: 'sharp') {
-  @include button($key, $size, $style);
-  @if $size == 'small' {
-    padding: .4rem;
-  } @else if $size == 'large' {
-    padding: .6rem;
-  } @else {
-    padding: .5rem;
-  }
   img, i, .icon {
     display: inline-block;
     width: 100%;
@@ -68,7 +62,12 @@
   }
 }
 
-@mixin button-gradient($key: 'primary', $size: 'normal', $style: 'normal', $shape: 'sharp') {
+@mixin button-gradient(
+  $key: 'primary',
+  $size: 'normal',
+  $style: 'normal',
+  $shape: 'sharp'
+) {
   @include button($key, $size, $style);
   background: app-gradient($key);
 }

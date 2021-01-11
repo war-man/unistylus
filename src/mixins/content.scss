@@ -1,25 +1,3 @@
-@mixin basic {
-  font-family: app-font('body');
-  font-size: app-size('base');
-  color: app-color('dark');
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: app-font('head');
-  }
-  
-  a {
-    color: app-color('primary');
-    text-decoration: none;    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  table {
-    @include table('dark');
-  }
-}
-
 @mixin dynamic-content {
 
   h1, h2, h3, h4, h5, h6 {

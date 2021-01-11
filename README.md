@@ -164,7 +164,7 @@ Parameters:
 
 #### max-width($width)
 
-#### truncate($width)
+#### truncate-text($width)
 
 #### ...
 

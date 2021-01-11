@@ -1,76 +1,75 @@
-$fonts: (
-  head: #{'Poppins', sans-serif},
-  body: #{'Roboto', sans-serif},
-  quote: #{'Charmonman', cursive},
-  code: #{'Source Code Pro', monospace},
-);
+:root, [data-theme="default"] {
+  // fonts
+  --app-font-head: 'Poppins', sans-serif;
+  --app-font-body: 'Roboto', sans-serif;
+  --app-font-quote: 'Charmonman', cursive;
+  --app-font-code: 'Source Code Pro', monospace;
+  // sizes
+  --app-size-base: 16px;
+  --app-size-radius: 7px;
+  --app-size-border: 1px;
+  // colors
+  --app-color-primary: #3880ff;
+  --app-color-primary-contrast: #ffffff;
+  --app-color-primary-shade: #3171e0;
+  --app-color-primary-tint: #4c8dff;
+  --app-color-secondary: #3dc2ff;
+  --app-color-secondary-contrast: #ffffff;
+  --app-color-secondary-shade: #36abe0;
+  --app-color-secondary-tint: #50c8ff;
+  --app-color-tertiary: #5260ff;
+  --app-color-tertiary-contrast: #ffffff;
+  --app-color-tertiary-shade: #4854e0;
+  --app-color-tertiary-tint: #6370ff;
+  --app-color-info: #5260ff;
+  --app-color-info-contrast: #ffffff;
+  --app-color-info-shade: #4854e0;
+  --app-color-info-tint: #6370ff;
+  --app-color-success: #2dd36f;
+  --app-color-success-contrast: #ffffff;
+  --app-color-success-shade: #28ba62;
+  --app-color-success-tint: #42d77d;
+  --app-color-warning: #ffc409;
+  --app-color-warning-contrast: #000000;
+  --app-color-warning-shade: #e0ac08;
+  --app-color-warning-tint: #ffca22;
+  --app-color-danger: #eb445a;
+  --app-color-danger-contrast: #ffffff;
+  --app-color-danger-shade: #cf3c4f;
+  --app-color-danger-tint: #ed576b;
+  --app-color-dark: #222428;
+  --app-color-dark-contrast: #ffffff;
+  --app-color-dark-shade: #1e2023;
+  --app-color-dark-tint: #383a3e;
+  --app-color-medium: #92949c;
+  --app-color-medium-contrast: #ffffff;
+  --app-color-medium-shade: #808289;
+  --app-color-medium-tint: #9d9fa6;
+  --app-color-muted: #92949c;
+  --app-color-muted-contrast: #ffffff;
+  --app-color-muted-shade: #808289;
+  --app-color-muted-tint: #9d9fa6;
+  --app-color-light: #f4f5f8;
+  --app-color-light-contrast: #000000;
+  --app-color-light-shade: #d7d8da;
+  --app-color-light-tint: #f5f6f9;
+  --app-color-background: var(--app-color-light);
+  --app-color-background-contrast: var(--app-color-light-contrast);
+  --app-color-background-shade: var(--app-color-light-shade);
+  --app-color-background-tint: var(--app-color-light-tint);
+  --app-color-foreground: var(--app-color-dark);
+  --app-color-foreground-contrast: var(--app-color-dark-contrast);
+  --app-color-foreground-shade: var(--app-color-dark-shade);
+  --app-color-foreground-tint: var(--app-color-dark-tint);
+}
 
-$sizes: (
-  base: 16px,
-  radius: 7px,
-  border: 1px,
-  padding: 1rem,
-  margin: 1rem,
-);
-
-$colors: (
-  primary: #3880ff,
-  secondary: #3dc2ff,
-  tertiary: #5260ff,
-  info: #5260ff,
-  success:#2dd36f,
-  warning: #ffc409,
-  danger: #eb445a,
-  dark: #222428,
-  medium: #92949c,
-  muted: #92949c,
-  light: #f4f5f8,
-  background: #ffffff,
-  foreground: #131313,
-);
-
-$gradients: (
-  primary: linear-gradient(
-    120deg, map-get($colors, primary), darken(map-get($colors, primary), 30)
-  ),
-  secondary: linear-gradient(
-    120deg, map-get($colors, secondary), darken(map-get($colors, secondary), 30)
-  ),
-  tertiary: linear-gradient(
-    120deg, map-get($colors, tertiary), darken(map-get($colors, tertiary), 30)
-  ),
-  info: linear-gradient(
-    120deg, map-get($colors, info), darken(map-get($colors, info), 30)
-  ),
-  success: linear-gradient(
-    120deg, map-get($colors, success), darken(map-get($colors, success), 30)
-  ),
-  warning: linear-gradient(
-    120deg, map-get($colors, warning), darken(map-get($colors, warning), 30)
-  ),
-  danger: linear-gradient(
-    120deg, map-get($colors, danger), darken(map-get($colors, danger), 30)
-  ),
-  dark: linear-gradient(
-    120deg, map-get($colors, dark), darken(map-get($colors, dark), 30)
-  ),
-  medium: linear-gradient(
-    120deg, map-get($colors, medium), darken(map-get($colors, medium), 30)
-  ),
-  muted: linear-gradient(
-    120deg, map-get($colors, muted), darken(map-get($colors, muted), 30)
-  ),
-  light: linear-gradient(
-    120deg, map-get($colors, light), darken(map-get($colors, light), 30)
-  ),
-  background: linear-gradient(
-    120deg, map-get($colors, background), darken(map-get($colors, background), 30)
-  ),
-  foreground: linear-gradient(
-    120deg, map-get($colors, foreground), darken(map-get($colors, foreground), 30)
-  ),
-);
-
-$values: (
-  foo: #{'bar'}
-);
+[data-theme="dark"] {
+  --app-color-background: var(--app-color-dark);
+  --app-color-background-contrast: var(--app-color-dark-contrast);
+  --app-color-background-shade: var(--app-color-dark-shade);
+  --app-color-background-tint: var(--app-color-dark-tint);
+  --app-color-foreground: var(--app-color-light);
+  --app-color-foreground-contrast: var(--app-color-light-contrast);
+  --app-color-foreground-shade: var(--app-color-light-shade);
+  --app-color-foreground-tint: var(--app-color-light-tint);
+}

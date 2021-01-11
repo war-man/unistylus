@@ -10,13 +10,13 @@
 @mixin border-left($key: 'medium', $style: 'solid') {
   border-left: #{app-size('border')} #{$style} #{app-color($key)};
 }
-@mixin border-all($key: 'medium', $style: 'solid') {
+@mixin border($key: 'medium', $style: 'solid') {
   border: #{app-size('border')} #{$style} #{app-color($key)};
 }
 
 @mixin max-width($width) {
   max-width: $width;
-  margin: auto;  
+  margin: auto;
 }
 
 @mixin truncate-text($width) {
