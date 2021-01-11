@@ -16,7 +16,7 @@
     margin-top: .5rem;
     span {
       display: block;
-      color: app-color('medium');
+      color: var(--app-color-medium);
       font-size: 1rem;
       padding: .5rem 0;
     }

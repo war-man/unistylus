@@ -9,14 +9,14 @@
   cursor: pointer;
   @if $style == 'clear' {
     background: none;
-    color: app-color($key);
+    color: var(--app-color-#{$key});
   } @else if $style == 'outline' {
     @include border($key);
     background: none;
-    color: app-color($key);
+    color: var(--app-color-#{$key});
   } @else {
-    background: app-color($key);
-    color: app-color($key, 'contrast');
+    background: var(--app-color-#{$key});
+    color: var(--app-color-#{$key}-contrast);
   }
   @if $size == 'small' {
     font-size: .8rem;
@@ -60,14 +60,4 @@
     max-height: 2rem;
     max-width: 2rem;
   }
-}
-
-@mixin button-gradient(
-  $key: 'primary',
-  $size: 'normal',
-  $style: 'normal',
-  $shape: 'sharp'
-) {
-  @include button($key, $size, $style);
-  background: app-gradient($key);
 }
