@@ -1,17 +1,17 @@
 @mixin border-top($key: 'medium', $style: 'solid') {
-  border-top: var(--app-size-border) $style var(#{--app-color-$key});
+  border-top: var(--app-size-border) #{$style} var(--app-color-#{$key});
 }
 @mixin border-right($key: 'medium', $style: 'solid') {
-  border-right: var(--app-size-border) $style var(#{--app-color-$key});
+  border-right: var(--app-size-border) #{$style} var(--app-color-#{$key});
 }
 @mixin border-bottom($key: 'medium', $style: 'solid') {
-  border-bottom: var(--app-size-border) $style var(#{--app-color-$key});
+  border-bottom: var(--app-size-border) #{$style} var(--app-color-#{$key});
 }
 @mixin border-left($key: 'medium', $style: 'solid') {
-  border-left: var(--app-size-border) $style var(#{--app-color-$key});
+  border-left: var(--app-size-border) #{$style} var(--app-color-#{$key});
 }
 @mixin border($key: 'medium', $style: 'solid') {
-  border: var(--app-size-border) $style var(#{--app-color-$key});
+  border: var(--app-size-border) #{$style} var(--app-color-#{$key});
 }
 
 @mixin max-width($width) {
