@@ -10,9 +10,20 @@ npm install --save @lamnhan/unistylus
 
 ## Usage
 
-Step 1: Add [`theming.scss`](https://github.com/lamnhan/unistylus/blob/master/theming.scss) file to your project. Then, change the variables to whatever you want.
+Step 1: Add [`themes.scss`](https://github.com/lamnhan/unistylus/blob/master/src/themes.scss) file to your project. Then, change the variables to whatever you want.
 
-Step 2: Import the `theming.scss` in your project into the global style file (for Angular, the `styles.scss`).
+```scss
+// all themes
+@import '~@lamnhan/unistylus/src/themes.scss';
+
+// default/light
+// @import '~@lamnhan/unistylus/src/themes/default.scss';
+
+// dark
+// @import '~@lamnhan/unistylus/src/themes/dark.scss';
+```
+
+Step 2: Using variables.
 
 ```scss
 body {
@@ -56,15 +67,15 @@ app-home {
 
 #### Fonts
 
-- `--app-font-head`: heading font, default: **Poppins, sans-serif**
-- `--app-font-body`: body font, default: **Roboto, sans-serif**
-- `--app-font-quote`: script & quote font, default: **'Charmonman, cursive**
-- `--app-font-code`: code font, default: **Source Code Pro, monospace**
+- `--app-font-head`: heading font, default: **Arial, sans-serif**
+- `--app-font-body`: body font, default: **Arial, sans-serif**
+- `--app-font-quote`: script & quote font, default: **Times New Roman, cursive**
+- `--app-font-code`: code font, default: **Consolas, monospace**
 
 #### Sizes
 
 - `--app-size-base`: base size, default: **16px**
-- `--app-size-radius`: radius size, default: **7px**
+- `--app-size-radius`: radius size, default: **3px**
 - `--app-size-border`: border size, default: **1px**
 
 #### Colors
@@ -89,13 +100,7 @@ You can also add whatever values you need.
 
 ### Mixins
 
-#### border($key)
-
-#### max-width($width)
-
-#### truncate-text($width)
-
-#### ...
+// TODO
 
 ## License
 

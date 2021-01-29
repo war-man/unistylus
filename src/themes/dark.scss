@@ -1,0 +1,10 @@
+[data-theme="dark"] {
+  --app-color-background: var(--app-color-dark);
+  --app-color-background-contrast: var(--app-color-dark-contrast);
+  --app-color-background-shade: var(--app-color-dark-shade);
+  --app-color-background-tint: var(--app-color-dark-tint);
+  --app-color-foreground: var(--app-color-light);
+  --app-color-foreground-contrast: var(--app-color-light-contrast);
+  --app-color-foreground-shade: var(--app-color-light-shade);
+  --app-color-foreground-tint: var(--app-color-light-tint);
+}
