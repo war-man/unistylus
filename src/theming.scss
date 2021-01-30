@@ -1,0 +1,18 @@
+body, [data-theme] {
+  color: var(--app-color-foreground);
+  background: var(--app-color-background);
+  font-family: var(--app-font-body);
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--app-font-head);
+  }
+  
+  a {
+    color: var(--app-color-primary);
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

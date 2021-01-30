@@ -1,0 +1,28 @@
+@mixin registerIconRules($icons, $prefix: 'app') {
+  @each $name, $url in $icons {
+    .icon.#{$prefix}-#{$name}, .icon.#{$name} {
+      display: inline-block;
+      content: var(--app-icon-#{$prefix}-#{$name});
+    }
+  }
+}
+
+@mixin registerIcons($groups, $prefix: 'app') {
+  @each $theme, $icons in $groups {
+    @if $theme != 'default' and $theme != 'light' {
+      // custom (dark, ...)
+      [data-theme="#{$theme}"] {
+        @each $name, $url in $icons {
+          --app-icon-#{$prefix}-#{$name}: url(#{$url});
+        }
+      }
+    } @else {
+      // default/light
+      :root, [data-theme="default"], [data-theme="light"] {
+        @each $name, $url in $icons {
+          --app-icon-#{$prefix}-#{$name}: url(#{$url});
+        }
+      }
+    } 
+  }
+}
