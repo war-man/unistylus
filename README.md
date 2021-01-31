@@ -2,14 +2,16 @@
 
 An SCSS theming system.
 
-- [Install & usage](#install-usage)
+- [Install & usage](#install-and-usage)
 - [Built-in themes](#themes)
+- [Tutorials](#tutorials)
+  - [Add new theme](#add-new-theme)
+  - [Create & use icons](#create-and-use-icons)
+  - [Themable Angular component](#themable-angular-component)
 - [Variables](#variables)
 - [Mixins](#mixins)
-- [Tutorials](#tutorials)
-  - [Themable Angular component](#themable-angular-component)
 
-## Install & usage
+## Install and usage
 
 ```sh
 npm install --save @lamnhan/unistylus
@@ -31,6 +33,59 @@ To use minxins:
 
 - `default`, `light`: The default/light theme.
 - `dark`: The dark theme.
+
+## Tutorials
+
+### Add new theme
+
+Add this to the global style file ([styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss) for Angular apps);
+
+```scss
+[data-theme="theme-name"] {
+  // add variables here
+}
+```
+
+### Create and use icons
+
+Icons are grouped by component:
+
+- Create `component_name.data.scss`: see example [`header.data.scss`](https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/styles/header/header.data.scss)
+
+- Create `component_name.icon.scss`: see example [`header.icon.scss`](https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/styles/header/header.icon.scss)
+
+- Register css rules in `component_name.style.scss`: see example [`header.style.scss`](https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/styles/header/header.style.scss#L6)
+
+To use icons, register them in [styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss#L11). Then, in component `.html`:
+
+```html
+<i class="icon icon_name"></i>
+```
+
+### Themable Angular component
+
+- Step 1: Create a component which is suffixed with `-raw`, including structure (.html) and logic (.ts), ex.: `lib-test-raw`.
+- Step 2: Create a separated `.scss` (ex.: `test.style.scss`) file contains styling.
+- Step 3: Create a parent component (ex.: `lib-test`), set `encapsulation` to `ViewEncapsulation.None`.
+- Step 4: Add the parent component, with `.html`:
+
+```html
+<lib-test-raw></lib-test-raw>
+```
+
+- Step 5: Add styling in the parent component:
+
+```scss
+lib-test lib-test-raw {
+  @import 'test.style.scss';
+}
+```
+
+- Step 6: Forward all @Input and @Output from the parent to the child.
+
+Then users can use the `<lib-test>` component as normal.
+
+Or users can use `<lib-test-raw>` with their own styling.
 
 ## Variables
 
@@ -69,24 +124,6 @@ You can also add whatever values you need.
 ## Mixins
 
 // TODO
-
-## Tutorials
-
-### Themable Angular component
-
-- Step 1: Create a component which is suffixed with `-raw`, including structure (.html) and logic (.ts), ex.: `lib-test-raw`.
-- Step 2: Create a separated `.scss` (ex.: `test.style.scss`) file contains styling.
-- Step 3: In parent component (ex.: `app-home`), set `encapsulation` to `ViewEncapsulation.None`.
-- Step 4: And add styling:
-
-```scss
-app-home {
-
-  lib-test-raw {
-    @import 'test.style.scss';
-  }
-}
-```
 
 ## License
 
