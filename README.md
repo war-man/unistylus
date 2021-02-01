@@ -3,11 +3,13 @@
 An SCSS theming system.
 
 - [Install & usage](#install-and-usage)
+- [Why, compared to Bootstrap?](#why-compared-to-bootstrap)
 - [Built-in themes](#themes)
 - [Tutorials](#tutorials)
   - [Add new theme](#add-new-theme)
-  - [Create & use icons](#create-and-use-icons)
-  - [Themable Angular component](#themable-angular-component)
+  - [Change theme](#change-theme)
+  - [Register & use icons](#register-and-use-icons)
+  - [Create themable Angular component](#themable-angular-component)
 - [Variables](#variables)
 - [Mixins](#mixins)
 
@@ -24,10 +26,26 @@ To use minxins:
 ```scss
 @import '~@lamnhan/unistylus/src/mixins.scss';
 
-.button {
+button {
   @include button;
 }
 ```
+
+## Why, compared to Bootstrap?
+
+**It's recommended to use Bootstrap in most projects those don't need much customization!**
+
+But if you want to build app that clean and have total control or simply don't want to use Bootstrap. You may give Unistylus a try:
+
+- Just standard HTML, CSS (SCSS) & JS (to change theme on the fly).
+- Supports multiple themes in app runtime (or in build time).
+- No icon font/library; just use icons you need.
+- Component can override global theme.
+- Supports Angular component in mind.
+
+The disadvantage is it will take more time to build things from scratch.
+
+Another option is to use Bootstrap and Unistylus together.
 
 ## Themes
 
@@ -38,7 +56,7 @@ To use minxins:
 
 ### Add new theme
 
-Add this to the global style file ([styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss) for Angular apps);
+Add this to the global style file (ex.: [styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss) for Angular apps);
 
 ```scss
 [data-theme="theme-name"] {
@@ -46,7 +64,26 @@ Add this to the global style file ([styles.scss](https://github.com/lamnhan/ngui
 }
 ```
 
-### Create and use icons
+### Change theme
+
+By default, the `default/light` theme is used, to change theme in build time:
+
+```html
+<!-- change global theme -->
+<body data-theme="theme-name"></body>
+
+<!-- change component theme (override global) -->
+<div data-theme="theme-name"></div>
+```
+
+Change theme in runtime:
+
+```js
+// change theme globally
+document.body.setAttribute('data-theme', 'dark');
+```
+
+### Register and use icons
 
 Icons are grouped by component:
 
@@ -89,19 +126,19 @@ Or users can use `<lib-test-raw>` with their own styling.
 
 ## Variables
 
-### Fonts
+Fonts
 
 - `--app-font-head`: heading font, default: **Arial, sans-serif**
 - `--app-font-body`: body font, default: **Arial, sans-serif**
 - `--app-font-quote`: script & quote font, default: **Times New Roman, cursive**
 - `--app-font-code`: code font, default: **Consolas, monospace**
 
-### Sizes
+Sizes
 
 - `--app-size-radius`: radius size, default: **3px**
 - `--app-size-border`: border size, default: **1px**
 
-### Colors
+Colors
 
 Each supports 3 variants: `contrast`, `shade` and `tint`.
 
@@ -117,9 +154,9 @@ Each supports 3 variants: `contrast`, `shade` and `tint`.
 - `--app-color-background`: background color
 - `--app-color-foreground`: foreground color
 
-### Custom values
+Custom values, you can also add whatever values you need:
 
-You can also add whatever values you need.
+- `--app-value-foo`: example property
 
 ## Mixins
 
