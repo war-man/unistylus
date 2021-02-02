@@ -1,0 +1,9 @@
+@import '../palettes/default';
+@import '../palettes/dark';
+
+:root,
+[data-theme="default"],
+[data-theme="dark"] {
+  @include default-palette;
+  @include dark-palette;
+}

@@ -1,4 +1,4 @@
-:root, [data-theme="default"] {
+@mixin default-palette {
   // fonts
   --app-font-body: 'Arial', sans-serif;
   --app-font-head: 'Arial', sans-serif;
@@ -44,12 +44,4 @@
   --app-color-light-contrast: #000000;
   --app-color-light-shade: #d7d8da;
   --app-color-light-tint: #f5f6f9;
-  --app-color-background: var(--app-color-light);
-  --app-color-background-contrast: var(--app-color-light-contrast);
-  --app-color-background-shade: var(--app-color-light-shade);
-  --app-color-background-tint: var(--app-color-light-tint);
-  --app-color-foreground: var(--app-color-dark);
-  --app-color-foreground-contrast: var(--app-color-dark-contrast);
-  --app-color-foreground-shade: var(--app-color-dark-shade);
-  --app-color-foreground-tint: var(--app-color-dark-tint);
 }

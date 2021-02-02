@@ -1,0 +1,9 @@
+@import '../palettes/default';
+@import '../palettes/light';
+
+:root,
+[data-theme="default"],
+[data-theme="light"] {
+  @include default-palette;
+  @include light-palette;
+}
