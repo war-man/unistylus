@@ -1,5 +1,5 @@
-@import '../scss/palettes/light';
+@import '../scss/properties/light';
 
 [data-theme="light"] {
-  @include light-palette;
+  @include light-properties;
 }

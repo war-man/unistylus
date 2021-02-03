@@ -1,5 +1,5 @@
-@import '../scss/palettes/dark';
+@import '../scss/properties/dark';
 
 [data-theme="dark"] {
-  @include dark-palette;
+  @include dark-properties;
 }

@@ -1,9 +1,9 @@
-@import '../scss/palettes/default';
-@import '../scss/palettes/dark';
+@import '../scss/properties/default';
+@import '../scss/properties/dark';
 
 :root,
 [data-theme="default"],
 [data-theme="dark"] {
-  @include default-palette;
-  @include dark-palette;
+  @include default-properties;
+  @include dark-properties;
 }

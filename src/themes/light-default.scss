@@ -1,9 +1,9 @@
-@import '../scss/palettes/default';
-@import '../scss/palettes/light';
+@import '../scss/properties/default';
+@import '../scss/properties/light';
 
 :root,
 [data-theme="default"],
 [data-theme="light"] {
-  @include default-palette;
-  @include light-palette;
+  @include default-properties;
+  @include light-properties;
 }

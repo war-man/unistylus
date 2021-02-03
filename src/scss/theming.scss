@@ -1,8 +1,8 @@
 body, [data-theme] {
-  font-family: var(--app-font-body);
-  color: var(--app-color-foreground);
   background: var(--app-color-background);
-  
+  color: var(--app-color-foreground);
+  font-family: var(--app-font-body);
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--app-font-head);
   }
