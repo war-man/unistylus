@@ -44,4 +44,14 @@
   --app-color-light-contrast: #000000;
   --app-color-light-shade: #d7d8da;
   --app-color-light-tint: #f5f6f9;
+  // gradients
+  --app-gradient-primary: linear-gradient(90deg, #3880ff 0%, #3171e0 100%);
+  --app-gradient-secondary: linear-gradient(90deg, #3dc2ff 0%, #36abe0 100%);
+  --app-gradient-tertiary: linear-gradient(90deg, #5260ff 0%, #4854e0 100%);
+  --app-gradient-success: linear-gradient(90deg, #2dd36f 0%, #28ba62 100%);
+  --app-gradient-warning: linear-gradient(90deg, #ffc409 0%, #e0ac08 100%);
+  --app-gradient-danger: linear-gradient(90deg, #eb445a 0%, #cf3c4f 100%);
+  --app-gradient-dark: linear-gradient(90deg, #222428 0%, #1e2023 100%);
+  --app-gradient-medium: linear-gradient(90deg, #92949c 0%, #808289 100%);
+  --app-gradient-light: linear-gradient(90deg, #f4f5f8 0%, #d7d8da 100%);
 }
