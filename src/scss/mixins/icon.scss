@@ -1,0 +1,57 @@
+@mixin registerAppIcons($groups) {
+  // properties
+  @each $theme, $icons in $groups {
+    @if $theme != 'default' {
+      // custom
+      [data-theme="#{$theme}"] {
+        @each $name, $url in $icons {
+          --app-icon-#{$name}: url(#{$url});
+        }
+      }
+    } @else {
+      // default
+      :root, [data-theme="default"] {
+        @each $name, $url in $icons {
+          --app-icon-#{$name}: url(#{$url});
+        }
+      }
+    }
+  }
+  // rules
+  $icons: map-get($groups, 'default');
+  @each $name, $url in $icons {
+    .icon.#{$name} {
+      display: inline-block;
+      content: var(--app-icon-#{$name});
+    }
+  }
+}
+
+@mixin registerComponentIconProperties($groups, $component_name) {
+  @each $theme, $icons in $groups {
+    @if $theme != 'default' {
+      // custom
+      [data-theme="#{$theme}"] {
+        @each $name, $url in $icons {
+          --component-#{$component_name}-icon-#{$name}: url(#{$url});
+        }
+      }
+    } @else {
+      // default
+      :root, [data-theme="default"] {
+        @each $name, $url in $icons {
+          --component-#{$component_name}-icon-#{$name}: url(#{$url});
+        }
+      }
+    }
+  }
+}
+
+@mixin registerComponentIconRules($icons, $component_name) {
+  @each $name, $url in $icons {
+    .icon.#{$name} {
+      display: inline-block;
+      content: var(--component-#{$component_name}-icon-#{$name});
+    }
+  }
+}

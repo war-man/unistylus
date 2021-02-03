@@ -1,4 +1,4 @@
-@import '../palettes/light';
+@import '../scss/palettes/light';
 
 [data-theme="light"] {
   @include light-palette;

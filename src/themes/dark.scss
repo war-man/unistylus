@@ -1,4 +1,4 @@
-@import '../palettes/dark';
+@import '../scss/palettes/dark';
 
 [data-theme="dark"] {
   @include dark-palette;
