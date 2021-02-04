@@ -1,10 +1,27 @@
-@mixin table($key: 'primary') {
+@import './common';
+
+@mixin table($key: 'medium') {
+
+  table {
+    @include table_styles($key);
+  }
+}
+
+@mixin table_styles($key: 'medium') {
+  width: 100%;
+
   &, tr {
     margin: 0;
     padding: 0;
   }
-  td {
-    @include border($key);
-    padding: app-size('padding');
+
+  th {
+    background: var(--app-color-background-shade);
   }
+
+  th, td {
+    @include border($key);
+    padding: calc(var(--app-size-padding) / 2);
+  }
+
 }

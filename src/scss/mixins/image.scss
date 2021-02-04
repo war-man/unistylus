@@ -1,0 +1,10 @@
+@mixin image {
+
+  img {
+    @include image_styles();
+  }
+}
+
+@mixin image_styles {
+  border-radius: var(--app-size-radius);
+}

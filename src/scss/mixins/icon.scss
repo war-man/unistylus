@@ -1,4 +1,4 @@
-@mixin registerAppIcons($groups) {
+@mixin register_app_icons($groups) {
   // properties
   @each $theme, $icons in $groups {
     @if $theme != 'default' {
@@ -27,7 +27,7 @@
   }
 }
 
-@mixin registerComponentIconProperties($groups, $component_name) {
+@mixin register_component_icon_properties($groups, $component_name) {
   @each $theme, $icons in $groups {
     @if $theme != 'default' {
       // custom
@@ -47,7 +47,7 @@
   }
 }
 
-@mixin registerComponentIconRules($icons, $component_name) {
+@mixin register_component_icon_rules($icons, $component_name) {
   @each $name, $url in $icons {
     .icon.#{$name} {
       display: inline-block;

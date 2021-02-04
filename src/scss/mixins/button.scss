@@ -29,7 +29,7 @@
     padding: .5rem 1rem;
   }
   @if $shape == 'ease' {
-    border-radius: app-size('radius');
+    border-radius: var(--app-size-radius);
   } @else if $shape == 'pill' {
     border-radius: 500px;
   } @else if $shape == 'round' {

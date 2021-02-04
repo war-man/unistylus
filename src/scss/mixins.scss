@@ -1,9 +1,12 @@
+@import './mixins/base';
+@import './mixins/typography';
+@import './mixins/image';
+@import './mixins/table';
 @import './mixins/common';
 @import './mixins/button';
 @import './mixins/list';
-@import './mixins/table';
 @import './mixins/form';
-@import './mixins/content';
+@import './mixins/embed';
 @import './mixins/skeleton';
 @import './mixins/box';
 @import './mixins/icon';

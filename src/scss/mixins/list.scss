@@ -1,9 +1,9 @@
-@mixin list-flex {
+@mixin list_flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin item-flex($num: 1, $pad: 0) {
+@mixin item_flex($num: 1, $pad: 0) {
   width: calc((100% / #{$num}) - (#{$pad} * 2));
   margin-left: $pad;
   margin-right: $pad;
