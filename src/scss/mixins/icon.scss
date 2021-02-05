@@ -20,7 +20,7 @@
   // rules
   $icons: map-get($groups, 'default');
   @each $name, $url in $icons {
-    .icon.#{$name} {
+    .icon-#{$name} {
       display: inline-block;
       content: var(--app-icon-#{$name});
     }
@@ -49,7 +49,7 @@
 
 @mixin register_component_icon_rules($icons, $component_name) {
   @each $name, $url in $icons {
-    .icon.#{$name} {
+    .icon-#{$name} {
       display: inline-block;
       content: var(--component-#{$component_name}-icon-#{$name});
     }

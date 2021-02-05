@@ -1,0 +1,117 @@
+@import '../variables';
+
+.margin {
+
+  & {
+    margin: var(--app-size-margin);
+  }
+
+  @each $step in $size_steps {
+    &-#{$step}x {
+      margin: calc(#{$step} * var(--app-size-margin));
+    }
+  }
+
+  @each $direction in $directions {
+    &-#{$direction} {
+      margin-#{$direction}: var(--app-size-margin);
+    }
+
+    @each $step in $size_steps {  
+      &-#{$direction}-#{$step}x {
+        margin-#{$direction}: calc(#{$step} * var(--app-size-margin));
+      }
+    }
+  }
+}
+
+.padding {
+
+  & {
+    padding: var(--app-size-padding);
+  }
+
+  @each $step in $size_steps {
+    &-#{$step}x {
+      padding: calc(#{$step} * var(--app-size-padding));
+    }
+  }
+
+  @each $direction in $directions {
+    &-#{$direction} {
+      padding-#{$direction}: var(--app-size-padding);
+    }
+
+    @each $step in $size_steps {  
+      &-#{$direction}-#{$step}x {
+        padding-#{$direction}: calc(#{$step} * var(--app-size-padding));
+      }
+    }
+  }
+}
+
+.border {
+
+  & {
+    border: var(--app-size-border) solid var(--app-color-medium);
+  }
+
+  @each $direction in $directions {
+    &-#{$direction} {
+      border-#{$direction}: var(--app-size-border) solid var(--app-color-medium);
+    }
+  }
+
+  @each $palette in $palettes {
+    &-#{$palette} {
+      border: var(--app-size-border) solid var(--app-color-#{$palette});
+    }
+
+    @each $direction in $directions {
+      &-#{$direction}-#{$palette} {
+        border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette});
+      }
+    }
+
+    @each $variant in $palette_variants {
+      &-#{$palette}-#{$variant} {
+        border: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+      }
+
+      @each $direction in $directions {
+        &-#{$direction}-#{$palette}-#{$variant} {
+          border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+        }
+      }
+    }
+  }
+}
+
+.background {
+
+  &, &-default {
+    background: var(--app-color-background);
+
+    @each $variant in $palette_variants {
+      &-#{$variant} {
+        color: var(--app-color-background-#{$variant});
+      }
+    }
+  }
+
+  @each $palette in $palettes {
+    &-#{$palette} {
+      background: var(--app-color-#{$palette});
+    }
+
+    @each $variant in $palette_variants {
+      &-#{$palette}-#{$variant} {
+        background: var(--app-color-#{$palette}-#{$variant});
+      }
+    }
+
+    &-gradient-#{$palette} {
+      background: var(--app-gradient-#{$palette});
+    }
+  }
+}

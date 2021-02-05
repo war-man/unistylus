@@ -1,3 +1,151 @@
-@import '../mixins';
+@import '../variables';
 
-@include table;
+@mixin table_shared {
+  width: 100%;
+  text-align: left;
+
+  tr {
+    margin: 0;
+    padding: 0;
+  }
+  
+  th {
+    font-weight: 700;
+  }
+
+  th, td {
+    padding: calc(.5 * var(--app-size-padding));
+  }
+}
+
+@mixin table_borderless_shared {
+  @include table_shared();
+
+  thead th, th, td {
+    border: none !important;
+  }
+}
+
+.table {
+  
+  & {
+    @include table_shared();
+
+    thead th {
+      border-bottom: 1px solid var(--app-color-foreground);
+    }
+  
+    th, td {
+      border-bottom: 1px solid var(--app-color-medium);
+    }
+    
+    @each $palette in $palettes {
+      &-#{$palette} {
+        @include table_shared();
+
+        & {
+          background: var(--app-color-#{$palette});
+          color: var(--app-color-#{$palette}-contrast);
+        }
+
+        thead th {
+          border-bottom: 1px solid var(--app-color-#{$palette}-shade);
+        }
+
+        th, td {
+          border-bottom: 1px solid var(--app-color-#{$palette}-tint);
+        }
+      }
+    }
+  }
+
+  &-borderless {
+    @include table_borderless_shared();
+
+    & {
+      border: 1px solid var(--app-color-medium);
+    }
+
+    @each $palette in $palettes {
+      &-#{$palette} {
+        @include table_borderless_shared();
+
+        & {
+          border: 1px solid var(--app-color-#{$palette});
+        }
+      }
+    }
+  }
+
+  &-bordered {
+    @include table_shared();
+
+    thead th, th, td {
+      border: 1px solid var(--app-color-medium);
+    }
+
+    @each $palette in $palettes {
+      &-#{$palette} {
+        @include table_shared();
+
+        thead th, th, td {
+          border: 1px solid var(--app-color-#{$palette});
+        }
+      }
+    }
+  }
+
+  &-striped {
+    @include table_shared();
+
+    & {
+      color: var(--app-color-background-contrast);
+    }
+
+    thead tr, tbody tr:nth-of-type(even) {
+      background: var(--app-color-background);
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background: var(--app-color-background-shade);
+    }
+
+    @each $palette in $palettes {
+      &-#{$palette} {
+        @include table_shared();
+
+        & {
+          color: var(--app-color-#{$palette}-contrast);
+        }
+
+        thead tr, tbody tr:nth-of-type(even) {
+          background: var(--app-color-#{$palette});
+        }
+
+        tbody tr:nth-of-type(odd) {
+          background: var(--app-color-#{$palette}-shade);
+        }
+      }
+    }
+  }
+
+  &-hover {
+    @include table_shared();
+
+    tbody tr:hover {
+      background: var(--app-color-background-shade);
+      color: var(--app-color-background-contrast);
+    }
+
+    @each $palette in $palettes {
+      &-#{$palette} {
+        @include table_shared();
+
+        tbody tr:hover {
+          background: var(--app-color-#{$palette}-shade);
+          color: var(--app-color-#{$palette}-contrast);
+        }
+      }
+    }
+  }
+}

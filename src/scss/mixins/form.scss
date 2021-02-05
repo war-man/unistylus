@@ -1,5 +1,5 @@
-@mixin input($key: 'medium') {
-  @include border($key);
+@mixin input($palette: 'medium') {
+  @include border($palette);
   display: block;
   border-radius: var(--app-size-radius);
   color: var(--app-color-foreground);
@@ -10,7 +10,7 @@
   }
 }
 
-@mixin form($key: 'light') {
+@mixin form($palette: 'light') {
   label {
     display: block;
     margin-top: .5rem;
@@ -35,10 +35,10 @@
     }
   }
   input, textarea {
-    @include input($key);
+    @include input($palette);
   }
   button {
-    @include button($key);
+    @include button($palette);
   }
   // advanced options
   .advanced {

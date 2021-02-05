@@ -1,11 +1,4 @@
-@mixin base {
-
-  body, [data-theme] {
-    @include base_styles();
-  }
-}
-
-@mixin base_styles {
+body, [data-theme] {
   font-family: var(--app-font-body);
   font-size: var(--app-size-font);
   background: var(--app-color-background);

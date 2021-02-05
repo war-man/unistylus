@@ -1,5 +1,5 @@
 @mixin button(
-  $key: 'primary',
+  $palette: 'primary',
   $size: 'normal',
   $style: 'normal',
   $shape: 'sharp'
@@ -9,14 +9,14 @@
   cursor: pointer;
   @if $style == 'clear' {
     background: none;
-    color: var(--app-color-#{$key});
+    color: var(--app-color-#{$palette});
   } @else if $style == 'outline' {
-    @include border($key);
+    @include border($palette);
     background: none;
-    color: var(--app-color-#{$key});
+    color: var(--app-color-#{$palette});
   } @else {
-    background: var(--app-color-#{$key});
-    color: var(--app-color-#{$key}-contrast);
+    background: var(--app-color-#{$palette});
+    color: var(--app-color-#{$palette}-contrast);
   }
   @if $size == 'small' {
     font-size: .8rem;
