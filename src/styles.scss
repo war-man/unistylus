@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+// ============================================================================
+// I. SETUP UNISTYLUS
+// ============================================================================
+
+// 1-line setup
+@import '../projects/unistylus/src/scss/setup';
+// OR customization setup
+// @import '../projects/unistylus/src/scss/content/reset';
+// @import '../projects/unistylus/src/scss/content/core';
+// @import '../projects/unistylus/src/scss/content/common';
+// @import '../projects/unistylus/src/scss/content/typography';
+// @inport '...';
+
+// add a theme (the default)
+@import '../projects/unistylus/src/themes/light-default';
+// OR multiple themes
+@import '../projects/unistylus/src/themes/dark';
+
+// ============================================================================
+// II. ADD/OVERRIDE THEMES
+// ============================================================================
+
+// :root, [data-theme="default"] {
+//   --app-color-primary: ...;
+// }
+
+// ============================================================================
+// III. SETUP NGUIX MODULE
+// ============================================================================
+
+// @import '...';
+
+// ============================================================================
+// IV. SETUP APP MODULE
+// ============================================================================
+
+// 1-line setup
+@import './scss/light.app.module';
+
+// ============================================================================
+// V. GLOBAL STYLES
+// ============================================================================
