@@ -1,3 +1,4 @@
+/// a fluid image
 .img {
   border-radius: var(--app-size-radius);
   width: 100%;
@@ -5,6 +6,7 @@
   height: auto;
 }
 
+/// fluid image with caption
 .figure {
 
   &-caption {

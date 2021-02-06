@@ -1,23 +1,46 @@
 @import '../variables';
 
+/// set margin
 .margin {
 
+  /*
+   * all directions
+   * @usage: .margin
+   */
   & {
     margin: var(--app-size-margin);
   }
 
+  /* sizes */
   @each $step in $size_steps {
+
+    /*
+     * all directions, custom size
+     * @usage: .margin-2x
+     */
     &-#{$step}x {
       margin: calc(#{$step} * var(--app-size-margin));
     }
   }
 
+  /* directions */
   @each $direction in $directions {
+
+    /*
+     * one direction
+     * @usage: .margin-left
+     */
     &-#{$direction} {
       margin-#{$direction}: var(--app-size-margin);
     }
 
-    @each $step in $size_steps {  
+    /* sizes */
+    @each $step in $size_steps {
+
+      /*
+       * one direction, custom size
+       * @usage: .margin-left-2x
+       */
       &-#{$direction}-#{$step}x {
         margin-#{$direction}: calc(#{$step} * var(--app-size-margin));
       }
@@ -25,24 +48,47 @@
   }
 }
 
+// set padding
 .padding {
 
+  /*
+   * all directions
+   * @usage: .padding
+   */
   & {
     padding: var(--app-size-padding);
   }
 
+  /* sizes */
   @each $step in $size_steps {
+
+    /*
+     * all directions, custom size
+     * @usage: .padding-2x
+     */
     &-#{$step}x {
       padding: calc(#{$step} * var(--app-size-padding));
     }
   }
 
+  /* directions */
   @each $direction in $directions {
+
+    /*
+     * one direction
+     * @usage: .padding-left
+     */
     &-#{$direction} {
       padding-#{$direction}: var(--app-size-padding);
     }
 
-    @each $step in $size_steps {  
+    /* sizes */
+    @each $step in $size_steps {
+
+      /*
+       * one direction, custom size
+       * @usage: .padding-left-2x
+       */
       &-#{$direction}-#{$step}x {
         padding-#{$direction}: calc(#{$step} * var(--app-size-padding));
       }
@@ -50,35 +96,70 @@
   }
 }
 
+/// set border
 .border {
 
+  /*
+   * medium palette, all directions
+   * @usage: .border
+   */
   & {
     border: var(--app-size-border) solid var(--app-color-medium);
   }
 
+  /* directions */
   @each $direction in $directions {
+
+    /*
+     * medium palette, one direction
+     * @usage: .border-left
+     */
     &-#{$direction} {
       border-#{$direction}: var(--app-size-border) solid var(--app-color-medium);
     }
   }
 
+  /* palettes */
   @each $palette in $palettes {
+
+    /*
+     * custom palette, all directions
+     * @usage: .border-primary
+     */
     &-#{$palette} {
       border: var(--app-size-border) solid var(--app-color-#{$palette});
     }
 
+    /* directions */
     @each $direction in $directions {
+
+      /*
+       * custom palette, one direction
+       * @usage: .border-left-primary
+       */
       &-#{$direction}-#{$palette} {
         border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette});
       }
     }
 
+    /* palette variants */
     @each $variant in $palette_variants {
+
+      /*
+       * custom palette variant, all directions
+       * @usage: .border-primary-shade
+       */
       &-#{$palette}-#{$variant} {
         border: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
       }
 
+      /* directions */
       @each $direction in $directions {
+
+        /*
+         * custom palette variant, one direction
+         * @usage: .border-left-primary-shade
+         */
         &-#{$direction}-#{$palette}-#{$variant} {
           border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
         }
@@ -87,29 +168,64 @@
   }
 }
 
+/// set background
 .background {
 
+  /* default */
   &, &-default {
-    background: var(--app-color-background);
 
+    /*
+     * default background
+     * @usage: .background, .background-default
+     */
+    & {
+      background: var(--app-color-background);
+    }
+
+    /* palette variants */
     @each $variant in $palette_variants {
+
+      /*
+       * default background variant
+       * @usage: .background-shade, .background-default-shade
+       */
       &-#{$variant} {
         color: var(--app-color-background-#{$variant});
       }
     }
   }
 
+  /* palettes */
   @each $palette in $palettes {
+
+    /*
+     * custom color
+     * @usage: .background-primary
+     */
     &-#{$palette} {
       background: var(--app-color-#{$palette});
     }
 
+    /* palette variants */
     @each $variant in $palette_variants {
+
+      /*
+       * custom color variant
+       * @usage: .background-primary-shade
+       */
       &-#{$palette}-#{$variant} {
         background: var(--app-color-#{$palette}-#{$variant});
       }
     }
+  }
 
+  /* gradients */
+  @each $palette in $palettes {
+
+    /*
+     * custom gradient
+     * @usage: .background-gradient-primary
+     */
     &-gradient-#{$palette} {
       background: var(--app-gradient-#{$palette});
     }

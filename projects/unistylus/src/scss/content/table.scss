@@ -26,47 +26,70 @@
   }
 }
 
+/// style a table
 .table {
-  
+
+  /* default table */
   & {
     @include table_shared();
+    
+    /*
+     * @usage: .table
+     */
+    & {
 
-    thead th {
-      border-bottom: 1px solid var(--app-color-foreground);
-    }
-  
-    th, td {
-      border-bottom: 1px solid var(--app-color-medium);
+      thead th {
+        border-bottom: 1px solid var(--app-color-foreground);
+      }
+    
+      th, td {
+        border-bottom: 1px solid var(--app-color-medium);
+      }
     }
     
+    /* --- */
     @each $palette in $palettes {
+  
+      /*
+       * @usage: .table-primary
+       */
       &-#{$palette} {
         @include table_shared();
-
+  
         & {
           background: var(--app-color-#{$palette});
           color: var(--app-color-#{$palette}-contrast);
-        }
 
-        thead th {
-          border-bottom: 1px solid var(--app-color-#{$palette}-shade);
-        }
-
-        th, td {
-          border-bottom: 1px solid var(--app-color-#{$palette}-tint);
-        }
+          thead th {
+            border-bottom: 1px solid var(--app-color-#{$palette}-shade);
+          }
+    
+          th, td {
+            border-bottom: 1px solid var(--app-color-#{$palette}-tint);
+          }
+        }  
       }
     }
   }
 
+
+  /* borderless table */
   &-borderless {
     @include table_borderless_shared();
-
+    
+    /*
+     * @usage: .table-borderless
+     */
     & {
       border: 1px solid var(--app-color-medium);
     }
 
+    /* --- */
     @each $palette in $palettes {
+
+      /*
+       * @usage: .table-borderless-primary
+       */
       &-#{$palette} {
         @include table_borderless_shared();
 
@@ -77,73 +100,111 @@
     }
   }
 
+  /* bordered table */
   &-bordered {
     @include table_shared();
 
-    thead th, th, td {
-      border: 1px solid var(--app-color-medium);
+    /*
+     * @usage: .table-bordered
+     */
+    & {
+
+      thead th, th, td {
+        border: 1px solid var(--app-color-medium);
+      }
     }
 
+    /* --- */
     @each $palette in $palettes {
+
+      /*
+       * @usage: .table-bordered-primary
+       */
       &-#{$palette} {
         @include table_shared();
 
-        thead th, th, td {
-          border: 1px solid var(--app-color-#{$palette});
+        & {
+          thead th, th, td {
+            border: 1px solid var(--app-color-#{$palette});
+          }
         }
       }
     }
   }
 
+  /* table striped */
   &-striped {
     @include table_shared();
 
+    /*
+     * @usage: .table-striped
+     */
     & {
       color: var(--app-color-background-contrast);
+
+      thead tr, tbody tr:nth-of-type(even) {
+        background: var(--app-color-background);
+      }
+  
+      tbody tr:nth-of-type(odd) {
+        background: var(--app-color-background-shade);
+      }
     }
 
-    thead tr, tbody tr:nth-of-type(even) {
-      background: var(--app-color-background);
-    }
-
-    tbody tr:nth-of-type(odd) {
-      background: var(--app-color-background-shade);
-    }
-
+    /* --- */
     @each $palette in $palettes {
+
+      /*
+       * @usage: .table-striped-primary
+       */
       &-#{$palette} {
         @include table_shared();
 
         & {
           color: var(--app-color-#{$palette}-contrast);
-        }
 
-        thead tr, tbody tr:nth-of-type(even) {
-          background: var(--app-color-#{$palette});
-        }
-
-        tbody tr:nth-of-type(odd) {
-          background: var(--app-color-#{$palette}-shade);
+          thead tr, tbody tr:nth-of-type(even) {
+            background: var(--app-color-#{$palette});
+          }
+  
+          tbody tr:nth-of-type(odd) {
+            background: var(--app-color-#{$palette}-shade);
+          }
         }
       }
     }
   }
 
+  /* table hover */
   &-hover {
     @include table_shared();
 
-    tbody tr:hover {
-      background: var(--app-color-background-shade);
-      color: var(--app-color-background-contrast);
+    /*
+     * @usage: .table-hover
+     */
+    & {
+
+      tbody tr:hover {
+        background: var(--app-color-background-shade);
+        color: var(--app-color-background-contrast);
+      }
     }
 
+    /* --- */
     @each $palette in $palettes {
+
+      /*
+       * @usage: .table-hover-primary
+       */
       &-#{$palette} {
         @include table_shared();
 
-        tbody tr:hover {
-          background: var(--app-color-#{$palette}-shade);
-          color: var(--app-color-#{$palette}-contrast);
+        & {
+
+          tbody tr:hover {
+            background: var(--app-color-#{$palette}-shade);
+            color: var(--app-color-#{$palette}-contrast);
+          }
         }
       }
     }

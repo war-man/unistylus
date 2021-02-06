@@ -41,42 +41,89 @@ a {
   }
 }
 
+/// set font family
 .font {
 
+  /*
+   * body font
+   * @usage: .font
+   */
   & {
     font-family: var(--app-font-body);
   }
 
+  /* fonts */
   @each $font in $fonts {
+
+    /*
+     * custom font
+     * @usage: .font-head
+     */
     &-#{$font} {
       font-family: var(--app-font-#{$font});
     }
   }
 }
 
+/// set text color
 .text {
 
+  /* default */
   &, &-default {
-    color: var(--app-color-foreground);
 
+    /*
+     * default color
+     * @usage: .text, .text-default
+     */
+    & {
+      color: var(--app-color-foreground);
+    }
+
+    /* palette variants */
     @each $variant in $palette_variants {
+
+      /*
+       * default color variant
+       * @usage: .text-shade, .text-default-shade
+       */
       &-#{$variant} {
         color: var(--app-color-foreground-#{$variant});
       }
     }
   }
 
+  /* colors */
   @each $palette in $palettes {
+
+    /*
+     * a palette
+     * @usage: .text-primary
+     */
     &-#{$palette} {
       color: var(--app-color-#{$palette});
     }
     
+    /* variants */
     @each $variant in $palette_variants {
+
+      /*
+       * palette variant
+       * @usage: .text-primary-shade
+       */
       &-#{$palette}-#{$variant} {
         color: var(--app-color-#{$palette}-#{$variant});
       }
     }
 
+  }
+
+  /* gradients */
+  @each $palette in $palettes {
+
+    /*
+    * a gradient
+    * @usage: .text-gradient-primary
+    */
     &-gradient-#{$palette} {
       background: var(--app-gradient-#{$palette});
       background-clip: text;
