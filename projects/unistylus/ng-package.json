@@ -1,0 +1,12 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/unistylus",
+  "assets": [
+    "./src/assets",
+    "./src/scss",
+    "./src/themes"
+  ],
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

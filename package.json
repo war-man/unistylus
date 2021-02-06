@@ -1,14 +1,21 @@
 {
   "name": "@lamnhan/unistylus",
-  "version": "0.0.2",
-  "description": "An SASS theming system.",
+  "version": "0.0.0",
+  "description": "An SCSS theming system.",
   "author": "Lam Nhan",
   "homepage": "https://lamnhan.com",
   "license": "MIT",
-  "files": [
-    "src"
-  ],
-  "scripts": {},
+  "private": true,
+  "scripts": {
+    "build": "ng build unistylus --prod && cpy README.md LICENSE dist/unistylus",
+    "deploy": "cd ./dist/unistylus && npm publish && cd ../../",
+    "docs": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "coverage": "cat ./coverage/*/lcov.info | coveralls",
+    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37"
+  },
   "keywords": [
     "css",
     "scss",
@@ -23,5 +30,39 @@
   "bugs": {
     "url": "https://github.com/lamnhan/unistylus/issues"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@angular/animations": "~11.0.9",
+    "@angular/common": "~11.0.9",
+    "@angular/compiler": "~11.0.9",
+    "@angular/core": "~11.0.9",
+    "@angular/forms": "~11.0.9",
+    "@angular/platform-browser": "~11.0.9",
+    "@angular/platform-browser-dynamic": "~11.0.9",
+    "@angular/router": "~11.0.9",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1100.7",
+    "@angular/cli": "~11.0.7",
+    "@angular/compiler-cli": "~11.0.9",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "coveralls": "^3.1.0",
+    "cpy-cli": "^3.1.1",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.1.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.0.2"
+  }
 }
