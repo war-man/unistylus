@@ -1,5 +1,88 @@
 <main class="padding">
 
+  <div>
+    <button (click)="toggleTheme()">{{isDarkTheme ? 'Use light theme': ' Use dark theme'}}</button>
+  </div>
+
+  <section>
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Forms</h2>
+
+    <form class="margin-top">
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </form>
+
+    <form class="margin-top">
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput6" class="form-label">Tiny input</label>
+        <input type="text" class="form-control-xs" id="exampleFormControlInput6" placeholder=".form-control-xs">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput2" class="form-label">Small input</label>
+        <input type="text" class="form-control-sm" id="exampleFormControlInput2" placeholder=".form-control-sm">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput3" class="form-label">Default input</label>
+        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder=".form-control">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput4" class="form-label">Large input</label>
+        <input type="text" class="form-control-lg" id="exampleFormControlInput4" placeholder=".form-control-lg">
+      </div>
+      <div>
+        <label for="exampleFormControlInput5" class="form-label">Extra large input</label>
+        <input type="text" class="form-control-xl" id="exampleFormControlInput5" placeholder=".form-control-xl">
+      </div>
+    </form>
+
+    <form class="margin-top">
+      <input class="form-control" type="text" placeholder="Disabled input" disabled>
+      <input class="form-control" type="text" placeholder="Disabled readonly input" disabled readonly>
+      <input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+    </form>
+
+    <form class="margin-top">
+      <div class="margin-bottom">
+        <label for="formFile" class="form-label">Default file input example</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <div class="margin-bottom">
+        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+        <input class="form-control" type="file" id="formFileMultiple" multiple>
+      </div>
+      <div class="margin-bottom">
+        <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+        <input class="form-control" type="file" id="formFileDisabled" disabled>
+      </div>
+      <div class="margin-bottom">
+        <label for="formFileSm" class="form-label">Small file input example</label>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
+      </div>
+      <div>
+        <label for="formFileLg" class="form-label">Large file input example</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file">
+      </div>
+    </form>
+
+    <form class="margin-top">
+      <label for="exampleDataList" class="form-label">Datalist example</label>
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+      <datalist id="datalistOptions">
+        <option value="San Francisco">
+        <option value="New York">
+        <option value="Seattle">
+        <option value="Los Angeles">
+        <option value="Chicago">
+      </datalist>
+    </form>
+  </section>
+
   <section>
     <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Paragraph, link</h2>
 

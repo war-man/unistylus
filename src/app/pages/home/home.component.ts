@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isDarkTheme = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    return this.isDarkTheme
+      ? document.body.setAttribute('data-theme', 'dark')
+      : document.body.removeAttribute('data-theme');
   }
 
 }

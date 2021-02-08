@@ -8,7 +8,6 @@
   "private": true,
   "scripts": {
     "css": "sass ./projects/unistylus/src/scss:./dist/unistylus/css",
-    "css-minify": "echo '// todo'",
     "build": "ng build unistylus --prod && npm run css && cpy README.md LICENSE dist/unistylus",
     "deploy": "cd ./dist/unistylus && npm publish && cd ../../",
     "docs": "ng build --prod",
