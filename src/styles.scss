@@ -4,19 +4,10 @@
 // I. SETUP UNISTYLUS
 // ============================================================================
 
-// 1-line setup
-@import '../projects/unistylus/src/scss/setup';
-// OR customization setup
-// @import '../projects/unistylus/src/scss/content/reset';
-// @import '../projects/unistylus/src/scss/content/core';
-// @import '../projects/unistylus/src/scss/content/common';
-// @import '../projects/unistylus/src/scss/content/typography';
-// @inport '...';
+// 1-line setup, see // TODO
+@import '../projects/unistylus/src/scss/unistylus-light-dark';
 
-// add a theme (the default)
-@import '../projects/unistylus/src/themes/light-default';
-// OR multiple themes
-@import '../projects/unistylus/src/themes/dark';
+// custom setup, see: // TODO
 
 // ============================================================================
 // II. ADD/OVERRIDE THEMES
@@ -27,13 +18,13 @@
 // }
 
 // ============================================================================
-// III. SETUP NGUIX MODULE
+// III. SETUP @LAMNHAN/NGUIX-*
 // ============================================================================
 
 // @import '...';
 
 // ============================================================================
-// IV. SETUP APP MODULE
+// IV. SETUP APP
 // ============================================================================
 
 // 1-line setup

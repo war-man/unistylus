@@ -1,0 +1,111 @@
+@import '../variables';
+
+.text {
+
+  /// default
+  &, &-default {
+
+    /// default color
+    /// @example: .text, .text-default
+    & {
+      color: var(--app-color-foreground);
+    }
+
+    // ---
+    @each $variant in $palette_variants {
+
+      /// default color variant
+      /// @example: .text-shade, .text-default-shade
+      &-#{$variant} {
+        color: var(--app-color-foreground-#{$variant});
+      }
+    }
+  }
+
+  // ---
+  @each $palette in $palettes {
+
+    /// a palette
+    /// @example: .text-primary
+    &-#{$palette} {
+      color: var(--app-color-#{$palette});
+    }
+    
+    // ---
+    @each $variant in $palette_variants {
+
+      /// palette variant
+      /// @example: .text-primary-shade
+      &-#{$palette}-#{$variant} {
+        color: var(--app-color-#{$palette}-#{$variant});
+      }
+    }
+
+  }
+
+  // ---
+  @each $palette in $palettes {
+
+    /// a gradient
+    /// @example: .text-gradient-primary
+    &-gradient-#{$palette} {
+      background: var(--app-gradient-#{$palette});
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+}
+
+.background {
+
+  /// default
+  &, &-default {
+
+    /// default background
+    /// @example: .background, .background-default
+    & {
+      background: var(--app-color-background);
+    }
+
+    // ---
+    @each $variant in $palette_variants {
+
+      /// default background variant
+      /// @example: .background-shade, .background-default-shade
+      &-#{$variant} {
+        color: var(--app-color-background-#{$variant});
+      }
+    }
+  }
+
+  // ---
+  @each $palette in $palettes {
+
+    /// custom color
+    /// @example: .background-primary
+    &-#{$palette} {
+      background: var(--app-color-#{$palette});
+    }
+
+    // ---
+    @each $variant in $palette_variants {
+
+      /// custom color variant
+      /// @example: .background-primary-shade
+      &-#{$palette}-#{$variant} {
+        background: var(--app-color-#{$palette}-#{$variant});
+      }
+    }
+  }
+
+  // ---
+  @each $palette in $palettes {
+
+    /// custom gradient
+    /// @example: .background-gradient-primary
+    &-gradient-#{$palette} {
+      background: var(--app-gradient-#{$palette});
+    }
+  }
+}

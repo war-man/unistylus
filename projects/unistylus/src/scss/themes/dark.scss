@@ -1,4 +1,4 @@
-@import '../scss/properties/dark';
+@import '../properties/dark';
 
 [data-theme="dark"] {
   @include dark-properties;

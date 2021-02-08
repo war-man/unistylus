@@ -3,8 +3,7 @@
   "dest": "../../dist/unistylus",
   "assets": [
     "./src/assets",
-    "./src/scss",
-    "./src/themes"
+    "./src/scss"
   ],
   "lib": {
     "entryFile": "src/public-api.ts"

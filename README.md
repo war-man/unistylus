@@ -1,6 +1,6 @@
 # Unistylus
 
-An SCSS theming system.
+An SCSS/CSS theming system.
 
 - [Install & usage](#install-and-usage)
 - [Why, compared to Bootstrap?](#why-compared-to-bootstrap)
@@ -19,7 +19,7 @@ An SCSS theming system.
 npm install --save @lamnhan/unistylus
 ```
 
-See usage example: [https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss)
+See usage example: [https://github.com/lamnhan/unistylus/blob/main/src/styles.scss](https://github.com/lamnhan/unistylus/blob/main/src/styles.scss)
 
 To use minxins:
 
@@ -56,7 +56,7 @@ Another option is to use Bootstrap and Unistylus together.
 
 ### Add new theme
 
-Add this to the global style file (ex.: [styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss) for Angular apps);
+Add this to the global style file (ex.: [styles.scss](https://github.com/lamnhan/unistylus/blob/main/src/styles.scss) for Angular apps);
 
 ```scss
 [data-theme="theme-name"] {
@@ -87,13 +87,13 @@ document.body.setAttribute('data-theme', 'dark');
 
 Icons are grouped by component:
 
-- Create `component_name.data.scss`: see example [`header.data.scss`](https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/styles/header/header.data.scss)
+- Create `component_name.data.scss`: see example [`header.data.scss`](https://github.com/lamnhan/unistylus/blob/main/projects/starter/src/lib/styles/header/header.data.scss)
 
-- Create `component_name.icon.scss`: see example [`header.icon.scss`](https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/styles/header/header.icon.scss)
+- Create `component_name.icon.scss`: see example [`header.icon.scss`](https://github.com/lamnhan/unistylus/blob/main/projects/starter/src/lib/styles/header/header.icon.scss)
 
-- Register css rules in `component_name.style.scss`: see example [`header.style.scss`](https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/styles/header/header.style.scss#L6)
+- Register css rules in `component_name.style.scss`: see example [`header.style.scss`](https://github.com/lamnhan/unistylus/blob/main/projects/starter/src/lib/styles/header/header.style.scss#L6)
 
-To use icons, register them in [styles.scss](https://github.com/lamnhan/nguix-starter/blob/main/src/styles.scss#L11). Then, in component `.html`:
+To use icons, register them in [styles.scss](https://github.com/lamnhan/unistylus/blob/main/src/styles.scss#L11). Then, in component `.html`:
 
 ```html
 <i class="icon icon_name"></i>

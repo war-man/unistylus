@@ -1,4 +1,4 @@
-@import '../scss/properties/light';
+@import '../properties/light';
 
 [data-theme="light"] {
   @include light-properties;

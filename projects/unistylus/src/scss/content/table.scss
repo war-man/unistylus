@@ -26,16 +26,13 @@
   }
 }
 
-/// style a table
 .table {
 
-  /* default table */
+  /// default table
   & {
     @include table_shared();
     
-    /*
-     * @usage: .table
-     */
+    /// @example: .table
     & {
 
       thead th {
@@ -47,12 +44,10 @@
       }
     }
     
-    /* --- */
+    // ---
     @each $palette in $palettes {
   
-      /*
-       * @usage: .table-primary
-       */
+      /// @example: .table-primary
       &-#{$palette} {
         @include table_shared();
   
@@ -73,23 +68,19 @@
   }
 
 
-  /* borderless table */
+  /// borderless table
   &-borderless {
     @include table_borderless_shared();
     
-    /*
-     * @usage: .table-borderless
-     */
+    /// @example: .table-borderless
     & {
       border: 1px solid var(--app-color-medium);
     }
 
-    /* --- */
+    // ---
     @each $palette in $palettes {
 
-      /*
-       * @usage: .table-borderless-primary
-       */
+      /// @example: .table-borderless-primary
       &-#{$palette} {
         @include table_borderless_shared();
 
@@ -100,13 +91,11 @@
     }
   }
 
-  /* bordered table */
+  /// bordered table
   &-bordered {
     @include table_shared();
 
-    /*
-     * @usage: .table-bordered
-     */
+    /// @example: .table-bordered
     & {
 
       thead th, th, td {
@@ -114,12 +103,10 @@
       }
     }
 
-    /* --- */
+    // ---
     @each $palette in $palettes {
 
-      /*
-       * @usage: .table-bordered-primary
-       */
+      /// @example: .table-bordered-primary
       &-#{$palette} {
         @include table_shared();
 
@@ -132,13 +119,11 @@
     }
   }
 
-  /* table striped */
+  /// table striped
   &-striped {
     @include table_shared();
 
-    /*
-     * @usage: .table-striped
-     */
+    /// @example: .table-striped
     & {
       color: var(--app-color-background-contrast);
 
@@ -151,12 +136,10 @@
       }
     }
 
-    /* --- */
+    // ---
     @each $palette in $palettes {
 
-      /*
-       * @usage: .table-striped-primary
-       */
+      /// @example: .table-striped-primary
       &-#{$palette} {
         @include table_shared();
 
@@ -175,13 +158,11 @@
     }
   }
 
-  /* table hover */
+  /// table hover
   &-hover {
     @include table_shared();
 
-    /*
-     * @usage: .table-hover
-     */
+    /// @example: .table-hover
     & {
 
       tbody tr:hover {
@@ -190,12 +171,10 @@
       }
     }
 
-    /* --- */
+    // ---
     @each $palette in $palettes {
 
-      /*
-       * @usage: .table-hover-primary
-       */
+      /// @example: .table-hover-primary
       &-#{$palette} {
         @include table_shared();
 

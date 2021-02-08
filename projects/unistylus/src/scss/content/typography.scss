@@ -1,3 +1,5 @@
+@import '../variables';
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--app-font-head);
   font-weight: var(--app-typography-heading-weight, 500);
@@ -27,108 +29,31 @@ h6 {
   font-size: var(--app-typography-h6-size, 1rem);
 }
 
-p {
-  line-height: var(--app-typography-line-height, 1.5);
-  margin-bottom: 1rem;
-}
-
 a {
   color: var(--app-color-primary);
   text-decoration: none;
 
   &:hover {
+    color: var(--app-color-primary-shade);
     text-decoration: underline;
   }
 }
 
-/// set font family
 .font {
 
-  /*
-   * body font
-   * @usage: .font
-   */
+  /// body font
+  /// @example: .font
   & {
     font-family: var(--app-font-body);
   }
 
-  /* fonts */
+  // ---
   @each $font in $fonts {
 
-    /*
-     * custom font
-     * @usage: .font-head
-     */
+    /// custom font
+    /// @example: .font-head
     &-#{$font} {
       font-family: var(--app-font-#{$font});
-    }
-  }
-}
-
-/// set text color
-.text {
-
-  /* default */
-  &, &-default {
-
-    /*
-     * default color
-     * @usage: .text, .text-default
-     */
-    & {
-      color: var(--app-color-foreground);
-    }
-
-    /* palette variants */
-    @each $variant in $palette_variants {
-
-      /*
-       * default color variant
-       * @usage: .text-shade, .text-default-shade
-       */
-      &-#{$variant} {
-        color: var(--app-color-foreground-#{$variant});
-      }
-    }
-  }
-
-  /* colors */
-  @each $palette in $palettes {
-
-    /*
-     * a palette
-     * @usage: .text-primary
-     */
-    &-#{$palette} {
-      color: var(--app-color-#{$palette});
-    }
-    
-    /* variants */
-    @each $variant in $palette_variants {
-
-      /*
-       * palette variant
-       * @usage: .text-primary-shade
-       */
-      &-#{$palette}-#{$variant} {
-        color: var(--app-color-#{$palette}-#{$variant});
-      }
-    }
-
-  }
-
-  /* gradients */
-  @each $palette in $palettes {
-
-    /*
-    * a gradient
-    * @usage: .text-gradient-primary
-    */
-    &-gradient-#{$palette} {
-      background: var(--app-gradient-#{$palette});
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
     }
   }
 }

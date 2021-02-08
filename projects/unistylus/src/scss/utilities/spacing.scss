@@ -1,0 +1,79 @@
+@import '../variables';
+
+.margin {
+
+  /// all directions
+  /// @example: .margin
+  & {
+    margin: var(--app-size-margin);
+  }
+
+  // ---
+  @each $step in $size_steps {
+
+    /// all directions, custom size
+    /// @example: .margin-2x
+    &-#{$step}x {
+      margin: calc(#{$step} * var(--app-size-margin));
+    }
+  }
+
+  // ---
+  @each $direction in $directions {
+
+    /// one direction
+    /// @example: .margin-left
+    &-#{$direction} {
+      margin-#{$direction}: var(--app-size-margin);
+    }
+
+    // ---
+    @each $step in $size_steps {
+
+      /// one direction, custom size
+      /// @example: .margin-left-2x
+      &-#{$direction}-#{$step}x {
+        margin-#{$direction}: calc(#{$step} * var(--app-size-margin));
+      }
+    }
+  }
+}
+
+.padding {
+
+  /// all directions
+  /// @example: .padding
+  & {
+    padding: var(--app-size-padding);
+  }
+
+  // ---
+  @each $step in $size_steps {
+
+    /// all directions, custom size
+    /// @example: .padding-2x
+    &-#{$step}x {
+      padding: calc(#{$step} * var(--app-size-padding));
+    }
+  }
+
+  // ---
+  @each $direction in $directions {
+
+    /// one direction
+    /// @example: .padding-left
+    &-#{$direction} {
+      padding-#{$direction}: var(--app-size-padding);
+    }
+
+    // ---
+    @each $step in $size_steps {
+
+      /// one direction, custom size
+      /// @example: .padding-left-2x
+      &-#{$direction}-#{$step}x {
+        padding-#{$direction}: calc(#{$step} * var(--app-size-padding));
+      }
+    }
+  }
+}
