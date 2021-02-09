@@ -1,0 +1,67 @@
+@import '../variables';
+
+@mixin alert_shared {
+  display: block;
+  padding: var(--app-size-padding);
+  border-radius: var(--app-size-radius);
+  font-weight: 500;
+  background: rgba(var(--app-color-medium-rgb), .3);
+  color: var(--app-color-medium-shade);
+  border: var(--app-size-border) solid var(--app-color-medium);
+}
+
+.alert {
+
+  // fill alerts
+  & {
+
+    /// .alert
+    & {
+      @include alert_shared();
+    }
+
+    // ---
+    @each $palette in $palettes {
+
+      /// .alert-primary
+      &-#{$palette} {
+        @include alert_shared();
+
+        & {
+          background: rgba(var(--app-color-#{$palette}-rgb), .3);
+          color: var(--app-color-#{$palette}-shade);
+          border: var(--app-size-border) solid var(--app-color-#{$palette});
+        }
+      }
+    }
+  }
+
+  // outline alerts
+  &-outline {
+
+    /// .alert-outline
+    & {
+      @include alert_shared();
+
+      & {
+        background: none;
+      }
+    }
+
+    // ---
+    @each $palette in $palettes {
+
+      /// .alert-outline-primary
+      &-#{$palette} {
+        @include alert_shared();
+
+        & {
+          background: none;
+          color: var(--app-color-#{$palette}-shade);
+          border: var(--app-size-border) solid var(--app-color-#{$palette});
+        }
+      }
+    }
+  }
+
+}

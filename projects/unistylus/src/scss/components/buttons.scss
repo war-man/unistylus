@@ -1,3 +1,187 @@
+@import '../variables';
+
+@mixin make_size_variants($variant_ratio) {
+  padding: calc(.375 * #{$variant_ratio} * var(--app-size-padding)) calc(.75 * #{$variant_ratio} * var(--app-size-padding));
+  font-size: calc(#{$variant_ratio} * var(--app-size-font));
+}
+
+@mixin button_shared {
+  display: inline-block;
+  border: none;
+  border-radius: var(--app-size-radius);
+  padding: calc(.375 * var(--app-size-padding)) calc(.75 * var(--app-size-padding));
+
+  & + & {
+    margin-left: calc(.5 * var(--app-size-margin));
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin button_fill_shared($palette) {
+  background: var(--app-color-#{$palette});
+  color: var(--app-color-#{$palette}-contrast);
+
+  &:hover {
+    background: var(--app-color-#{$palette}-shade);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-#{$palette}-rgb), .3);
+  }
+}
+
+@mixin button_outline_shared($palette) {
+  background: none;
+  border: var(--app-size-border) solid var(--app-color-#{$palette});
+  color: var(--app-color-#{$palette});
+
+  &:hover {
+    background: var(--app-color-#{$palette});
+    color: var(--app-color-#{$palette}-contrast);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-#{$palette}-rgb), .3);
+  }
+}
+
+@mixin button_fill_default_shared() {
+  background: var(--app-color-foreground);
+  color: var(--app-color-background); 
+
+  &:hover {
+    background: var(--app-color-foreground-shade);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-foreground-rgb), .3);
+  }
+}
+
+@mixin button_outline_default_shared() {
+  background: none;
+  border: var(--app-size-border) solid var(--app-color-foreground);
+  color: var(--app-color-foreground);
+  
+  &:hover {
+    background: var(--app-color-foreground);
+    color: var(--app-color-background);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-foreground-rgb), .3);
+  }
+}
+
+
 .button {
+
+  // fill buttons
+  & {
+    
+    /// .button
+    & {
+      @include button_shared();
+      @include button_fill_default_shared();
+
+      // ---
+      @each $variant_name, $variant_ratio in $size_variants {
+  
+        /// .button-sm
+        &-#{$variant_name} {
+          @include button_shared();
+          @include button_fill_default_shared();
+          @include make_size_variants($variant_ratio);
+        }
+      }      
+    }
+
+    // ---
+    @each $palette in $palettes {
+  
+      /// .button-primary
+      &-#{$palette} {
+        @include button_shared();
+        @include button_fill_shared($palette);
+      }
+  
+      // ---
+      @each $variant_name, $variant_ratio in $size_variants {
+  
+        /// .button-primary-sm
+        &-#{$palette}-#{$variant_name} {
+          @include button_shared();
+          @include button_fill_shared($palette);
+          @include make_size_variants($variant_ratio);
+        }
+      }
+    }
+  }
+
+  // link buttons
+  &-link {
+    @include button_shared();
+    
+    /// .button-link
+    & {
+      background: none;
+      color: var(--app-color-primary);
+      
+      &:hover {
+        background: none;
+        color: var(--app-color-primary-shade);
+        text-decoration: underline;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-primary-rgb), .3);
+      }
+    }
+  }
+
+  // outline buttons
+  &-outline {
+    
+    /// .button-outline
+    & {
+      @include button_shared();
+      @include button_outline_default_shared();
+
+      // ---
+      @each $variant_name, $variant_ratio in $size_variants {
+  
+        /// .button-outline-sm
+        &-#{$variant_name} {
+          @include button_shared();
+          @include button_outline_default_shared();
+          @include make_size_variants($variant_ratio);
+        }
+      }
+    }
+
+    // ---
+    @each $palette in $palettes {
+
+      /// .button-outline-primary
+      &-#{$palette} {
+        @include button_shared();
+        @include button_outline_shared($palette);
+      }
+
+      // ---
+      @each $variant_name, $variant_ratio in $size_variants {
+  
+        /// .button-outline-primary-sm
+        &-#{$palette}-#{$variant_name} {
+          @include button_shared();
+          @include button_outline_shared($palette);
+          @include make_size_variants($variant_ratio);
+        }
+      }
+    }
+  }
 
 }

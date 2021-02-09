@@ -1,0 +1,58 @@
+@import '../variables';
+
+@mixin badge_shared {
+  border: none;
+  border-radius: var(--app-size-radius);
+  padding: .25em .5em;
+  background: var(--app-color-medium);
+  color: var(--app-color-medium-contrast);
+  font-size: .75em;
+  font-weight: 700;
+}
+
+.badge {
+
+  // fill badges
+  & {
+
+    /// .badge
+    & {
+      @include badge_shared();
+    }
+
+    // ---
+    @each $palette in $palettes {
+
+      /// .badge-primary
+      &-#{$palette} {
+        @include badge_shared();
+        background: var(--app-color-#{$palette});
+        color: var(--app-color-#{$palette}-contrast);
+      }
+    }
+  }
+
+  // outline badges
+  &-outline {
+
+    /// .badge-outline
+    & {
+      @include badge_shared();
+      background: none;
+      color: var(--app-color-medium);
+      border: 1px solid var(--app-color-medium);
+    }
+
+    // ---
+    @each $palette in $palettes {
+
+      /// .badge-outline-primary
+      &-#{$palette} {
+        @include badge_shared();
+        background: none;
+        color: var(--app-color-#{$palette});
+        border: 1px solid var(--app-color-#{$palette});
+      }
+    }
+  }
+}

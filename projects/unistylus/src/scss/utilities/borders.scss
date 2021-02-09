@@ -2,59 +2,72 @@
 
 .border {
 
-  /// medium palette, all directions
-  /// @example: .border
+  // ease
   & {
-    border: var(--app-size-border) solid var(--app-color-medium);
-  }
+    /// medium palette, all directions
+    /// @example: .border
 
-  // ---
-  @each $direction in $directions {
-
-    /// medium palette, one direction
-    /// @example: .border-left
-    &-#{$direction} {
-      border-#{$direction}: var(--app-size-border) solid var(--app-color-medium);
-    }
-  }
-
-  // ---
-  @each $palette in $palettes {
-
-    /// custom palette, all directions
-    /// @example: .border-primary
-    &-#{$palette} {
-      border: var(--app-size-border) solid var(--app-color-#{$palette});
+    & {
+      border: var(--app-size-border) solid var(--app-color-medium);
     }
 
     // ---
     @each $direction in $directions {
-
-      /// custom palette, one direction
-      /// @example: .border-left-primary
-      &-#{$direction}-#{$palette} {
-        border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette});
+  
+      /// medium palette, one direction
+      /// @example: .border-left
+      &-#{$direction} {
+        border-#{$direction}: var(--app-size-border) solid var(--app-color-medium);
       }
     }
-
+  
     // ---
-    @each $variant in $palette_variants {
-
-      /// custom palette variant, all directions
-      /// @example: .border-primary-shade
-      &-#{$palette}-#{$variant} {
-        border: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+    @each $palette in $palettes {
+  
+      /// custom palette, all directions
+      /// @example: .border-primary
+      &-#{$palette} {
+        border: var(--app-size-border) solid var(--app-color-#{$palette});
       }
-
+  
       // ---
       @each $direction in $directions {
-
-        /// custom palette variant, one direction
-        /// @example: .border-left-primary-shade
-        &-#{$direction}-#{$palette}-#{$variant} {
-          border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+  
+        /// custom palette, one direction
+        /// @example: .border-left-primary
+        &-#{$direction}-#{$palette} {
+          border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette});
+        }
+      }
+  
+      // ---
+      @each $variant in $palette_variants {
+  
+        /// custom palette variant, all directions
+        /// @example: .border-primary-shade
+        &-#{$palette}-#{$variant} {
+          border: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+        }
+  
+        // ---
+        @each $direction in $directions {
+  
+          /// custom palette variant, one direction
+          /// @example: .border-left-primary-shade
+          &-#{$direction}-#{$palette}-#{$variant} {
+            border-#{$direction}: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+          }
         }
       }
     }
+  }
+
+  // pill
+  &-pill {
+    border-radius: 1000px !important;
+  }
+  
+  &-sharp {
+    border-radius: 0 !important;
   }
 }

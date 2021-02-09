@@ -1,10 +1,282 @@
 <main class="padding">
 
   <div>
-    <button (click)="toggleTheme()">{{isDarkTheme ? 'Use light theme': ' Use dark theme'}}</button>
+    <button
+      type="button"
+      class="button"
+      [class]="isDarkTheme ? 'button-light': 'button-dark'"
+      (click)="toggleTheme()"
+    >{{isDarkTheme ? 'Use light theme': 'Use dark theme'}}</button>
   </div>
 
-  <section>
+  <section class="margin-top">
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Alerts</h2>
+
+    <div>
+      <h3>Colors</h3>
+      <div class="alert">
+        A simple default alert—check it out!
+      </div>
+      <div class="alert-primary margin-top">
+        A simple primary alert—check it out!
+      </div>
+      <div class="alert-secondary margin-top">
+        A simple secondary alert—check it out!
+      </div>
+      <div class="alert-tertiary margin-top">
+        A simple tertiary alert—check it out!
+      </div>
+      <div class="alert-success margin-top">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert-danger margin-top">
+        A simple danger alert—check it out!
+      </div>
+      <div class="alert-warning margin-top">
+        A simple warning alert—check it out!
+      </div>
+      <div class="alert-dark margin-top">
+        A simple dark alert—check it out!
+      </div>
+      <div class="alert-medium margin-top">
+        A simple medium alert—check it out!
+      </div>
+      <div class="alert-light margin-top">
+        A simple light alert—check it out!
+      </div>
+    </div>
+
+    <div class="margin-top">
+      <h3>Outline</h3>
+      <div class="alert-outline">
+        A simple default alert—check it out!
+      </div>
+      <div class="alert-outline-primary margin-top">
+        A simple primary alert—check it out!
+      </div>
+      <div class="alert-outline-secondary margin-top">
+        A simple secondary alert—check it out!
+      </div>
+      <div class="alert-outline-tertiary margin-top">
+        A simple tertiary alert—check it out!
+      </div>
+      <div class="alert-outline-success margin-top">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert-outline-danger margin-top">
+        A simple danger alert—check it out!
+      </div>
+      <div class="alert-outline-warning margin-top">
+        A simple warning alert—check it out!
+      </div>
+      <div class="alert-outline-dark margin-top">
+        A simple dark alert—check it out!
+      </div>
+      <div class="alert-outline-medium margin-top">
+        A simple medium alert—check it out!
+      </div>
+      <div class="alert-outline-light margin-top">
+        A simple light alert—check it out!
+      </div>
+    </div>
+  </section>
+
+  <section class="margin-top">
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Badges</h2>
+    
+    <div>
+      <h1>Example heading <span class="badge">New</span></h1>
+      <h2>Example heading <span class="badge">New</span></h2>
+      <h3>Example heading <span class="badge">New</span></h3>
+      <h4>Example heading <span class="badge">New</span></h4>
+      <h5>Example heading <span class="badge">New</span></h5>
+      <h6>Example heading <span class="badge">New</span></h6>
+    </div>
+
+    <div class="margin-top">
+      <h3>Colors</h3>
+      <span class="badge">Default</span>
+      <span class="badge-primary margin-left">Primary</span>
+      <span class="badge-secondary margin-left">Secondary</span>
+      <span class="badge-tertiary margin-left">Tertiary</span>
+      <span class="badge-success margin-left">Success</span>
+      <span class="badge-danger margin-left">Danger</span>
+      <span class="badge-warning margin-left">Warning</span>
+      <span class="badge-dark margin-left">Dark</span>
+      <span class="badge-medium margin-left">Medium</span>
+      <span class="badge-light margin-left">Light</span>
+    </div>
+
+    <div class="margin-top">
+      <h3>Outline</h3>
+      <span class="badge-outline">Default</span>
+      <span class="badge-outline-primary margin-left">Primary</span>
+      <span class="badge-outline-secondary margin-left">Secondary</span>
+      <span class="badge-outline-tertiary margin-left">Tertiary</span>
+      <span class="badge-outline-success margin-left">Success</span>
+      <span class="badge-outline-danger margin-left">Danger</span>
+      <span class="badge-outline-warning margin-left">Warning</span>
+      <span class="badge-outline-dark margin-left">Dark</span>
+      <span class="badge-outline-medium margin-left">Medium</span>
+      <span class="badge-outline-light margin-left">Light</span>
+    </div>
+
+    <div class="margin-top">
+      <h3>Pill</h3>
+      <span class="badge border-pill">Default</span>
+      <span class="badge-primary border-pill margin-left">Primary</span>
+      <span class="badge-secondary border-pill margin-left">Secondary</span>
+      <span class="badge-tertiary border-pill margin-left">Tertiary</span>
+      <span class="badge-success border-pill margin-left">Success</span>
+      <span class="badge-danger border-pill margin-left">Danger</span>
+      <span class="badge-warning border-pill margin-left">Warning</span>
+      <span class="badge-dark border-pill margin-left">Dark</span>
+      <span class="badge-medium border-pill margin-left">Medium</span>
+      <span class="badge-light border-pill margin-left">Light</span>
+    </div>
+
+    <div class="margin-top">
+      <h3>Sharp</h3>
+      <span class="badge border-sharp">Default</span>
+      <span class="badge-primary border-sharp margin-left">Primary</span>
+      <span class="badge-secondary border-sharp margin-left">Secondary</span>
+      <span class="badge-tertiary border-sharp margin-left">Tertiary</span>
+      <span class="badge-success border-sharp margin-left">Success</span>
+      <span class="badge-danger border-sharp margin-left">Danger</span>
+      <span class="badge-warning border-sharp margin-left">Warning</span>
+      <span class="badge-dark border-sharp margin-left">Dark</span>
+      <span class="badge-medium border-sharp margin-left">Medium</span>
+      <span class="badge-light border-sharp margin-left">Light</span>
+    </div>
+  </section>
+
+  <section class="margin-top">
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Buttons</h2>
+
+    <div>
+      <h3>Colors</h3>
+
+      <div>
+        <button type="button" class="button">Default</button>
+        <button type="button" class="button-primary margin-left">Primary</button>
+        <button type="button" class="button-secondary margin-left">Secondary</button>
+        <button type="button" class="button-tertiary margin-left">Tertiaty</button>
+        <button type="button" class="button-success margin-left">Success</button>
+        <button type="button" class="button-danger margin-left">Danger</button>
+        <button type="button" class="button-warning margin-left">Warning</button>
+        <button type="button" class="button-dark margin-left">Dark</button>
+        <button type="button" class="button-medium margin-left">Medium</button>
+        <button type="button" class="button-light margin-left">Light</button>
+        <button type="button" class="button-link margin-left">Link</button>
+      </div>
+
+      <div class="margin-top">
+        <button type="button" class="button-primary background-gradient-primary">Primary (gradient)</button>
+        <button type="button" class="button-secondary background-gradient-secondary margin-left">Secondary</button>
+        <button type="button" class="button-tertiary background-gradient-tertiary margin-left">Tertiaty</button>
+        <button type="button" class="button-success background-gradient-success margin-left">Success</button>
+        <button type="button" class="button-danger background-gradient-danger margin-left">Danger</button>
+        <button type="button" class="button-warning background-gradient-warning margin-left">Warning</button>
+        <button type="button" class="button-dark background-gradient-dark margin-left">Dark</button>
+        <button type="button" class="button-medium background-gradient-medium margin-left">Medium</button>
+        <button type="button" class="button-light background-gradient-light margin-left">Light</button>
+      </div>
+    </div>
+
+
+    <div class="margin-top">
+      <h3>Outline</h3>
+
+      <div>
+        <button type="button" class="button-outline">Default</button>
+        <button type="button" class="button-outline-primary margin-left">Primary</button>
+        <button type="button" class="button-outline-secondary margin-left">Secondary</button>
+        <button type="button" class="button-outline-tertiary margin-left">Tertiary</button>
+        <button type="button" class="button-outline-success margin-left">Success</button>
+        <button type="button" class="button-outline-danger margin-left">Danger</button>
+        <button type="button" class="button-outline-warning margin-left">Warning</button>
+        <button type="button" class="button-outline-dark margin-left">Dark</button>
+        <button type="button" class="button-outline-medium margin-left">Medium</button>
+        <button type="button" class="button-outline-light margin-left">Light</button>
+      </div>
+
+      <div class="margin-top">
+        <button type="button" class="button-outline ease-all">Default (ease)</button>
+        <button type="button" class="button-outline-primary ease-all-short margin-left">Primary (short)</button>
+        <button type="button" class="button-outline-secondary ease-all-long margin-left">Secondary (long)</button>
+        <button type="button" class="button-outline-tertiary ease-all margin-left">Tertiary</button>
+        <button type="button" class="button-outline-success ease-all margin-left">Success</button>
+        <button type="button" class="button-outline-danger ease-all margin-left">Danger</button>
+        <button type="button" class="button-outline-warning ease-all margin-left">Warning</button>
+        <button type="button" class="button-outline-dark ease-all margin-left">Dark</button>
+        <button type="button" class="button-outline-medium ease-all margin-left">Medium</button>
+        <button type="button" class="button-outline-light ease-all margin-left">Light</button>
+      </div>
+    </div>
+
+    <div class="margin-top">
+      <h3>Size</h3>
+
+      <div>
+        <button type="button" class="button-xs">Tiny</button>
+        <button type="button" class="button-primary-sm margin-left">Small</button>
+        <button type="button" class="button-secondary margin-left">Normal</button>
+        <button type="button" class="button-tertiary-lg margin-left">Large</button>
+        <button type="button" class="button-success-xl margin-left">Extra large</button>
+      </div>
+
+      <div class="margin-top">
+        <button type="button" class="button-outline-xs">Tiny</button>
+        <button type="button" class="button-outline-primary-sm margin-left">Small</button>
+        <button type="button" class="button-outline-secondary margin-left">Normal</button>
+        <button type="button" class="button-outline-tertiary-lg margin-left">Large</button>
+        <button type="button" class="button-outline-success-xl margin-left">Extra large</button>
+      </div>
+    </div>
+
+    <div class="margin-top">
+      <h3>Pills</h3>
+
+      <div>
+        <button type="button" class="button-xs border-pill">Tiny</button>
+        <button type="button" class="button-primary-sm border-pill margin-left">Small</button>
+        <button type="button" class="button-success border-pill margin-left">Normal</button>
+        <button type="button" class="button-warning-lg border-pill margin-left">Large</button>
+        <button type="button" class="button-danger-xl border-pill margin-left">Extra large</button>
+      </div>
+
+      <div class="margin-top">
+        <button type="button" class="button-outline-xs border-pill">Tiny</button>
+        <button type="button" class="button-outline-primary-sm border-pill margin-left">Small</button>
+        <button type="button" class="button-outline-success border-pill margin-left">Normal</button>
+        <button type="button" class="button-outline-warning-lg border-pill margin-left">Large</button>
+        <button type="button" class="button-outline-danger-xl border-pill margin-left">Extra large</button>
+      </div>
+    </div>
+
+    <div class="margin-top">
+      <h3>Sharps</h3>
+
+      <div>
+        <button type="button" class="button-xs border-sharp">Tiny</button>
+        <button type="button" class="button-primary-sm border-sharp margin-left">Small</button>
+        <button type="button" class="button-success border-sharp margin-left">Normal</button>
+        <button type="button" class="button-warning-lg border-sharp margin-left">Large</button>
+        <button type="button" class="button-danger-xl border-sharp margin-left">Extra large</button>
+      </div>
+
+      <div class="margin-top">
+        <button type="button" class="button-outline-xs border-sharp">Tiny</button>
+        <button type="button" class="button-outline-primary-sm border-sharp margin-left">Small</button>
+        <button type="button" class="button-outline-success border-sharp margin-left">Normal</button>
+        <button type="button" class="button-outline-warning-lg border-sharp margin-left">Large</button>
+        <button type="button" class="button-outline-danger-xl border-sharp margin-left">Extra large</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="margin-top">
     <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Forms</h2>
 
     <form class="margin-top">
@@ -14,18 +286,59 @@
       </div>
       <div>
         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Content here ..."></textarea>
       </div>
     </form>
 
     <form class="margin-top">
+      <h3>Colors</h3>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1a" class="form-label">Primary</label>
+        <input type="text" class="form-control-primary" id="exampleFormControlInput1a" placeholder=".form-control-primary">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1b" class="form-label">Secondary</label>
+        <input type="text" class="form-control-secondary" id="exampleFormControlInput1b" placeholder=".form-control-secondary">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1c" class="form-label">Tertiary</label>
+        <input type="text" class="form-control-tertiary" id="exampleFormControlInput1c" placeholder=".form-control-tertiary">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1d" class="form-label">Success</label>
+        <input type="text" class="form-control-success" id="exampleFormControlInput1d" placeholder=".form-control-success">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1e" class="form-label">Warning</label>
+        <input type="text" class="form-control-warning" id="exampleFormControlInput1e" placeholder=".form-control-warning">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1f" class="form-label">Danger</label>
+        <input type="text" class="form-control-danger" id="exampleFormControlInput1f" placeholder=".form-control-danger">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1g" class="form-label">Dark</label>
+        <input type="text" class="form-control-dark" id="exampleFormControlInput1g" placeholder=".form-control-dark">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1h" class="form-label">Medium</label>
+        <input type="text" class="form-control-medium" id="exampleFormControlInput1h" placeholder=".form-control-medium">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1i" class="form-label">Light</label>
+        <input type="text" class="form-control-light" id="exampleFormControlInput1i" placeholder=".form-control-light">
+      </div>
+    </form>
+
+    <form class="margin-top">
+      <h3>Sizes</h3>
       <div class="margin-bottom">
         <label for="exampleFormControlInput6" class="form-label">Tiny input</label>
         <input type="text" class="form-control-xs" id="exampleFormControlInput6" placeholder=".form-control-xs">
       </div>
       <div class="margin-bottom">
         <label for="exampleFormControlInput2" class="form-label">Small input</label>
-        <input type="text" class="form-control-sm" id="exampleFormControlInput2" placeholder=".form-control-sm">
+        <input type="text" class="form-control-primary-sm" id="exampleFormControlInput2" placeholder=".form-control-sm">
       </div>
       <div class="margin-bottom">
         <label for="exampleFormControlInput3" class="form-label">Default input</label>
@@ -33,21 +346,24 @@
       </div>
       <div class="margin-bottom">
         <label for="exampleFormControlInput4" class="form-label">Large input</label>
-        <input type="text" class="form-control-lg" id="exampleFormControlInput4" placeholder=".form-control-lg">
+        <input type="text" class="form-control-secondary-lg" id="exampleFormControlInput4" placeholder=".form-control-lg">
       </div>
       <div>
         <label for="exampleFormControlInput5" class="form-label">Extra large input</label>
-        <input type="text" class="form-control-xl" id="exampleFormControlInput5" placeholder=".form-control-xl">
+        <input type="text" class="form-control-tertiary-xl" id="exampleFormControlInput5" placeholder=".form-control-xl">
       </div>
     </form>
 
     <form class="margin-top">
+      <h3>Disabled/Readonly</h3>
       <input class="form-control" type="text" placeholder="Disabled input" disabled>
-      <input class="form-control" type="text" placeholder="Disabled readonly input" disabled readonly>
-      <input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+      <input class="form-control-primary margin-top" type="text" placeholder="Disabled readonly input" disabled readonly>
+      <input class="form-control margin-top" type="text" placeholder="Readonly input here..." readonly>
+      <input class="form-control-secondary margin-top" type="text" placeholder="Readonly input here..." readonly>
     </form>
 
     <form class="margin-top">
+      <h3>Files</h3>
       <div class="margin-bottom">
         <label for="formFile" class="form-label">Default file input example</label>
         <input class="form-control" type="file" id="formFile">
@@ -71,6 +387,7 @@
     </form>
 
     <form class="margin-top">
+      <h3>Data list</h3>
       <label for="exampleDataList" class="form-label">Datalist example</label>
       <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
       <datalist id="datalistOptions">

@@ -1,0 +1,14 @@
+.ease {
+
+  &-all {
+    transition: all .5s ease;
+  }
+
+  &-all-short {
+    transition: all .25s ease;
+  }
+
+  &-all-long {
+    transition: all 1s ease;
+  }
+}

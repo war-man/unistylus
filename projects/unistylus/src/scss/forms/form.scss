@@ -1,8 +1,14 @@
 @import '../variables';
 
+@mixin make_size_variants($variant_ratio) {
+  padding: calc(.375 * #{$variant_ratio} * var(--app-size-padding)) calc(.75 * #{$variant_ratio} * var(--app-size-padding));
+  font-size: calc(#{$variant_ratio} * var(--app-size-font));
+}
+
 @mixin form_control_shared {
   display: block;
   background: var(--app-color-background);
+  color: var(--app-color-foreground);
   border: var(--app-size-border) solid var(--app-color-medium);
   border-radius: var(--app-size-radius);
   padding: calc(.375 * var(--app-size-padding)) calc(.75 * var(--app-size-padding));
@@ -13,15 +19,14 @@
   }
 
   &:focus {
-    color: var(--app-color-foreground);
-    border-color: var(--app-color-primary-tint);
     outline: 0;
-    box-shadow: 0 0 0 var(--app-form-focus-size, 0.25rem) var(--app-form-focus-color, rgb(13 110 253 / 25%));
+    box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-primary-rgb), .3);
   }
 
   &:disabled, &[readonly] {
     opacity: 1;
     background: var(--app-color-background-shade);
+    border-color: var(--app-color-medium);
   }
 
   &[type=file] {
@@ -30,6 +35,17 @@
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
     }
+  }
+}
+
+@mixin form_control_color_shared($palette) {
+  border-color: var(--app-color-#{$palette});
+  color: var(--app-color-#{$palette});
+
+  &:focus {
+    border-color: var(--app-color-#{$palette}-shade);
+    outline: 0;
+    box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-#{$palette}-rgb), .3);
   }
 }
 
@@ -44,21 +60,47 @@
   // textual input
   &-control {
 
-    /// .form-control
+    // default
     & {
-      @include form_control_shared();
-    }
 
-    // ---
-    @each $variant_name, $variant_ratio in $size_variants {
-
-      /// .form-control-sm
-      &-#{$variant_name} {
+      /// .form-control
+      & {
         @include form_control_shared();
 
-        & {
-          padding: calc(.375 * #{$variant_ratio} * var(--app-size-padding)) calc(.75 * #{$variant_ratio} * var(--app-size-padding));
-          font-size: calc(#{$variant_ratio} * var(--app-size-font));
+        &:focus {
+          border-color: var(--app-color-primary);
+        }
+      }
+
+      // ---
+      @each $variant_name, $variant_ratio in $size_variants {
+  
+        /// .form-control-sm
+        &-#{$variant_name} {
+          @include form_control_shared();
+          @include make_size_variants($variant_ratio);
+        }
+      }
+    }
+
+    // colors
+    // ---
+    @each $palette in $palettes {
+      
+      /// .form-control-primary
+      &-#{$palette} {
+        @include form_control_shared();
+        @include form_control_color_shared($palette);
+
+        // ---
+        @each $variant_name, $variant_ratio in $size_variants {
+
+          /// .form-control-primary-sm
+          &-#{$variant_name} {
+            @include form_control_shared();
+            @include form_control_color_shared($palette);
+            @include make_size_variants($variant_ratio);
+          }
         }
       }
     }
