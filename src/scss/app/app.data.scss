@@ -1,5 +1,7 @@
 $default_icons: (
-  ok: 'https://img.icons8.com/ios-glyphs/32/000000/ok.png'
+  ok: 'https://img.icons8.com/ios-glyphs/32/000000/ok.svg',
+  github: 'https://img.icons8.com/material-sharp/32/000000/github.svg',
+  patreon: 'https://img.icons8.com/material-sharp/32/000000/patreon.svg'
 );
 
 // light theme
@@ -7,5 +9,7 @@ $light_theme_icons: $default_icons;
 
 // dark theme
 $dark_theme_icons: (
-  ok: 'https://img.icons8.com/ios-glyphs/32/ffffff/ok.png'
+  ok: 'https://img.icons8.com/ios-glyphs/32/ffffff/ok.png',  
+  github: 'https://img.icons8.com/material-sharp/32/ffffff/github.svg',
+  patreon: 'https://img.icons8.com/material-sharp/32/ffffff/patreon.svg'
 );
