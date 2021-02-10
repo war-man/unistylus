@@ -67,7 +67,13 @@
     border-radius: 1000px !important;
   }
   
+  // sharp
   &-sharp {
     border-radius: 0 !important;
+  }
+
+  // no border
+  &-none {
+    border: none !important;
   }
 }

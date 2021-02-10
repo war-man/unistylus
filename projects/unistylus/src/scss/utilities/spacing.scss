@@ -5,7 +5,7 @@
   /// all directions
   /// @example: .margin
   & {
-    margin: var(--app-size-margin);
+    margin: 1rem;
   }
 
   // ---
@@ -14,7 +14,7 @@
     /// all directions, custom size
     /// @example: .margin-2x
     &-#{$step}x {
-      margin: calc(#{$step} * var(--app-size-margin));
+      margin: #{$step}rem;
     }
   }
 
@@ -24,7 +24,7 @@
     /// one direction
     /// @example: .margin-left
     &-#{$direction} {
-      margin-#{$direction}: var(--app-size-margin);
+      margin-#{$direction}: 1rem;
     }
 
     // ---
@@ -33,7 +33,7 @@
       /// one direction, custom size
       /// @example: .margin-left-2x
       &-#{$direction}-#{$step}x {
-        margin-#{$direction}: calc(#{$step} * var(--app-size-margin));
+        margin-#{$direction}: #{$step}rem;
       }
     }
   }
@@ -44,7 +44,7 @@
   /// all directions
   /// @example: .padding
   & {
-    padding: var(--app-size-padding);
+    padding: 1rem;
   }
 
   // ---
@@ -53,7 +53,7 @@
     /// all directions, custom size
     /// @example: .padding-2x
     &-#{$step}x {
-      padding: calc(#{$step} * var(--app-size-padding));
+      padding: #{$step}rem;
     }
   }
 
@@ -63,7 +63,7 @@
     /// one direction
     /// @example: .padding-left
     &-#{$direction} {
-      padding-#{$direction}: var(--app-size-padding);
+      padding-#{$direction}: 1rem;
     }
 
     // ---
@@ -72,7 +72,7 @@
       /// one direction, custom size
       /// @example: .padding-left-2x
       &-#{$direction}-#{$step}x {
-        padding-#{$direction}: calc(#{$step} * var(--app-size-padding));
+        padding-#{$direction}: #{$step}rem;
       }
     }
   }
