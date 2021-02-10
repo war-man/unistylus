@@ -107,9 +107,9 @@ export class AppComponent {
         routerLink: ['/components', 'alerts']
       },
       {
-        text: 'Badge',
+        text: 'Badges',
         level: 1,
-        routerLink: ['/components', 'adge']
+        routerLink: ['/components', 'badges']
       },
       {
         text: 'Buttons',
