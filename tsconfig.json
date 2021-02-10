@@ -20,9 +20,13 @@
       "dom"
     ],
     "paths": {
-      "unistylus": [
+      "@lamnhan/unistylus": [
         "dist/unistylus/unistylus",
         "dist/unistylus"
+      ],
+      "@lamnhan/ngx-useful": [
+        "../ngx-useful/dist/useful/useful",
+        "../ngx-useful/dist/useful"
       ]
     }
   },

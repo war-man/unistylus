@@ -14,13 +14,19 @@
   </div>
   <ul class="nav">
     <li>
-      <a href="#" target="_blank">
-        <i class="icon-patreon"></i>
+      <a href="https://lamnhan.com/hire" target="_blank">
+        <em>Hire me</em>
+        <span>Hire me</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://lamnhan.com/donate" target="_blank">
+        <em>Buy coffee</em>
         <span>Buy me coffee</span>
       </a>
     </li>
     <li>
-      <a href="#" target="_blank">
+      <a href="https://github.com/lamnhan/unistylus" target="_blank">
         <i class="icon-github"></i>
         <span>Source code</span>
       </a>
@@ -31,7 +37,41 @@
 <main>
 
   <aside>
-
+    <div class="menu">
+      <div class="head">
+        <div class="title">Table of content</div>
+        <select
+          id="themer"
+          (change)="selectTheme($event)"
+        >
+          <option value="light">Light theme</option>
+          <option value="dark">Dark theme</option>
+        </select>
+        <div class="toggler">
+          <button
+            [class.expanded]="mobileMenuExpanded"
+            (click)="mobileMenuExpanded=!mobileMenuExpanded"
+          >
+            <i class="icon-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="body" [class.expanded]="mobileMenuExpanded">        
+        <ul class="menu-items">
+          <li *ngFor="let menuItem of menuItems">
+            <a
+              *ngIf="menuItem.level!==0;else noLinkElse"
+              [href]="menuItem.href"
+              [routerLink]="menuItem.routerLink"
+              [innerHtml]="menuItem.text"
+            ></a>
+            <ng-template #noLinkElse>
+              <strong class="margin-top-2x">{{menuItem.text}}</strong>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+    </div>
   </aside>
 
   <article>
@@ -46,13 +86,13 @@
   </div>
   <ul class="links">
     <li>
-      <a href="#">Email</a>
+      <a href="mailto:dev@lamnhan.com">Email</a>
     </li>
     <li>
-      <a href="#">Messenger</a>
+      <a href="https://m.me/lamhiennhan" target="_blank">Messenger</a>
     </li>
     <li>
-      <a href="#">Github</a>
+      <a href="https://github.com/lamnhan" target="_blank">Github</a>
     </li>
   </ul>
 </footer>
