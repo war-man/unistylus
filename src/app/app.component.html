@@ -59,6 +59,7 @@
               *ngIf="menuItem.level!==0;else noLinkElse"
               [href]="menuItem.href"
               [routerLink]="menuItem.routerLink"
+              routerLinkActive="active"
               [innerHtml]="menuItem.text"
             ></a>
             <ng-template #noLinkElse>

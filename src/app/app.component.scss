@@ -166,6 +166,12 @@ main {
           color: var(--app-color-foreground);
           padding: .25rem 1rem 0;
           opacity: .7;
+
+          &.active {
+            text-decoration: underline;
+            font-weight: 700;
+            opacity: 1;
+          }
           
           &:hover, &:focus {
             opacity: 1;
