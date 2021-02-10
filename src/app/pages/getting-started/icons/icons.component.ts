@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CodeService } from '../../../services/code/code.service';
+
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
@@ -7,9 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public codeService: CodeService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

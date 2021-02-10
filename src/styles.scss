@@ -60,10 +60,11 @@
 [data-theme="example2"] {
   --app-font-head: 'Poppins', sans-serif;
   --app-font-body: 'Roboto', sans-serif;
+  --app-font-code: 'Roboto Mono', monospace;
 }
 
 // ============================================================================
-// III. SETUP @LAMNHAN/NGUIX-*
+// III. SETUP MODULES: @LAMNHAN/NGUIX-*, ...
 // ============================================================================
 
 // @import '...';
@@ -79,3 +80,25 @@
 // V. GLOBAL STYLES
 // ============================================================================
 
+.code {
+
+  .source {
+    padding: 1.5rem;
+    border-radius: var(--app-size-radius) var(--app-size-radius) 0 0;
+    border: 1px solid rgba(var(--app-color-medium-rgb), .3);
+
+    br {
+      display: none;
+    }
+  }
+  
+  .display {
+    padding: 1.5rem;
+    background: var(--app-color-background-shade);    
+    border-radius: 0 0 var(--app-size-radius) var(--app-size-radius);
+
+    code {
+      font-family: var(--app-font-code) !important;
+    }
+  }
+}

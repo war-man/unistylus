@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CodeService } from '../../../services/code/code.service';
 @Component({
   selector: 'app-typography',
   templateUrl: './typography.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypographyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public codeService: CodeService) { }
 
   ngOnInit(): void {
   }

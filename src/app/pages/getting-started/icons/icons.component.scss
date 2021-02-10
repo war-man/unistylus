@@ -1,0 +1,15 @@
+.page-icons {
+
+  .section-1 .source {
+    display: flex;
+    flex-wrap: nowrap;
+
+    i {
+      display: block;
+      padding: .5rem;
+      margin-right: 1rem;
+      border: 1px solid rgba(var(--app-color-medium-rgb), .1);
+      border-radius: var(--app-size-radius);
+    }
+  }
+}
