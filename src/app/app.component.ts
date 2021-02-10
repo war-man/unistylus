@@ -25,6 +25,21 @@ export class AppComponent {
         level: 1,
         routerLink: ['/getting-started', 'install']
       },
+      {
+        text: 'Basic usage',
+        level: 1,
+        routerLink: ['/getting-started', 'usage']
+      },
+      {
+        text: 'Icons',
+        level: 1,
+        routerLink: ['/getting-started', 'icons']
+      },
+      {
+        text: 'Contribute',
+        level: 1,
+        routerLink: ['/getting-started', 'contribute']
+      },
     {
       text: 'Customize',
       level: 0,

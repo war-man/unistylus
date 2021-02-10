@@ -23,9 +23,11 @@
 @mixin button_fill_shared($palette) {
   background: var(--app-color-#{$palette});
   color: var(--app-color-#{$palette}-contrast);
-
-  &:hover {
+  
+  &:hover, &:focus {
     background: var(--app-color-#{$palette}-shade);
+    color: var(--app-color-#{$palette}-contrast);
+    text-decoration: none;
   }
 
   &:focus {
@@ -38,9 +40,10 @@
   border: var(--app-size-border) solid var(--app-color-#{$palette});
   color: var(--app-color-#{$palette});
 
-  &:hover {
+  &:hover, &:focus {
     background: var(--app-color-#{$palette});
     color: var(--app-color-#{$palette}-contrast);
+    text-decoration: none;
   }
 
   &:focus {
@@ -51,9 +54,11 @@
 @mixin button_fill_default_shared() {
   background: var(--app-color-foreground);
   color: var(--app-color-background); 
-
-  &:hover {
+  
+  &:hover, &:focus {
     background: var(--app-color-foreground-shade);
+    color: var(--app-color-background);
+    text-decoration: none;
   }
 
   &:focus {
@@ -66,16 +71,16 @@
   border: var(--app-size-border) solid var(--app-color-foreground);
   color: var(--app-color-foreground);
   
-  &:hover {
+  &:hover, &:focus {
     background: var(--app-color-foreground);
     color: var(--app-color-background);
+    text-decoration: none;
   }
 
   &:focus {
     box-shadow: 0 0 0 calc(.25 * var(--app-size-padding)) rgba(var(--app-color-foreground-rgb), .3);
   }
 }
-
 
 .button {
 

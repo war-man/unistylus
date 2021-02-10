@@ -1,13 +1,35 @@
-<main class="padding">
+<div class="page-home">
 
-  <div>
-    <button
-      type="button"
-      class="button"
-      [class]="isDarkTheme ? 'button-light': 'button-dark'"
-      (click)="toggleTheme()"
-    >{{isDarkTheme ? 'Use light theme': 'Use dark theme'}}</button>
+  <div class="heading">
+    <h1>
+      <span class="text-primary">U</span>
+      <span class="text-secondary">n</span>
+      <span class="text-tertiary">i</span>
+      <span class="text-success">s</span>
+      <span class="text-warning">t</span>
+      <span class="text-danger">y</span>
+      <span class="text-primary">l</span>
+      <span class="text-medium">u</span>
+      <span class="text-foreground">s</span>
+    </h1>
+    <p>A <strong class="text-foreground">modern</strong>, <strong class="text-foreground">clean</strong> and <strong class="text-foreground">light weight</strong> CSS theming system.</p>
   </div>
+
+  <div class="cta">
+    <a
+      class="button-primary-xl margin-bottom"
+      [routerLink]="['/getting-started', 'install']"
+    >Use it now!</a>
+    <a
+      class="button-outline-medium-xl margin-left"
+      href="https://github.com/lamnhan/unistylus"
+      target="_blank"
+    >Source code</a>
+  </div>
+
+</div>
+
+<!-- <main class="padding">
 
   <section class="margin-top">
     <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Alerts</h2>
@@ -669,4 +691,4 @@
     </figure>
   </section>
 
-</main>
+</main> -->

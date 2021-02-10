@@ -1,16 +1,6 @@
 <header class="padding">
   <div class="brand">
-    <h1>
-      <strong class="text-primary">U</strong>
-      <span class="text-secondary">n</span>
-      <span class="text-tertiary">i</span>
-      <span class="text-success">s</span>
-      <span class="text-warning">t</span>
-      <span class="text-danger">y</span>
-      <span class="text-foreground">l</span>
-      <span class="text-medium">u</span>
-      <span class="text-secondary">s</span>
-    </h1>
+    <h1>Unistylus</h1>
   </div>
   <ul class="nav">
     <li>
@@ -39,13 +29,19 @@
   <aside>
     <div class="menu">
       <div class="head">
-        <div class="title">Table of content</div>
+        <div class="title">Documentation</div>
         <select
           id="themer"
           (change)="selectTheme($event)"
         >
-          <option value="light">Light theme</option>
-          <option value="dark">Dark theme</option>
+          <optgroup label="Built-ins">
+            <option value="light">Light theme</option>
+            <option value="dark">Dark theme</option>
+          </optgroup>
+          <optgroup label="Examples">
+            <option value="example1">Custom colors</option>
+            <option value="example2">Custom fonts</option>
+          </optgroup>
         </select>
         <div class="toggler">
           <button
@@ -74,15 +70,15 @@
     </div>
   </aside>
 
-  <article>
+  <div class="page-container">
     <router-outlet></router-outlet>
-  </article>
+  </div>
 
 </main>
 
 <footer class="padding">
   <div class="attr">
-    Developed by <a href="https://lamnhan.com">Lam Nhan</a> with 💝, under the <strong>MIT</strong> license.
+    Developed by <a href="https://lamnhan.com"><strong>Lam Nhan</strong></a> with 💝, under the <strong>MIT</strong> license.
   </div>
   <ul class="links">
     <li>
