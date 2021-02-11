@@ -84,21 +84,12 @@
 
   .source {
     padding: 1.5rem;
-    border-radius: var(--app-size-radius) var(--app-size-radius) 0 0;
     border: 1px solid rgba(var(--app-color-medium-rgb), .3);
+    border-radius: var(--app-size-radius) var(--app-size-radius) 0 0;
 
     br {
       display: none;
     }
   }
-  
-  .display {
-    padding: 1.5rem 1.5rem 0;
-    background: #f8f8f8;
-    border-radius: 0 0 var(--app-size-radius) var(--app-size-radius);
 
-    code {
-      font-family: var(--app-font-code) !important;
-    }
-  }
 }

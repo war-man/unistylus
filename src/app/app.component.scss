@@ -136,7 +136,7 @@ main {
     .body {
       height: 0;
       overflow: hidden;
-      transition: height .3s ease, padding .5s ease;
+      transition: height .1s ease, padding .3s ease;
       padding: 0 1rem;
 
       &.expanded {
@@ -254,7 +254,7 @@ footer {
     flex-wrap: nowrap;
 
     aside {
-      flex: 1;
+      width: 250px;
 
       .menu {
         border-bottom: none;
@@ -289,7 +289,7 @@ footer {
     }
 
     .page-container {
-      flex: 3;
+      width: calc(100vw - 250px - 4rem);
       margin-left: 2rem;
     }
   }

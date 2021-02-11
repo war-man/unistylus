@@ -13,24 +13,32 @@ export class CodeComponent implements OnInit, AfterViewInit {
   @ViewChild('codeComponent')
   private codeComponent?: ElementRef<HTMLElement>;
 
-  @Input('htmlSource') htmlSource?: HTMLElement;
-  @Input('html') htmlCode?: string;
-  @Input('css') cssCode?: string;
-  @Input('js') jsCode?: string;
+  @Input('title') title = '';
+  @Input('showLang') showLang?: string;
 
-  showLang?: string;
+  @Input('htmlSource') htmlSource?: HTMLElement;
+  @Input('htmlCode') htmlCode?: string;
+  @Input('htmlLabel') htmlLabel = 'HTML';
+
+  @Input('cssCode') cssCode?: string;
+  @Input('cssLabel') cssLabel = 'CSS';
+
+  @Input('jsCode') jsCode?: string;
+  @Input('jsLabel') jsLabel = 'JS';
 
   constructor(public codeService: CodeService) { }
 
   ngOnInit(): void {
-    this.showLang = 
-      this.htmlSource || this.htmlCode
-        ? 'html'
-        : this.cssCode
-        ? 'css'
-        : this.jsCode
-        ? 'js'
-        : undefined;
+    if (!this.showLang) {
+      this.showLang = 
+        this.htmlSource || this.htmlCode
+          ? 'html'
+          : this.cssCode
+          ? 'css'
+          : this.jsCode
+          ? 'js'
+          : undefined;
+    }
   }
 
   ngAfterViewInit() {
