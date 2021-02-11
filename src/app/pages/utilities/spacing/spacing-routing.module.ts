@@ -9,4 +9,4 @@ const routes: Routes = [{ path: '', component: SpacingComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SpacingRoutingModule { }
+export class SpacingRoutingModule {}

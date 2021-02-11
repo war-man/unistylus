@@ -12,4 +12,4 @@ import { BordersComponent } from './borders.component';
     BordersRoutingModule
   ]
 })
-export class BordersModule { }
+export class BordersPageModule {}

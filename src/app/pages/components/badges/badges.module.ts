@@ -12,4 +12,4 @@ import { BadgesComponent } from './badges.component';
     BadgesRoutingModule
   ]
 })
-export class BadgesModule { }
+export class BadgesPageModule {}

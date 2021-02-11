@@ -1,20 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+
   <meta charset="utf-8">
-  <title>Unistylus, an SCSS theming system.</title>
+  <title>Unistylus</title>
   <base href="/">
   <!-- <base href="/unistylus/"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <!-- For theming examples -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+
   <!-- Code highlight -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/css.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/javascript.min.js"></script>
+
   <!-- Loading screen -->
   <style>.prerender-loading-screen{display:flex;position:fixed;height:100%;width:100%;left:0;top:0;background:#ffffff;text-align:center;justify-content:center;align-items:center}.prerender-loading-screen .inner img{width:120px}</style>
 </head>

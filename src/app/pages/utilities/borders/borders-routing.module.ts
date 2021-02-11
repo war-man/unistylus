@@ -9,4 +9,4 @@ const routes: Routes = [{ path: '', component: BordersComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BordersRoutingModule { }
+export class BordersRoutingModule {}

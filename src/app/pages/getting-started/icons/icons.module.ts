@@ -14,4 +14,4 @@ import { CodeComponentModule } from '../../../components/code/code.module';
     CodeComponentModule
   ]
 })
-export class IconsModule { }
+export class IconsPageModule {}

@@ -14,4 +14,4 @@ import { CodeComponentModule } from '../../../components/code/code.module';
     TypographyRoutingModule
   ]
 })
-export class TypographyModule { }
+export class TypographyPageModule {}

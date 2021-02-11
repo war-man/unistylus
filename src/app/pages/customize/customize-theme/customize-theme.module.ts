@@ -12,4 +12,4 @@ import { CustomizeThemeComponent } from './customize-theme.component';
     CustomizeThemeRoutingModule
   ]
 })
-export class CustomizeThemeModule { }
+export class CustomizeThemePageModule {}

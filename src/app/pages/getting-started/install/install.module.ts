@@ -12,4 +12,4 @@ import { InstallComponent } from './install.component';
     InstallRoutingModule
   ]
 })
-export class InstallModule { }
+export class InstallPageModule {}

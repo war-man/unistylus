@@ -12,4 +12,4 @@ import { RebootComponent } from './reboot.component';
     RebootRoutingModule
   ]
 })
-export class RebootModule { }
+export class RebootPageModule {}

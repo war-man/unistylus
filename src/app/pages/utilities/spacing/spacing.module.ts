@@ -12,4 +12,4 @@ import { SpacingComponent } from './spacing.component';
     SpacingRoutingModule
   ]
 })
-export class SpacingModule { }
+export class SpacingPageModule {}

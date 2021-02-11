@@ -9,4 +9,4 @@ const routes: Routes = [{ path: '', component: TypographyComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TypographyRoutingModule { }
+export class TypographyRoutingModule {}

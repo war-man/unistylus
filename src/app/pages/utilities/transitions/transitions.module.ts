@@ -12,4 +12,4 @@ import { TransitionsComponent } from './transitions.component';
     TransitionsRoutingModule
   ]
 })
-export class TransitionsModule { }
+export class TransitionsPageModule {}

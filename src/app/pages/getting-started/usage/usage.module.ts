@@ -12,4 +12,4 @@ import { UsageComponent } from './usage.component';
     UsageRoutingModule
   ]
 })
-export class UsageModule { }
+export class UsagePageModule {}

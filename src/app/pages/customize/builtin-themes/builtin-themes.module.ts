@@ -12,4 +12,4 @@ import { BuiltinThemesComponent } from './builtin-themes.component';
     BuiltinThemesRoutingModule
   ]
 })
-export class BuiltinThemesModule { }
+export class BuiltinThemesPageModule {}

@@ -12,4 +12,4 @@ import { ContributeComponent } from './contribute.component';
     ContributeRoutingModule
   ]
 })
-export class ContributeModule { }
+export class ContributePageModule {}

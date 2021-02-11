@@ -12,4 +12,4 @@ import { CoreComponent } from './core.component';
     CoreRoutingModule
   ]
 })
-export class CoreModule { }
+export class CorePageModule {}

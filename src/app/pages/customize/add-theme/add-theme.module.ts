@@ -12,4 +12,4 @@ import { AddThemeComponent } from './add-theme.component';
     AddThemeRoutingModule
   ]
 })
-export class AddThemeModule { }
+export class AddThemePageModule {}

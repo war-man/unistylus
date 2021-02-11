@@ -12,4 +12,4 @@ import { ImagesComponent } from './images.component';
     ImagesRoutingModule
   ]
 })
-export class ImagesModule { }
+export class ImagesPageModule {}

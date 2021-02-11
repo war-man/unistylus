@@ -9,4 +9,4 @@ const routes: Routes = [{ path: '', component: CustomizeThemeComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CustomizeThemeRoutingModule { }
+export class CustomizeThemeRoutingModule {}

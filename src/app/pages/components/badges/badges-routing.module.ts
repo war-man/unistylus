@@ -9,4 +9,4 @@ const routes: Routes = [{ path: '', component: BadgesComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BadgesRoutingModule { }
+export class BadgesRoutingModule {}

@@ -12,4 +12,4 @@ import { TablesComponent } from './tables.component';
     TablesRoutingModule
   ]
 })
-export class TablesModule { }
+export class TablesPageModule {}

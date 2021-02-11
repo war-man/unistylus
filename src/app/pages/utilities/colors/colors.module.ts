@@ -12,4 +12,4 @@ import { ColorsComponent } from './colors.component';
     ColorsRoutingModule
   ]
 })
-export class ColorsModule { }
+export class ColorsPageModule {}

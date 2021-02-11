@@ -12,4 +12,4 @@ import { IntroductionComponent } from './introduction.component';
     IntroductionRoutingModule
   ]
 })
-export class IntroductionModule { }
+export class IntroductionPageModule {}

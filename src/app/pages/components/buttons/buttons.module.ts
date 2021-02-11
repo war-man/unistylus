@@ -12,4 +12,4 @@ import { ButtonsComponent } from './buttons.component';
     ButtonsRoutingModule
   ]
 })
-export class ButtonsModule { }
+export class ButtonsPageModule {}

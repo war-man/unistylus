@@ -12,4 +12,4 @@ import { AlertsComponent } from './alerts.component';
     AlertsRoutingModule
   ]
 })
-export class AlertsModule { }
+export class AlertsPageModule {}

@@ -12,4 +12,4 @@ import { FormControlComponent } from './form-control.component';
     FormControlRoutingModule
   ]
 })
-export class FormControlModule { }
+export class FormControlPageModule {}
