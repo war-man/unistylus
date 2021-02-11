@@ -17,4 +17,4 @@ import { CodeComponent } from './code.component';
     CodeComponent,
   ]
 })
-export class CodeComponentModule { }
+export class CodeComponentModule {}

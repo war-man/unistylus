@@ -26,4 +26,4 @@ import { MenuComponent } from './components/menu/menu.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

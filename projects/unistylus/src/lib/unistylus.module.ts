@@ -6,4 +6,4 @@ import { NgModule } from '@angular/core';
   ],
   exports: []
 })
-export class UnistylusModule { }
+export class UnistylusModule {}
