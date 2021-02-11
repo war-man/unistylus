@@ -60,6 +60,7 @@
               [href]="menuItem.href"
               [routerLink]="menuItem.routerLink"
               routerLinkActive="active"
+              (click)="mobileMenuExpanded=false"
               [innerHtml]="menuItem.text"
             ></a>
             <ng-template #noLinkElse>

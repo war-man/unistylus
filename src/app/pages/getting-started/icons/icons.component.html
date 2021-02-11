@@ -5,19 +5,21 @@
   <section class="section-1">
 
     <div class="content">
-      <p>These icons are registered when needed.</p>
+      <p>These icons are registered when needed. Try changing to dark theme, the icons will also be changed to adapt.</p>
       <p>See <a href="https://github.com/lamnhan/unistylus/blob/main/src/scss/app/app.data.scss" target="_blank">the example source</a>.</p>
     </div>
 
     <div class="code">
 
-      <div class="source" #sec1Code>
+      <div class="source" #code1>
         <i class="icon-ok"></i><br>
         <i class="icon-right"></i><br>
         <i class="icon-github"></i>
       </div>
   
-      <pre class="display"><code>{{codeService.extractCode(sec1Code)}}</code></pre>
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
 
     </div>
 

@@ -93,8 +93,8 @@
   }
   
   .display {
-    padding: 1.5rem;
-    background: var(--app-color-background-shade);    
+    padding: 1.5rem 1.5rem 0;
+    background: #f8f8f8;
     border-radius: 0 0 var(--app-size-radius) var(--app-size-radius);
 
     code {

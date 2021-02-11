@@ -1,0 +1,43 @@
+<div class="component-code" #codeComponent>
+
+  <div class="head" *ngIf="isMultiple()">
+    <ul>
+      <li
+        *ngIf="htmlSource || htmlCode"
+        [class.active]="showLang==='html'"
+        (click)="showLang='html'"
+      >HTML</li>
+      <li
+        *ngIf="cssCode"
+        [class.active]="showLang==='css'"
+        (click)="showLang='css'"
+      >SCSS</li>
+      <li
+        *ngIf="jsCode"
+        [class.active]="showLang==='js'"
+        (click)="showLang='js'"
+      >TS</li>
+    </ul>
+  </div>
+
+  <div class="body" *ngIf="showLang">
+
+    <div class="html" *ngIf="showLang==='html'">
+      <pre *ngIf="htmlSource; else htmlCodeElse">
+        <code class="language-html">{{codeService.extractCode(htmlSource)}}</code>
+      </pre>
+      <ng-template #htmlCodeElse>
+        <pre><code class="language-html">{{htmlCode}}</code></pre>
+      </ng-template>
+    </div>
+
+    <div class="cssCode" *ngIf="showLang==='css'">
+      <pre><code class="language-css">{{cssCode}}</code></pre>
+    </div>
+    
+    <div class="jsCode" *ngIf="showLang==='js'">
+      <pre><code class="language-js">{{jsCode}}</code></pre>
+    </div>
+  </div>
+
+</div>
