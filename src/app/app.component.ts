@@ -31,11 +31,6 @@ export class AppComponent {
         routerLink: ['/getting-started', 'usage']
       },
       {
-        text: 'Icons',
-        level: 1,
-        routerLink: ['/getting-started', 'icons']
-      },
-      {
         text: 'Contribute',
         level: 1,
         routerLink: ['/getting-started', 'contribute']
@@ -115,6 +110,11 @@ export class AppComponent {
         text: 'Buttons',
         level: 1,
         routerLink: ['/components', 'buttons']
+      },
+      {
+        text: 'Icons',
+        level: 1,
+        routerLink: ['/components', 'icons']
       },
     {
       text: 'Utilites',

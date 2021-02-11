@@ -1,0 +1,35 @@
+@import '../variables';
+
+@mixin icon_shared {
+  display: inline-block;
+  content: '';
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.icon {
+
+  /// .icon
+  & {
+    @include icon_shared();
+  
+    & {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @each $size in $size_steps {
+
+    /// .icon-1x
+    &-#{$size}x {
+      @include icon_shared();
+
+      & {
+        width: #{$size}rem;
+        height: #{$size}rem;
+      }
+    }
+  }
+}
