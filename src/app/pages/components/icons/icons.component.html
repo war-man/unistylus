@@ -1,23 +1,39 @@
 <div class="page-icons padding">
-  
-  <section class="section-1">
 
-    <h2 class="margin-bottom">Icons</h2>
-    
-    <div class="imports margin-bottom">
-      <app-code
-        title="Minimum imports:"
-        showLang="css"
-        htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus@latest/css/components/icons.css&#x22;&#x3E;"
-        htmlLabel="CSS"
-        cssCode="@import '~@lamnhan/unistylus/src/scss/components/icons';"
-        cssLabel="SCSS"
-      ></app-code>
-    </div>
+  <div class="head margin-top">
+    <h2>Icons</h2>
+    <p class="font-lg text-medium-shade">Add icons to your app, only use what you need, separated icons for different themes.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus@latest/css/components/icons.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '~@lamnhan/unistylus/src/scss/components/icons';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
 
     <div class="content">
-      <p>These icons are registered when needed. Try changing to dark theme, the icons will also be changed to adapt.</p>
-      <p>See <a href="https://github.com/lamnhan/unistylus/blob/main/src/scss/app/app.data.scss" target="_blank">the example source</a>.</p>
+      <h3>Register icons</h3>
+      <p>App icons can be use anywhere in the app. Icons are registered when needed:</p>
+      <ul>
+        <li>Step 1: Define icons sources (.svg, .png, ...), see <a href="https://github.com/lamnhan/unistylus/blob/main/src/scss/app/app.data.scss" target="_blank">example</a>.</li>
+        <li>Step 2: Register icons, see <a href="https://github.com/lamnhan/unistylus/blob/main/src/scss/app/light.app.component.scss" target="_blank">example</a>.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="section-2 margin-top-2x">
+
+    <div class="content">
+      <h3>Use icons</h3>
+      <p>Try changing to the "Dark theme", the icons will also be changed to adapt.</p>
     </div>
 
     <div class="code">
@@ -30,6 +46,31 @@
   
       <div class="display">
         <app-code [htmlSource]="code1"></app-code>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section-3 margin-top-2x">
+
+    <div class="content">
+      <h3>Sizes</h3>
+      <p>Default icon size is <code>2x2rem</code>. Add <code>[1-7]x</code> to change icon size. Or set the <code>width</code> and <code>height</code> of the icon tag.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code2>
+        <i class="icon-1x icon-github"></i><br>
+        <i class="icon icon-github"></i><br>
+        <i class="icon-3x icon-github"></i><br>
+        <i class="icon-5x icon-github"></i><br>
+        <i class="icon-7x icon-github"></i>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
       </div>
 
     </div>

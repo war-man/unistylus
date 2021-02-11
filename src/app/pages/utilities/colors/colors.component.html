@@ -1,63 +1,83 @@
-<section>
-  <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Text colors</h2>
+<div class="page-colors padding">
 
-  <h1 class="text">text (default)</h1>
-  <h1 class="text-primary">text-primary</h1>
-  <h2 class="text-secondary">text-secondary</h2>
-  <h3 class="text-tertiary">text-tertiary</h3>
-  <h4 class="text-success">text-success</h4>
-  <h5 class="text-warning">text-warning</h5>
-  <h6 class="text-danger">text-danger</h6>
-  <h6 class="text-dark background-light" style="display: inline-block;">text-dark</h6>
-  <h6 class="text-medium">text-medium</h6>
-  <h6 class="text-light background-dark" style="display: inline-block;">text-light</h6>
-</section>
-
-<section>
-  <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Text gradients</h2>
-
-  <h1 class="text-gradient-primary">text-gradient-primary</h1>
-  <h2 class="text-gradient-secondary">text-gradient-secondary</h2>
-  <h3 class="text-gradient-tertiary">text-gradient-tertiary</h3>
-  <h4 class="text-gradient-success">text-gradient-success</h4>
-  <h5 class="text-gradient-warning">text-gradient-warning</h5>
-  <h6 class="text-gradient-danger">text-gradient-danger</h6>
-  <div class="background-light" style="display: inline-block;">
-    <h6 class="text-gradient-dark">text-gradient-dark</h6>
+  <div class="head margin-top">
+    <h2>Colors</h2>
+    <p class="font-lg text-medium-shade">Text and background colors.</p>
   </div>
-  <h6 class="text-gradient-medium">text-gradient-medium</h6>
-  <div class="background-dark" style="display: inline-block;">
-    <h6 class="text-gradient-light">text-gradient-light</h6>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus@latest/css/utilities/colors.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '~@lamnhan/unistylus/src/scss/utilities/colors';"
+      cssLabel="SCSS"
+    ></app-code>
   </div>
-</section>
 
-<section>
-  <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Background colors</h2>
+  <section>
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Text colors</h2>
+  
+    <h1 class="text">text (default)</h1>
+    <h1 class="text-primary">text-primary</h1>
+    <h2 class="text-secondary">text-secondary</h2>
+    <h3 class="text-tertiary">text-tertiary</h3>
+    <h4 class="text-success">text-success</h4>
+    <h5 class="text-warning">text-warning</h5>
+    <h6 class="text-danger">text-danger</h6>
+    <h6 class="text-dark background-light" style="display: inline-block;">text-dark</h6>
+    <h6 class="text-medium">text-medium</h6>
+    <h6 class="text-light background-dark" style="display: inline-block;">text-light</h6>
+  </section>
+  
+  <section>
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Text gradients</h2>
+  
+    <h1 class="text-gradient-primary">text-gradient-primary</h1>
+    <h2 class="text-gradient-secondary">text-gradient-secondary</h2>
+    <h3 class="text-gradient-tertiary">text-gradient-tertiary</h3>
+    <h4 class="text-gradient-success">text-gradient-success</h4>
+    <h5 class="text-gradient-warning">text-gradient-warning</h5>
+    <h6 class="text-gradient-danger">text-gradient-danger</h6>
+    <div class="background-light" style="display: inline-block;">
+      <h6 class="text-gradient-dark">text-gradient-dark</h6>
+    </div>
+    <h6 class="text-gradient-medium">text-gradient-medium</h6>
+    <div class="background-dark" style="display: inline-block;">
+      <h6 class="text-gradient-light">text-gradient-light</h6>
+    </div>
+  </section>
+  
+  <section>
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Background colors</h2>
+  
+    <div class="background" style="width: 300px; height: 20px;">background (default)</div>
+    <div class="background-primary text-primary-contrast" style="width: 300px; height: 20px;">background-primary</div>
+    <div class="background-secondary text-secondary-contrast" style="width: 300px; height: 20px;">background-secondary
+    </div>
+    <div class="background-tertiary text-tertiary-contrast" style="width: 300px; height: 20px;">background-tertiary
+    </div>
+    <div class="background-success text-success-contrast" style="width: 300px; height: 20px;">background-success</div>
+    <div class="background-warning text-warning-contrast" style="width: 300px; height: 20px;">background-warning</div>
+    <div class="background-danger text-danger-contrast" style="width: 300px; height: 20px;">background-danger</div>
+    <div class="background-dark text-dark-contrast" style="width: 300px; height: 20px;">background-dark</div>
+    <div class="background-medium text-medium-contrast" style="width: 300px; height: 20px;">background-medium</div>
+    <div class="background-light text-light-contrast" style="width: 300px; height: 20px;">background-light</div>
+  </section>
+  
+  <section>
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Background gradients</h2>
+  
+    <div class="background-gradient-primary text-primary-contrast" style="width: 300px; height: 20px;">background-gradient-primary</div>
+    <div class="background-gradient-secondary text-secondary-contrast" style="width: 300px; height: 20px;">background-gradient-secondary</div>
+    <div class="background-gradient-tertiary text-tertiary-contrast" style="width: 300px; height: 20px;">background-gradient-tertiary</div>
+    <div class="background-gradient-success text-success-contrast" style="width: 300px; height: 20px;">background-gradient-success</div>
+    <div class="background-gradient-warning text-warning-contrast" style="width: 300px; height: 20px;">background-gradient-warning</div>
+    <div class="background-gradient-danger text-danger-contrast" style="width: 300px; height: 20px;">background-gradient-danger</div>
+    <div class="background-gradient-dark text-dark-contrast" style="width: 300px; height: 20px;">background-gradient-dark</div>
+    <div class="background-gradient-medium text-medium-contrast" style="width: 300px; height: 20px;">background-gradient-medium</div>
+    <div class="background-gradient-light text-light-contrast" style="width: 300px; height: 20px;">background-gradient-light</div>
+  </section>
 
-  <div class="background" style="width: 300px; height: 20px;">background (default)</div>
-  <div class="background-primary text-primary-contrast" style="width: 300px; height: 20px;">background-primary</div>
-  <div class="background-secondary text-secondary-contrast" style="width: 300px; height: 20px;">background-secondary
-  </div>
-  <div class="background-tertiary text-tertiary-contrast" style="width: 300px; height: 20px;">background-tertiary
-  </div>
-  <div class="background-success text-success-contrast" style="width: 300px; height: 20px;">background-success</div>
-  <div class="background-warning text-warning-contrast" style="width: 300px; height: 20px;">background-warning</div>
-  <div class="background-danger text-danger-contrast" style="width: 300px; height: 20px;">background-danger</div>
-  <div class="background-dark text-dark-contrast" style="width: 300px; height: 20px;">background-dark</div>
-  <div class="background-medium text-medium-contrast" style="width: 300px; height: 20px;">background-medium</div>
-  <div class="background-light text-light-contrast" style="width: 300px; height: 20px;">background-light</div>
-</section>
-
-<section>
-  <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Background gradients</h2>
-
-  <div class="background-gradient-primary text-primary-contrast" style="width: 300px; height: 20px;">background-gradient-primary</div>
-  <div class="background-gradient-secondary text-secondary-contrast" style="width: 300px; height: 20px;">background-gradient-secondary</div>
-  <div class="background-gradient-tertiary text-tertiary-contrast" style="width: 300px; height: 20px;">background-gradient-tertiary</div>
-  <div class="background-gradient-success text-success-contrast" style="width: 300px; height: 20px;">background-gradient-success</div>
-  <div class="background-gradient-warning text-warning-contrast" style="width: 300px; height: 20px;">background-gradient-warning</div>
-  <div class="background-gradient-danger text-danger-contrast" style="width: 300px; height: 20px;">background-gradient-danger</div>
-  <div class="background-gradient-dark text-dark-contrast" style="width: 300px; height: 20px;">background-gradient-dark</div>
-  <div class="background-gradient-medium text-medium-contrast" style="width: 300px; height: 20px;">background-gradient-medium</div>
-  <div class="background-gradient-light text-light-contrast" style="width: 300px; height: 20px;">background-gradient-light</div>
-</section>
+</div>

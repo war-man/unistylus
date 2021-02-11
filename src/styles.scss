@@ -87,7 +87,7 @@
     border: 1px solid rgba(var(--app-color-medium-rgb), .3);
     border-radius: var(--app-size-radius) var(--app-size-radius) 0 0;
 
-    br {
+    br, hr {
       display: none;
     }
   }

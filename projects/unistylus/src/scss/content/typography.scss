@@ -57,6 +57,14 @@ a {
     }
   }
 
+  @each $variant_name, $variant_ratio in $size_variants {
+
+    /// .font-sm
+    &-#{$variant_name} {
+      font-size: calc(#{$variant_ratio} * var(--app-size-font));
+    }
+  }
+
   @each $size in $size_steps {
 
     /// .font-1x

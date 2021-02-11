@@ -11,6 +11,7 @@ export class CodeService {
     return el
       .innerHTML
       .replace(/( _ng).*?("")/g, '')
-      .replace(/<br>|<br \/>/g, '\n');
+      .replace(/<br>|<br \/>/g, '\n')
+      .replace(/<hr>|<hr \/>/g, '  ');
   }
 }

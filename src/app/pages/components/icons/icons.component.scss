@@ -1,16 +1,13 @@
 .page-icons {
 
-  .section-1 .source {
+  .source {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 
     i {
-      display: block;
-      padding: .5rem;
-      margin-right: 1rem;
-      background-size: 1.75rem 1.75rem;
-      border: 1px solid rgba(var(--app-color-medium-rgb), .1);
-      border-radius: var(--app-size-radius);
+      margin-right: 1.5rem;
     }
   }
+
 }
