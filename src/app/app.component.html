@@ -1,75 +1,9 @@
-<header class="padding">
-  <div class="brand">
-    <a [routerLink]="['/']"><h1>Unistylus</h1></a>
-  </div>
-  <ul class="nav">
-    <li>
-      <a href="https://lamnhan.com/hire" target="_blank">
-        <em>Hire me</em>
-        <span>Hire me</span>
-      </a>
-    </li>
-    <li>
-      <a href="https://lamnhan.com/donate" target="_blank">
-        <em>Buy coffee</em>
-        <span>Buy me coffee</span>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/lamnhan/unistylus" target="_blank">
-        <i class="icon icon-github"></i>
-        <span>Source code</span>
-      </a>
-    </li>
-  </ul>
-</header>
+<app-header></app-header>
 
 <main>
 
-  <aside>
-    <div class="menu">
-      <div class="head">
-        <div class="title">Documentation</div>
-        <select
-          id="themer"
-          (change)="selectTheme($event)"
-        >
-          <optgroup label="Built-ins">
-            <option value="light">Light theme</option>
-            <option value="dark">Dark theme</option>
-          </optgroup>
-          <optgroup label="Examples">
-            <option value="example1">Custom colors</option>
-            <option value="example2">Custom fonts</option>
-          </optgroup>
-        </select>
-        <div class="toggler">
-          <button
-            [class.expanded]="mobileMenuExpanded"
-            (click)="mobileMenuExpanded=!mobileMenuExpanded"
-          >
-            <i class="icon icon-right"></i>
-          </button>
-        </div>
-      </div>
-      <div class="body" [class.expanded]="mobileMenuExpanded">        
-        <ul class="menu-items">
-          <li *ngFor="let menuItem of menuItems">
-            <a
-              *ngIf="menuItem.level!==0;else noLinkElse"
-              [href]="menuItem.href"
-              [routerLink]="menuItem.routerLink"
-              routerLinkActive="active"
-              (click)="mobileMenuExpanded=false"
-              [innerHtml]="menuItem.text"
-            ></a>
-            <ng-template #noLinkElse>
-              <strong class="margin-top-2x">{{menuItem.text}}</strong>
-            </ng-template>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <aside class="sidebar">
+    <app-menu [menuItems]="menuItems"></app-menu>
   </aside>
 
   <div class="page-container">
@@ -78,19 +12,4 @@
 
 </main>
 
-<footer class="padding">
-  <div class="attr">
-    Developed by <a href="https://lamnhan.com"><strong>Lam Nhan</strong></a> with 💝, unders the <strong>MIT</strong> license.
-  </div>
-  <ul class="links">
-    <li>
-      <a href="mailto:dev@lamnhan.com">Email</a>
-    </li>
-    <li>
-      <a href="https://m.me/lamhiennhan" target="_blank">Messenger</a>
-    </li>
-    <li>
-      <a href="https://github.com/lamnhan" target="_blank">Github</a>
-    </li>
-  </ul>
-</footer>
+<app-footer></app-footer>

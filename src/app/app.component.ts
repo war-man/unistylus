@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavItem } from '@lamnhan/ngx-useful';
+import { Router } from '@angular/router';
+import { AppService, NavService, NavItem } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,6 @@ import { NavItem } from '@lamnhan/ngx-useful';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  mobileMenuExpanded = false;
 
   menuItems: NavItem[] = [
     {
@@ -142,11 +141,21 @@ export class AppComponent {
       }
   ];
 
-  constructor() {}
-
-  selectTheme(e: unknown) {
-    const themeName = (e as any).target.value;
-    return document.body.setAttribute('data-theme', themeName);
+  constructor(
+    private router: Router,
+    private appService: AppService,
+    private navService: NavService,
+  ) {
+    this.initialize();
   }
 
+  private initialize() {
+    // app service
+    this.appService.init({}, {
+      title: 'Unistylus',
+      description: 'A modern, clean and light weight CSS theming system.',
+    });
+    // nav service
+    this.navService.init(this.router);
+  }
 }

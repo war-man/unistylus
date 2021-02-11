@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppService, NavService } from '@lamnhan/ngx-useful';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,6 +24,10 @@ import { MenuComponent } from './components/menu/menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+  ],
+  providers: [
+    AppService,
+    NavService,
   ],
   bootstrap: [AppComponent]
 })

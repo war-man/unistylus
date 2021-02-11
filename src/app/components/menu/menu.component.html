@@ -1,1 +1,43 @@
-<p>menu works!</p>
+<div class="menu">
+  <div class="head">
+    <div class="title">Documentation</div>
+    <select
+      id="themer"
+      (change)="selectTheme($event)"
+    >
+      <optgroup label="Built-ins">
+        <option value="light">Light theme</option>
+        <option value="dark">Dark theme</option>
+      </optgroup>
+      <optgroup label="Examples">
+        <option value="example1">Custom colors</option>
+        <option value="example2">Custom fonts</option>
+      </optgroup>
+    </select>
+    <div class="toggler">
+      <button
+        [class.expanded]="mobileMenuExpanded"
+        (click)="mobileMenuExpanded=!mobileMenuExpanded"
+      >
+        <i class="icon icon-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="body" [class.expanded]="mobileMenuExpanded">        
+    <ul class="menu-items">
+      <li *ngFor="let menuItem of menuItems">
+        <a
+          *ngIf="menuItem.level!==0;else noLinkElse"
+          [href]="menuItem.href"
+          [routerLink]="menuItem.routerLink"
+          routerLinkActive="active"
+          (click)="mobileMenuExpanded=false;navService.scrollToTop()"
+          [innerHtml]="menuItem.text"
+        ></a>
+        <ng-template #noLinkElse>
+          <strong class="margin-top-2x">{{menuItem.text}}</strong>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</div>
