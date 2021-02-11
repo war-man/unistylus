@@ -127,7 +127,7 @@ Register css rules, see example: https://github.com/lamnhan/nguix-starter/blob/m
 - To use registered icons, in component `.html`:
 
 ```html
-<i class="icon-name"></i>
+<i class="icon icon-name"></i>
 ```
 
 ## Variables

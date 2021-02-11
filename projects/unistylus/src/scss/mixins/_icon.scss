@@ -17,12 +17,23 @@
       }
     }
   }
+
+  // general rules
+  .icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+
   // rules
   $icons: map-get($groups, 'default');
   @each $name, $url in $icons {
     .icon-#{$name} {
-      display: inline-block;
-      content: var(--app-icon-#{$name});
+      background-image: var(--app-icon-#{$name});
     }
   }
 }
@@ -48,10 +59,19 @@
 }
 
 @mixin register_component_icon_rules($icons, $component_name) {
+  .icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+
   @each $name, $url in $icons {
     .icon-#{$name} {
-      display: inline-block;
-      content: var(--component-#{$component_name}-icon-#{$name});
+      background-image: var(--component-#{$component_name}-icon-#{$name});
     }
   }
 }

@@ -56,4 +56,12 @@ a {
       font-family: var(--app-font-#{$font});
     }
   }
+
+  @each $size in $size_steps {
+
+    /// .font-1x
+    &-#{$size}x {
+      font-size: calc(#{$size} * var(--app-size-font));
+    }
+  }
 }
