@@ -15,15 +15,29 @@ header {
     a {
       color: var(--app-color-foreground-tint);
       text-decoration: none;
+      display: flex;
+      align-items: center;
       
       &:hover, &:focus {
         text-decoration: none;
       }
+
+      em {
+        display: block;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
   
-      h1 {
+      span {
+        display: block;
+        display: none;
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
+        letter-spacing: 2px;
       }
     }
   }
@@ -72,19 +86,20 @@ header {
 
   header .nav a {
     padding: 0 .75rem;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-
-  header .nav a {
 
     em {
       display: none;
     }
-
+    
     span {
       display: inline-block;
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  header .brand a span {
+    display: block;
   }
 }
