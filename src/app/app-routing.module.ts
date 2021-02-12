@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'components/buttons', loadChildren: () => import('./pages/components/buttons/buttons.module').then(m => m.ButtonsPageModule) },
   { path: 'components/icons', loadChildren: () => import('./pages/components/icons/icons.module').then(m => m.IconsPageModule) },
   { path: 'utilities/spacing', loadChildren: () => import('./pages/utilities/spacing/spacing.module').then(m => m.SpacingPageModule) },
+  { path: 'utilities/background', loadChildren: () => import('./pages/utilities/background/background.module').then(m => m.BackgroundPageModule) },
   { path: 'utilities/colors', loadChildren: () => import('./pages/utilities/colors/colors.module').then(m => m.ColorsPageModule) },
   { path: 'utilities/borders', loadChildren: () => import('./pages/utilities/borders/borders.module').then(m => m.BordersPageModule) },
   { path: 'utilities/transitions', loadChildren: () => import('./pages/utilities/transitions/transitions.module').then(m => m.TransitionsPageModule) },

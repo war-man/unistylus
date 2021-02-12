@@ -125,6 +125,11 @@ export class AppComponent {
         routerLink: ['/utilities', 'spacing']
       },
       {
+        text: 'Background',
+        level: 1,
+        routerLink: ['/utilities', 'background']
+      },
+      {
         text: 'Colors',
         level: 1,
         routerLink: ['/utilities', 'colors']

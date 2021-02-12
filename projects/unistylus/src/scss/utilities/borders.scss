@@ -9,6 +9,7 @@
 
     & {
       border: var(--app-size-border) solid var(--app-color-medium);
+      border-radius: var(--app-size-radius);
     }
 
     // ---
@@ -28,6 +29,7 @@
       /// @example: .border-primary
       &-#{$palette} {
         border: var(--app-size-border) solid var(--app-color-#{$palette});
+        border-radius: var(--app-size-radius);
       }
   
       // ---
@@ -47,6 +49,7 @@
         /// @example: .border-primary-shade
         &-#{$palette}-#{$variant} {
           border: var(--app-size-border) solid var(--app-color-#{$palette}-#{$variant});
+          border-radius: var(--app-size-radius);
         }
   
         // ---
@@ -60,6 +63,11 @@
         }
       }
     }
+  }
+
+  // ease
+  &-ease {
+    border-radius: var(--app-size-radius) !important;
   }
 
   // pill
