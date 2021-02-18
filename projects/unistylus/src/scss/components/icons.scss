@@ -33,3 +33,14 @@
     }
   }
 }
+
+button.icon {
+  display: inline-block;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  padding: .25rem;
+
+  &, &:hover, &:focus, &:active {
+    outline: none !important;
+  }
+}

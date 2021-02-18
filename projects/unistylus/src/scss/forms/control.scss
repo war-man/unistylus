@@ -49,66 +49,57 @@
   }
 }
 
-.form {
+/// .form-label
+.form-label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
 
-  /// .form-label
-  &-label {
-    display: inline-block;
-    margin-bottom: .5rem;
+// textual input
+.form-control {
+
+  // default
+  & {
+
+    /// .form-control
+    & {
+      @include form_control_shared();
+
+      &:focus {
+        border-color: var(--app-color-primary);
+      }
+    }
+
+    // ---
+    @each $variant_name, $variant_ratio in $size_variants {
+
+      /// .form-control-sm
+      &-#{$variant_name} {
+        @include form_control_shared();
+        @include make_size_variants($variant_ratio);
+      }
+    }
   }
 
-  // textual input
-  &-control {
-
-    // default
-    & {
-
-      /// .form-control
-      & {
-        @include form_control_shared();
-
-        &:focus {
-          border-color: var(--app-color-primary);
-        }
-      }
+  // colors
+  // ---
+  @each $palette in $palettes {
+    
+    /// .form-control-primary
+    &-#{$palette} {
+      @include form_control_shared();
+      @include form_control_color_shared($palette);
 
       // ---
       @each $variant_name, $variant_ratio in $size_variants {
-  
-        /// .form-control-sm
+
+        /// .form-control-primary-sm
         &-#{$variant_name} {
           @include form_control_shared();
+          @include form_control_color_shared($palette);
           @include make_size_variants($variant_ratio);
         }
       }
     }
-
-    // colors
-    // ---
-    @each $palette in $palettes {
-      
-      /// .form-control-primary
-      &-#{$palette} {
-        @include form_control_shared();
-        @include form_control_color_shared($palette);
-
-        // ---
-        @each $variant_name, $variant_ratio in $size_variants {
-
-          /// .form-control-primary-sm
-          &-#{$variant_name} {
-            @include form_control_shared();
-            @include form_control_color_shared($palette);
-            @include make_size_variants($variant_ratio);
-          }
-        }
-      }
-    }
   }
-
-  &-select {}
-
-  &-check {}
-
-  &-range {}
 }
