@@ -15,39 +15,8 @@
     margin-right: .5rem;
   }
 
-  &:focus {
+  &:hover, &:focus, &:active {
     outline: 0;
-  }
-}
-
-@mixin button_fill_shared($palette) {
-  background: var(--app-color-#{$palette});
-  color: var(--app-color-#{$palette}-contrast);
-  
-  &:hover, &:focus {
-    background: var(--app-color-#{$palette}-shade);
-    color: var(--app-color-#{$palette}-contrast);
-    text-decoration: none;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 .25rem rgba(var(--app-color-#{$palette}-rgb), .3);
-  }
-}
-
-@mixin button_outline_shared($palette) {
-  background: none;
-  border: var(--app-size-border) solid var(--app-color-#{$palette});
-  color: var(--app-color-#{$palette});
-
-  &:hover, &:focus {
-    background: var(--app-color-#{$palette});
-    color: var(--app-color-#{$palette}-contrast);
-    text-decoration: none;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 .25rem rgba(var(--app-color-#{$palette}-rgb), .3);
   }
 }
 
@@ -55,14 +24,39 @@
   background: var(--app-color-foreground);
   color: var(--app-color-background); 
   
-  &:hover, &:focus {
+  &:hover, &:focus, &:active {
     background: var(--app-color-foreground-shade);
     color: var(--app-color-background);
     text-decoration: none;
   }
 
-  &:focus {
+  &:focus, &:active {
     box-shadow: 0 0 0 .25rem rgba(var(--app-color-foreground-rgb), .3);
+  }
+  
+  &:disabled {
+    opacity: 1;
+    background: rgba(var(--app-color-foreground-rgb), .5);
+  }
+}
+
+@mixin button_fill_shared($palette) {
+  background: var(--app-color-#{$palette});
+  color: var(--app-color-#{$palette}-contrast);
+  
+  &:hover, &:focus, &:active {
+    background: var(--app-color-#{$palette}-shade);
+    color: var(--app-color-#{$palette}-contrast);
+    text-decoration: none;
+  }
+
+  &:focus, &:active {
+    box-shadow: 0 0 0 .25rem rgba(var(--app-color-#{$palette}-rgb), .3);
+  }
+
+  &:disabled {
+    opacity: 1;
+    background: rgba(var(--app-color-#{$palette}-rgb), .5);
   }
 }
 
@@ -71,14 +65,40 @@
   border: var(--app-size-border) solid var(--app-color-foreground);
   color: var(--app-color-foreground);
   
-  &:hover, &:focus {
+  &:hover, &:focus, &:active {
     background: var(--app-color-foreground);
     color: var(--app-color-background);
     text-decoration: none;
   }
 
-  &:focus {
+  &:focus, &:active {
     box-shadow: 0 0 0 .25rem rgba(var(--app-color-foreground-rgb), .3);
+  }
+
+  &:disabled {
+    border: var(--app-size-border) solid rgba(var(--app-color-foreground-rgb), .5);
+    color: rgba(var(--app-color-foreground-rgb), .5);
+  }
+}
+
+@mixin button_outline_shared($palette) {
+  background: none;
+  border: var(--app-size-border) solid var(--app-color-#{$palette});
+  color: var(--app-color-#{$palette});
+
+  &:hover, &:focus, &:active {
+    background: var(--app-color-#{$palette});
+    color: var(--app-color-#{$palette}-contrast);
+    text-decoration: none;
+  }
+
+  &:focus, &:active {
+    box-shadow: 0 0 0 .25rem rgba(var(--app-color-#{$palette}-rgb), .3);
+  }
+
+  &:disabled {
+    border: var(--app-size-border) solid rgba(var(--app-color-#{$palette}-rgb), .5);
+    color: rgba(var(--app-color-#{$palette}-rgb), .5);
   }
 }
 
@@ -126,27 +146,6 @@
     }
   }
 
-  // link buttons
-  &-link {
-    @include button_shared();
-    
-    /// .button-link
-    & {
-      background: none;
-      color: var(--app-color-primary);
-      
-      &:hover {
-        background: none;
-        color: var(--app-color-primary-shade);
-        text-decoration: underline;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 .25rem rgba(var(--app-color-primary-rgb), .3);
-      }
-    }
-  }
-
   // outline buttons
   &-outline {
     
@@ -184,6 +183,70 @@
           @include button_shared();
           @include button_outline_shared($palette);
           @include make_size_variants($variant_ratio);
+        }
+      }
+    }
+  }
+
+  // link buttons
+  &-link {
+    @include button_shared();
+    
+    /// .button-link
+    & {
+      background: none;
+      color: var(--app-color-primary);
+      
+      &:hover, &:focus, &:active {
+        background: none;
+        color: var(--app-color-primary-shade);
+        text-decoration: underline;
+      }
+
+      &:focus, &:active {
+        box-shadow: 0 0 0 .25rem rgba(var(--app-color-primary-rgb), .3);
+      }
+
+      &:disabled {
+        color: rgba(var(--app-color-primary), .5);
+        text-decoration: none;
+      }
+    }
+  }
+
+  // clear button
+  &-clear {
+
+    /// button-clear
+    & {
+      @include button_shared();
+
+      & {
+        background: none;
+        border: none;
+        color: var(--app-color-foreground);
+
+        &:disabled {
+          color: rgba(var(--app-color-foreground), .5);
+        }
+      }
+    }
+
+    // ---
+    @each $palette in $palettes {
+
+      /// .button-clear-primary
+      &-#{$palette} {
+        @include button_shared();
+
+        & {
+          background: none;
+          border: none;
+          color: var(--app-color-#{$palette});
+          
+          &:disabled {
+            color: rgba(var(--app-color-#{$palette}), .5);
+          }
         }
       }
     }
