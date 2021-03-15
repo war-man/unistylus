@@ -1,0 +1,5 @@
+@import '../mixins/common';
+
+.truncate {
+  @include truncate_text;
+}

@@ -3,8 +3,7 @@
   margin: auto;
 }
 
-@mixin truncate_text($width) {
-  width: $width;
+@mixin truncate_text() {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
