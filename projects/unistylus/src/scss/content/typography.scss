@@ -33,9 +33,12 @@ a {
   color: var(--app-color-primary);
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:focus, &:active {
     color: var(--app-color-primary-shade);
     text-decoration: underline;
+    border: none;
+    background: none;
+    outline: 0;
   }
 }
 

@@ -232,6 +232,10 @@
         border: none;
         color: var(--app-color-foreground);
 
+        &:focus, &:active {
+          border: var(--app-size-border) solid var(--app-color-foreground);
+        }
+
         &:disabled {
           color: rgba(var(--app-color-foreground), .5);
         }
@@ -249,6 +253,10 @@
           background: none;
           border: none;
           color: var(--app-color-#{$palette});
+
+          &:focus, &:active {
+            border: var(--app-size-border) solid var(--app-color-#{$palette});
+          }
           
           &:disabled {
             color: rgba(var(--app-color-#{$palette}), .5);
