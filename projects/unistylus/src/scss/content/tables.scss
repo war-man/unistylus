@@ -1,6 +1,6 @@
 @import '../variables';
 
-@mixin table_shared {
+@mixin table_base {
   width: 100%;
   text-align: left;
 
@@ -18,8 +18,8 @@
   }
 }
 
-@mixin table_borderless_shared {
-  @include table_shared();
+@mixin table_borderless_base {
+  @include table_base();
 
   thead th, th, td {
     border: none !important;
@@ -30,7 +30,7 @@
 
   /// default table
   & {
-    @include table_shared();
+    @include table_base();
     
     /// @example: .table
     & {
@@ -49,7 +49,7 @@
   
       /// @example: .table-primary
       &-#{$palette} {
-        @include table_shared();
+        @include table_base();
   
         & {
           background: var(--app-color-#{$palette});
@@ -69,7 +69,7 @@
 
   /// borderless table
   &-borderless {
-    @include table_borderless_shared();
+    @include table_borderless_base();
     
     /// @example: .table-borderless
     & {
@@ -81,7 +81,7 @@
 
       /// @example: .table-borderless-primary
       &-#{$palette} {
-        @include table_borderless_shared();
+        @include table_borderless_base();
 
         & {
           border: 1px solid var(--app-color-#{$palette});
@@ -92,7 +92,7 @@
 
   /// bordered table
   &-bordered {
-    @include table_shared();
+    @include table_base();
 
     /// @example: .table-bordered
     & {
@@ -107,7 +107,7 @@
 
       /// @example: .table-bordered-primary
       &-#{$palette} {
-        @include table_shared();
+        @include table_base();
 
         & {
           thead th, th, td {
@@ -120,7 +120,7 @@
 
   /// table striped
   &-striped {
-    @include table_shared();
+    @include table_base();
 
     /// @example: .table-striped
     & {
@@ -140,7 +140,7 @@
 
       /// @example: .table-striped-primary
       &-#{$palette} {
-        @include table_shared();
+        @include table_base();
 
         & {
           color: var(--app-color-#{$palette}-contrast);
@@ -159,7 +159,7 @@
 
   /// table hover
   &-hover {
-    @include table_shared();
+    @include table_base();
 
     /// @example: .table-hover
     & {
@@ -175,7 +175,7 @@
 
       /// @example: .table-hover-primary
       &-#{$palette} {
-        @include table_shared();
+        @include table_base();
 
         & {
 

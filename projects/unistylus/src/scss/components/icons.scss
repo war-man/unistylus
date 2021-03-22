@@ -1,6 +1,6 @@
 @import '../variables';
 
-@mixin icon_shared {
+@mixin icon_base {
   display: inline-block;
   content: '';
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 
   /// .icon
   & {
-    @include icon_shared();
+    @include icon_base();
   
     & {
       width: 2rem;
@@ -24,7 +24,7 @@
 
     /// .icon-1x
     &-#{$size}x {
-      @include icon_shared();
+      @include icon_base();
 
       & {
         width: #{$size}rem;

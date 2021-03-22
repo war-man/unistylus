@@ -5,7 +5,7 @@
   font-size: calc(#{$variant_ratio} * var(--app-size-font));
 }
 
-@mixin form_control_shared {
+@mixin form_control_base {
   display: block;
   background: var(--app-color-background);
   color: var(--app-color-foreground);
@@ -38,7 +38,7 @@
   }
 }
 
-@mixin form_control_color_shared($palette) {
+@mixin form_control_color_base($palette) {
   border-color: var(--app-color-#{$palette});
   color: var(--app-color-#{$palette});
 
@@ -63,7 +63,7 @@
 
     /// .form-control
     & {
-      @include form_control_shared();
+      @include form_control_base();
 
       &:focus {
         border-color: var(--app-color-primary);
@@ -75,7 +75,7 @@
 
       /// .form-control-sm
       &-#{$variant_name} {
-        @include form_control_shared();
+        @include form_control_base();
         @include make_size_variants($variant_ratio);
       }
     }
@@ -87,16 +87,16 @@
     
     /// .form-control-primary
     &-#{$palette} {
-      @include form_control_shared();
-      @include form_control_color_shared($palette);
+      @include form_control_base();
+      @include form_control_color_base($palette);
 
       // ---
       @each $variant_name, $variant_ratio in $size_variants {
 
         /// .form-control-primary-sm
         &-#{$variant_name} {
-          @include form_control_shared();
-          @include form_control_color_shared($palette);
+          @include form_control_base();
+          @include form_control_color_base($palette);
           @include make_size_variants($variant_ratio);
         }
       }

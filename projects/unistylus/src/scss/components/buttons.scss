@@ -5,7 +5,7 @@
   font-size: calc(#{$variant_ratio} * var(--app-size-font));
 }
 
-@mixin button_shared {
+@mixin button_base {
   display: inline-block;
   border: none;
   border-radius: var(--app-size-radius);
@@ -20,7 +20,7 @@
   }
 }
 
-@mixin button_fill_default_shared() {
+@mixin button_fill_default_base() {
   background: var(--app-color-foreground);
   color: var(--app-color-background); 
   
@@ -42,7 +42,7 @@
   }
 }
 
-@mixin button_fill_shared($palette) {
+@mixin button_fill_base($palette) {
   background: var(--app-color-#{$palette});
   color: var(--app-color-#{$palette}-contrast);
   
@@ -64,7 +64,7 @@
   }
 }
 
-@mixin button_outline_default_shared() {
+@mixin button_outline_default_base() {
   background: none;
   border: var(--app-size-border) solid var(--app-color-foreground);
   color: var(--app-color-foreground);
@@ -88,7 +88,7 @@
   }
 }
 
-@mixin button_outline_shared($palette) {
+@mixin button_outline_base($palette) {
   background: none;
   border: var(--app-size-border) solid var(--app-color-#{$palette});
   color: var(--app-color-#{$palette});
@@ -119,16 +119,16 @@
     
     /// .button
     & {
-      @include button_shared();
-      @include button_fill_default_shared();
+      @include button_base();
+      @include button_fill_default_base();
 
       // ---
       @each $variant_name, $variant_ratio in $size_variants {
   
         /// .button-sm
         &-#{$variant_name} {
-          @include button_shared();
-          @include button_fill_default_shared();
+          @include button_base();
+          @include button_fill_default_base();
           @include make_size_variants($variant_ratio);
         }
       }      
@@ -139,8 +139,8 @@
   
       /// .button-primary
       &-#{$palette} {
-        @include button_shared();
-        @include button_fill_shared($palette);
+        @include button_base();
+        @include button_fill_base($palette);
       }
   
       // ---
@@ -148,8 +148,8 @@
   
         /// .button-primary-sm
         &-#{$palette}-#{$variant_name} {
-          @include button_shared();
-          @include button_fill_shared($palette);
+          @include button_base();
+          @include button_fill_base($palette);
           @include make_size_variants($variant_ratio);
         }
       }
@@ -161,16 +161,16 @@
     
     /// .button-outline
     & {
-      @include button_shared();
-      @include button_outline_default_shared();
+      @include button_base();
+      @include button_outline_default_base();
 
       // ---
       @each $variant_name, $variant_ratio in $size_variants {
   
         /// .button-outline-sm
         &-#{$variant_name} {
-          @include button_shared();
-          @include button_outline_default_shared();
+          @include button_base();
+          @include button_outline_default_base();
           @include make_size_variants($variant_ratio);
         }
       }
@@ -181,8 +181,8 @@
 
       /// .button-outline-primary
       &-#{$palette} {
-        @include button_shared();
-        @include button_outline_shared($palette);
+        @include button_base();
+        @include button_outline_base($palette);
       }
 
       // ---
@@ -190,8 +190,8 @@
   
         /// .button-outline-primary-sm
         &-#{$palette}-#{$variant_name} {
-          @include button_shared();
-          @include button_outline_shared($palette);
+          @include button_base();
+          @include button_outline_base($palette);
           @include make_size_variants($variant_ratio);
         }
       }
@@ -200,7 +200,7 @@
 
   // link buttons
   &-link {
-    @include button_shared();
+    @include button_base();
     
     /// .button-link
     & {
@@ -225,7 +225,7 @@
 
     /// button-clear
     & {
-      @include button_shared();
+      @include button_base();
 
       & {
         background: none;
@@ -247,7 +247,7 @@
 
       /// .button-clear-primary
       &-#{$palette} {
-        @include button_shared();
+        @include button_base();
 
         & {
           background: none;
