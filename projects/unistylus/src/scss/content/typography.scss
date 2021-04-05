@@ -40,6 +40,15 @@ a {
     background: none;
     outline: 0;
   }
+
+  &.muted {    
+    color: var(--app-color-foreground);
+    
+    &:hover, &:focus, &:active {
+      color: var(--app-color-foreground-shade);
+      text-decoration: none;
+    }
+  }
 }
 
 .font {
