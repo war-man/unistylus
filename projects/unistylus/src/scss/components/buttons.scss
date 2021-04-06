@@ -231,9 +231,15 @@
         background: none;
         border: none;
         color: var(--app-color-foreground);
+        border: var(--app-size-border) solid rgba(0, 0, 0, 0);
+        border-radius: var(--app-size-radius);
+
+        &:hover {
+          color: var(--app-color-foreground-shade);
+        }
 
         &:focus, &:active {
-          border: var(--app-size-border) solid var(--app-color-foreground);
+          border-color: var(--app-color-foreground);
         }
 
         &:disabled {
@@ -253,9 +259,15 @@
           background: none;
           border: none;
           color: var(--app-color-#{$palette});
+          border: var(--app-size-border) solid rgba(0, 0, 0, 0);
+          border-radius: var(--app-size-radius);
+          
+          &:hover {
+            color: var(--app-color-#{$palette}-shade);
+          }
 
           &:focus, &:active {
-            border: var(--app-size-border) solid var(--app-color-#{$palette});
+            border-color: var(--app-color-#{$palette});
           }
           
           &:disabled {
