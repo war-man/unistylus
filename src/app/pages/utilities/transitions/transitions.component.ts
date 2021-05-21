@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-transitions',
+  selector: 'app-transitions-page',
   templateUrl: './transitions.component.html',
   styleUrls: ['./transitions.component.scss']
 })

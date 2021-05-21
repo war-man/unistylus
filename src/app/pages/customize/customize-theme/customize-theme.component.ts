@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-customize-theme',
+  selector: 'app-customize-theme-page',
   templateUrl: './customize-theme.component.html',
   styleUrls: ['./customize-theme.component.scss']
 })

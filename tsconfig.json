@@ -20,9 +20,8 @@
       "dom"
     ],
     "paths": {
-      "@lamnhan/unistylus": [
-        "dist/unistylus/unistylus",
-        "dist/unistylus"
+      "@angular/*": [
+        "./node_modules/@angular/*"
       ],
       "@lamnhan/ngx-useful": [
         "../ngx-useful/dist/useful/useful",

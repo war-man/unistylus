@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-borders',
+  selector: 'app-borders-page',
   templateUrl: './borders.component.html',
   styleUrls: ['./borders.component.scss']
 })

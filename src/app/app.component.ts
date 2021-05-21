@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AppService, NavService, NavItem } from '@lamnhan/ngx-useful';
+import { LocalstorageService, AppService, MetaService, NavService, NavItem, SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-root',
@@ -147,20 +146,44 @@ export class AppComponent {
   ];
 
   constructor(
-    private router: Router,
+    private localstorageService: LocalstorageService,
     private appService: AppService,
+    private metaService: MetaService,
     private navService: NavService,
+    private settingService: SettingService,
   ) {
     this.initialize();
   }
 
   private initialize() {
-    // app service
-    this.appService.init({}, {
-      title: 'Unistylus',
-      description: 'A modern, clean and light weight CSS theming system.',
-    });
-    // nav service
-    this.navService.init(this.router);
+    this.localstorageService.init();
+    this.appService.init({ splashScreen: true });
+    this.settingService.init(
+      {
+        browserColor: true,
+        onReady: () => this.appService.hideSplashScreen(),
+      },
+      {},
+      {
+        localstorageService: this.localstorageService,
+      },
+    );
+    this.navService.init(
+      {},
+      { settingService: this.settingService },
+    );
+    this.metaService.init(
+      {
+        title: 'Unistylus',
+        description: 'A modern, clean and light weight CSS theming system.',
+        image: 'https://unistylus.lamnhan.com/assets/images/featured.jpg',
+        url: 'https://unistylus.lamnhan.com/',
+        lang: 'en',
+        ogLocale: 'en-US',
+        ogSiteName: 'Unistylus'
+      },
+      {},
+      { settingService: this.settingService },
+    );
   }
 }

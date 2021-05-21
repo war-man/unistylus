@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-spacing',
+  selector: 'app-spacing-page',
   templateUrl: './spacing.component.html',
   styleUrls: ['./spacing.component.scss']
 })

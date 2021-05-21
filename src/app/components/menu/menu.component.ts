@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AppService, NavService, NavItem } from '@lamnhan/ngx-useful';
+import { NavService, NavItem, SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-menu',
@@ -12,13 +12,13 @@ export class MenuComponent implements OnInit {
   mobileMenuExpanded = false;
 
   constructor(
-    private appService: AppService,
-    public navService: NavService,
+    public nav: NavService,
+    private settingService: SettingService,
   ) {}
 
   ngOnInit(): void {}
 
   selectTheme(e: any) {
-    return this.appService.changeTheme(e.target.value);
+    return this.settingService.changeTheme(e.target.value);
   }
 }

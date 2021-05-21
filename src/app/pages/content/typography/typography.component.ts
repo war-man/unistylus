@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CodeService } from '../../../services/code/code.service';
 @Component({
-  selector: 'app-typography',
+  selector: 'app-typography-page',
   templateUrl: './typography.component.html',
   styleUrls: ['./typography.component.scss']
 })

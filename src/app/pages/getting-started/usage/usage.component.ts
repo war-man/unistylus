@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-usage',
+  selector: 'app-usage-page',
   templateUrl: './usage.component.html',
   styleUrls: ['./usage.component.scss']
 })

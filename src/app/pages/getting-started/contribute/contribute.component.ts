@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contribute',
+  selector: 'app-contribute-page',
   templateUrl: './contribute.component.html',
   styleUrls: ['./contribute.component.scss']
 })

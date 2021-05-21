@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-images',
+  selector: 'app-images-page',
   templateUrl: './images.component.html',
   styleUrls: ['./images.component.scss']
 })

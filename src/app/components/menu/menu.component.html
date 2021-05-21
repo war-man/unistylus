@@ -31,9 +31,9 @@
         <a
           *ngIf="menuItem.level!==0;else noLinkElse"
           [href]="menuItem.href"
-          [routerLink]="menuItem.routerLink"
-          routerLinkActive="active"
-          (click)="mobileMenuExpanded=false;navService.scrollToTop()"
+          [usefulRouterLink]="menuItem.routerLink"
+          usefulRouterLinkActive="active"
+          (click)="mobileMenuExpanded=false;nav.scrollToTop()"
           [innerHtml]="menuItem.text"
         ></a>
         <ng-template #noLinkElse>
