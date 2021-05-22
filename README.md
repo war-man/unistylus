@@ -104,7 +104,7 @@ document.body.setAttribute('data-theme', 'dark');
 
 - Register icons globally:
 
-See example: https://github.com/lamnhan/unistylus/blob/main/src/scss/app/light.app.component.scss: 
+See example: https://github.com/lamnhan/unistylus/blob/main/src/scss/app/app.component.scss: 
 
 ```scss
 @include register_app_icons($icon_groups);
