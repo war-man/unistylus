@@ -25,7 +25,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -78,9 +78,6 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "unistylus-app:build"
-          },
           "configurations": {
             "production": {
               "browserTarget": "unistylus-app:build:production"
@@ -104,6 +101,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -125,7 +123,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/unistylus/tsconfig.lib.json",
             "project": "projects/unistylus/ng-package.json"
           },
           "configurations": {
@@ -144,18 +141,6 @@
             "main": "projects/unistylus/src/test.ts",
             "tsConfig": "projects/unistylus/tsconfig.spec.json",
             "karmaConfig": "projects/unistylus/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/unistylus/tsconfig.lib.json",
-              "projects/unistylus/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
