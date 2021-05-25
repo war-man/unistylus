@@ -16,22 +16,22 @@ export class AppComponent {
       {
         text: 'Introduction',
         level: 1,
-        routerLink: ['/getting-started', 'introduction']
+        routerLink: ['getting-started', 'introduction']
       },
       {
         text: 'Install',
         level: 1,
-        routerLink: ['/getting-started', 'install']
+        routerLink: ['getting-started', 'install']
       },
       {
         text: 'Basic usage',
         level: 1,
-        routerLink: ['/getting-started', 'usage']
+        routerLink: ['getting-started', 'usage']
       },
       {
         text: 'Contribute',
         level: 1,
-        routerLink: ['/getting-started', 'contribute']
+        routerLink: ['getting-started', 'contribute']
       },
     {
       text: 'Customize',
@@ -40,17 +40,17 @@ export class AppComponent {
       {
         text: 'Built-in themes',
         level: 1,
-        routerLink: ['/customize', 'builtin-themes']
+        routerLink: ['customize', 'builtin-themes']
       },
       {
         text: 'Customize a theme',
         level: 1,
-        routerLink: ['/customize', 'customize-theme']
+        routerLink: ['customize', 'customize-theme']
       },
       {
         text: 'Add new theme',
         level: 1,
-        routerLink: ['/customize', 'add-theme']
+        routerLink: ['customize', 'add-theme']
       },
     {
       text: 'Content',
@@ -59,36 +59,56 @@ export class AppComponent {
       {
         text: 'Reboot',
         level: 1,
-        routerLink: ['/content', 'reboot']
+        routerLink: ['content', 'reboot']
       },
       {
         text: 'Core',
         level: 1,
-        routerLink: ['/content', 'core']
+        routerLink: ['content', 'core']
       },
       {
         text: 'Typography',
         level: 1,
-        routerLink: ['/content', 'typography']
+        routerLink: ['content', 'typography']
       },
       {
         text: 'Images',
         level: 1,
-        routerLink: ['/content', 'images']
+        routerLink: ['content', 'images']
       },
       {
         text: 'Tables',
         level: 1,
-        routerLink: ['/content', 'tables']
+        routerLink: ['content', 'tables']
       },
     {
       text: 'Forms',
       level: 0,
     },
       {
-        text: 'Form control',
+        text: 'Controls',
         level: 1,
-        routerLink: ['/forms', 'form-control']
+        routerLink: ['forms', 'form-controls']
+      },
+      {
+        text: 'Switch',
+        level: 1,
+        routerLink: ['forms', 'form-switch']
+      },
+      {
+        text: 'Select',
+        level: 1,
+        routerLink: ['forms', 'form-select']
+      },
+      {
+        text: 'Range',
+        level: 1,
+        routerLink: ['forms', 'form-range']
+      },
+      {
+        text: 'Check',
+        level: 1,
+        routerLink: ['forms', 'form-check']
       },
     {
       text: 'Components',
@@ -97,22 +117,32 @@ export class AppComponent {
       {
         text: 'Alerts',
         level: 1,
-        routerLink: ['/components', 'alerts']
+        routerLink: ['components', 'alerts']
       },
       {
         text: 'Badges',
         level: 1,
-        routerLink: ['/components', 'badges']
+        routerLink: ['components', 'badges']
       },
       {
         text: 'Buttons',
         level: 1,
-        routerLink: ['/components', 'buttons']
+        routerLink: ['components', 'buttons']
+      },
+      {
+        text: 'List',
+        level: 1,
+        routerLink: ['components', 'list']
+      },
+      {
+        text: 'Card',
+        level: 1,
+        routerLink: ['components', 'card']
       },
       {
         text: 'Icons',
         level: 1,
-        routerLink: ['/components', 'icons']
+        routerLink: ['components', 'icons']
       },
     {
       text: 'Utilites',
@@ -121,27 +151,32 @@ export class AppComponent {
       {
         text: 'Spacing',
         level: 1,
-        routerLink: ['/utilities', 'spacing']
+        routerLink: ['utilities', 'spacing']
       },
       {
         text: 'Background',
         level: 1,
-        routerLink: ['/utilities', 'background']
+        routerLink: ['utilities', 'background']
       },
       {
         text: 'Colors',
         level: 1,
-        routerLink: ['/utilities', 'colors']
+        routerLink: ['utilities', 'colors']
       },
       {
         text: 'Borders',
         level: 1,
-        routerLink: ['/utilities', 'borders']
+        routerLink: ['utilities', 'borders']
       },
       {
         text: 'Transitions',
         level: 1,
-        routerLink: ['/utilities', 'transitions']
+        routerLink: ['utilities', 'transitions']
+      },
+      {
+        text: 'Truncate',
+        level: 1,
+        routerLink: ['utilities', 'truncate']
       }
   ];
 

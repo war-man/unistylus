@@ -16,73 +16,145 @@
     ></app-code>
   </div>
 
-  <section class="margin-top">
-    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Badges</h2>
+  <section class="section-1 margin-top-2x">
     
-    <div>
-      <h1>Example heading <span class="badge">New</span></h1>
-      <h2>Example heading <span class="badge">New</span></h2>
-      <h3>Example heading <span class="badge">New</span></h3>
-      <h4>Example heading <span class="badge">New</span></h4>
-      <h5>Example heading <span class="badge">New</span></h5>
-      <h6>Example heading <span class="badge">New</span></h6>
+    <div class="content">
+      <h3>Badges</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <h1>Example heading <span class="badge">New</span></h1><br>
+        <h2>Example heading <span class="badge">New</span></h2><br>
+        <h3>Example heading <span class="badge">New</span></h3><br>
+        <h4>Example heading <span class="badge">New</span></h4><br>
+        <h5>Example heading <span class="badge">New</span></h5><br>
+        <h6>Example heading <span class="badge">New</span></h6>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+
     </div>
   
-    <div class="margin-top">
+  </section>
+
+  <section class="section-2 margin-top-2x">
+    
+    <div class="content">
       <h3>Colors</h3>
-      <span class="badge">Default</span>
-      <span class="badge-primary margin-left">Primary</span>
-      <span class="badge-secondary margin-left">Secondary</span>
-      <span class="badge-tertiary margin-left">Tertiary</span>
-      <span class="badge-success margin-left">Success</span>
-      <span class="badge-danger margin-left">Danger</span>
-      <span class="badge-warning margin-left">Warning</span>
-      <span class="badge-dark margin-left">Dark</span>
-      <span class="badge-medium margin-left">Medium</span>
-      <span class="badge-light margin-left">Light</span>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code2>
+        <span class="badge">Default</span><br>
+        <span class="badge-primary">Primary</span><br>
+        <span class="badge-secondary">Secondary</span><br>
+        <span class="badge-tertiary">Tertiary</span><br>
+        <span class="badge-success">Success</span><br>
+        <span class="badge-danger">Danger</span><br>
+        <span class="badge-warning">Warning</span><br>
+        <span class="badge-dark">Dark</span><br>
+        <span class="badge-medium">Medium</span><br>
+        <span class="badge-light">Light</span>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+
     </div>
   
-    <div class="margin-top">
-      <h3>Outline</h3>
-      <span class="badge-outline">Default</span>
-      <span class="badge-outline-primary margin-left">Primary</span>
-      <span class="badge-outline-secondary margin-left">Secondary</span>
-      <span class="badge-outline-tertiary margin-left">Tertiary</span>
-      <span class="badge-outline-success margin-left">Success</span>
-      <span class="badge-outline-danger margin-left">Danger</span>
-      <span class="badge-outline-warning margin-left">Warning</span>
-      <span class="badge-outline-dark margin-left">Dark</span>
-      <span class="badge-outline-medium margin-left">Medium</span>
-      <span class="badge-outline-light margin-left">Light</span>
+  </section>
+
+  <section class="section-3 margin-top-2x">
+    
+    <div class="content">
+      <h3>Outlines</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code3>
+        <span class="badge-outline">Default</span><br>
+        <span class="badge-outline-primary">Primary</span><br>
+        <span class="badge-outline-secondary">Secondary</span><br>
+        <span class="badge-outline-tertiary">Tertiary</span><br>
+        <span class="badge-outline-success">Success</span><br>
+        <span class="badge-outline-danger">Danger</span><br>
+        <span class="badge-outline-warning">Warning</span><br>
+        <span class="badge-outline-dark">Dark</span><br>
+        <span class="badge-outline-medium">Medium</span><br>
+        <span class="badge-outline-light">Light</span>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code3"></app-code>
+      </div>
+
     </div>
   
-    <div class="margin-top">
-      <h3>Pill</h3>
-      <span class="badge border-pill">Default</span>
-      <span class="badge-primary border-pill margin-left">Primary</span>
-      <span class="badge-secondary border-pill margin-left">Secondary</span>
-      <span class="badge-tertiary border-pill margin-left">Tertiary</span>
-      <span class="badge-success border-pill margin-left">Success</span>
-      <span class="badge-danger border-pill margin-left">Danger</span>
-      <span class="badge-warning border-pill margin-left">Warning</span>
-      <span class="badge-dark border-pill margin-left">Dark</span>
-      <span class="badge-medium border-pill margin-left">Medium</span>
-      <span class="badge-light border-pill margin-left">Light</span>
+  </section>
+
+  <section class="section-4 margin-top-2x">
+    
+    <div class="content">
+      <h3>Pills</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code4>
+        <span class="badge border-pill">Default</span><br>
+        <span class="badge-primary border-pill">Primary</span><br>
+        <span class="badge-secondary border-pill">Secondary</span><br>
+        <span class="badge-tertiary border-pill">Tertiary</span><br>
+        <span class="badge-success border-pill">Success</span><br>
+        <span class="badge-danger border-pill">Danger</span><br>
+        <span class="badge-warning border-pill">Warning</span><br>
+        <span class="badge-dark border-pill">Dark</span><br>
+        <span class="badge-medium border-pill">Medium</span><br>
+        <span class="badge-light border-pill">Light</span>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code4"></app-code>
+      </div>
+
     </div>
   
-    <div class="margin-top">
-      <h3>Sharp</h3>
-      <span class="badge border-sharp">Default</span>
-      <span class="badge-primary border-sharp margin-left">Primary</span>
-      <span class="badge-secondary border-sharp margin-left">Secondary</span>
-      <span class="badge-tertiary border-sharp margin-left">Tertiary</span>
-      <span class="badge-success border-sharp margin-left">Success</span>
-      <span class="badge-danger border-sharp margin-left">Danger</span>
-      <span class="badge-warning border-sharp margin-left">Warning</span>
-      <span class="badge-dark border-sharp margin-left">Dark</span>
-      <span class="badge-medium border-sharp margin-left">Medium</span>
-      <span class="badge-light border-sharp margin-left">Light</span>
+  </section>
+
+  <section class="section-5 margin-top-2x">
+    
+    <div class="content">
+      <h3>Sharps</h3>
     </div>
+
+    <div class="code">
+
+      <div class="source" #code5>
+        <span class="badge border-sharp">Default</span><br>
+        <span class="badge-primary border-sharp">Primary</span><br>
+        <span class="badge-secondary border-sharp">Secondary</span><br>
+        <span class="badge-tertiary border-sharp">Tertiary</span><br>
+        <span class="badge-success border-sharp">Success</span><br>
+        <span class="badge-danger border-sharp">Danger</span><br>
+        <span class="badge-warning border-sharp">Warning</span><br>
+        <span class="badge-dark border-sharp">Dark</span><br>
+        <span class="badge-medium border-sharp">Medium</span><br>
+        <span class="badge-light border-sharp">Light</span>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code5"></app-code>
+      </div>
+
+    </div>
+  
   </section>
 
 </div>
