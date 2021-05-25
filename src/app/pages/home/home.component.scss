@@ -1,7 +1,4 @@
 .page-home {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 3rem 1rem;
 
   .heading {
@@ -19,14 +16,42 @@
   }
 
   .cta {
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a.source-code {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+
+      .icon {
+        opacity: .5;
+      }
+
+      span {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 480px) {
 
-  .page-home .heading h1 {
-    font-size: 5rem;
+  .page-home {
+
+    .heading h1 {
+      font-size: 5rem;
+    }
+
+    .cta {
+      flex-wrap: nowrap;
+
+      a.source-code {
+        margin-top: 0;
+        margin-left: 1rem;
+      }
+    }
   }
 }
 

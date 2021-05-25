@@ -71,6 +71,7 @@
   
   &:hover, &:focus, &:active {
     background: var(--app-color-foreground);
+    border: var(--app-size-border) solid var(--app-color-foreground);
     color: var(--app-color-background);
     text-decoration: none;
   }
@@ -95,6 +96,7 @@
 
   &:hover, &:focus, &:active {
     background: var(--app-color-#{$palette});
+    border: var(--app-size-border) solid var(--app-color-#{$palette});
     color: var(--app-color-#{$palette}-contrast);
     text-decoration: none;
   }

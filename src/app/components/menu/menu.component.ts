@@ -12,13 +12,13 @@ export class MenuComponent implements OnInit {
   mobileMenuExpanded = false;
 
   constructor(
-    public nav: NavService,
-    private settingService: SettingService,
+    public readonly nav: NavService,
+    public readonly setting: SettingService,
   ) {}
 
   ngOnInit(): void {}
 
   selectTheme(e: any) {
-    return this.settingService.changeTheme(e.target.value);
+    return this.setting.changeTheme(e.target.value);
   }
 }

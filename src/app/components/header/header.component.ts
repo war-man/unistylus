@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public readonly setting: SettingService) { }
 
   ngOnInit(): void {}
+
+  toggleTheme(e: any) {
+    return this.setting.changeTheme(e.target.checked ? 'dark' : 'light');
+  }
 
 }

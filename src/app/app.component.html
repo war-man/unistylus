@@ -1,15 +1,15 @@
 <app-header></app-header>
 
-<main>
+<div class="app">
 
   <aside class="sidebar">
     <app-menu [menuItems]="menuItems"></app-menu>
   </aside>
-
-  <div class="page-container">
+  
+  <main class="page-container">
     <router-outlet></router-outlet>
-  </div>
+  </main>
 
-</main>
+</div>
 
 <app-footer></app-footer>
