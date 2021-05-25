@@ -83,7 +83,11 @@ header {
       padding: .5rem;
       display: flex;
       align-items: center;
-      color: var(--app-color-foreground);
+
+      &:hover, &:focus, &:active {
+        color: var(--app-color-foreground);
+        background: var(--app-color-background-shade);
+      }
 
       .icon {
         width: 1.5rem;

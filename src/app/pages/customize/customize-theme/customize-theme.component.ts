@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomizeThemeComponent implements OnInit {
 
+  cssCode = `// customize the light theme (the default)
+:root, [data-theme="default"], [data-theme="light"] {
+  --app-color-primary: ...;
+}
+`;
+
   constructor() { }
 
   ngOnInit(): void {

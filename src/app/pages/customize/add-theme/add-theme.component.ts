@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddThemeComponent implements OnInit {
 
+  cssCode = `// new theme name 'foo'
+[data-theme="foo"] {
+  --app-color-primary: ...;
+}
+`;
+
   constructor() { }
 
   ngOnInit(): void {

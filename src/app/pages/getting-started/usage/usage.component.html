@@ -2,7 +2,42 @@
 
   <div class="head margin-top">
     <h2>Usage</h2>
-    <p class="font-lg text-medium-shade">// TODO</p>
+    <p class="font-lg text-medium-shade">Include CSS or import SCSS with built-in themes.</p>
   </div>
+
+  <section class="section-1 margin-top-2x">
+    <h3>All features</h3>
+
+    <p class="margin-top">Import built-in themes:</p>
+    <app-code [cssCode]="scssCodeFull"></app-code>
+
+    <p class="margin-top">Or, include in the HTML:</p>
+    <app-code [htmlCode]="cssCodeFull"></app-code>
+  </section>
+
+  <section class="section-2 margin-top-2x">
+    <h3>Minimal imports</h3>
+    
+    <p class="margin-top">Import what you want:</p>
+    <app-code [cssCode]="scssCodeMinimal"></app-code>
+
+    <p class="margin-top">Or, include what you want:</p>
+    <app-code [htmlCode]="cssCodeMinimal"></app-code>
+  </section>
+
+  <section class="section-3 margin-top-2x">
+    <h3>Theme changer</h3>
+
+    <p>To change theme using Javascript:</p>
+    <app-code jsCode="document.body.setAttribute('data-theme', 'dark');"></app-code>
+
+    <p class="margin-top">For Angular apps, it is recommend to use <a href="https://github.com/lamnhan/ngx-useful" target="_blank">@lamnhan/ngx-useful</a>, the <a href="https://github.com/lamnhan/ngx-useful/blob/main/projects/useful/src/lib/services/setting/setting.service.ts" target="_blank"><code>SettingService</code></a> provide <code>.changeTheme()</code> method with local storage management.</p>
+  </section>
+
+  <section class="section-4 margin-top-2x">
+    <h3>Using mixins</h3>
+    <p>To use mixins:</p>
+    <app-code cssCode="@import '~@lamnhan/unistylus/src/mixins';"></app-code>
+  </section>
 
 </div>
