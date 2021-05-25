@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'content/typography', loadChildren: () => import('./pages/content/typography/typography.module').then(m => m.TypographyPageModule) },
   { path: 'content/images', loadChildren: () => import('./pages/content/images/images.module').then(m => m.ImagesPageModule) },
   { path: 'content/tables', loadChildren: () => import('./pages/content/tables/tables.module').then(m => m.TablesPageModule) },
-  { path: 'forms/form-control', loadChildren: () => import('./pages/forms/form-control/form-control.module').then(m => m.FormControlPageModule) },
+  { path: 'forms/form-controls', loadChildren: () => import('./pages/forms/form-control/form-control.module').then(m => m.FormControlPageModule) },
   { path: 'components/alerts', loadChildren: () => import('./pages/components/alerts/alerts.module').then(m => m.AlertsPageModule) },
   { path: 'components/badges', loadChildren: () => import('./pages/components/badges/badges.module').then(m => m.BadgesPageModule) },
   { path: 'components/buttons', loadChildren: () => import('./pages/components/buttons/buttons.module').then(m => m.ButtonsPageModule) },

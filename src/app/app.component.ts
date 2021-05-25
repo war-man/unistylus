@@ -95,21 +95,21 @@ export class AppComponent {
         level: 1,
         routerLink: ['forms', 'form-switch']
       },
-      {
-        text: 'Select',
-        level: 1,
-        routerLink: ['forms', 'form-select']
-      },
-      {
-        text: 'Range',
-        level: 1,
-        routerLink: ['forms', 'form-range']
-      },
-      {
-        text: 'Check',
-        level: 1,
-        routerLink: ['forms', 'form-check']
-      },
+      // {
+      //   text: 'Select',
+      //   level: 1,
+      //   routerLink: ['forms', 'form-select']
+      // },
+      // {
+      //   text: 'Range',
+      //   level: 1,
+      //   routerLink: ['forms', 'form-range']
+      // },
+      // {
+      //   text: 'Check',
+      //   level: 1,
+      //   routerLink: ['forms', 'form-check']
+      // },
     {
       text: 'Components',
       level: 0,

@@ -86,7 +86,7 @@ header {
 
       &:hover, &:focus, &:active {
         color: var(--app-color-foreground);
-        background: var(--app-color-background-shade);
+        background: none;
       }
 
       .icon {
