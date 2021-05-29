@@ -104,24 +104,10 @@ document.body.setAttribute('data-theme', 'dark');
 
 - Register icons globally:
 
-See example: https://github.com/lamnhan/unistylus/blob/main/src/scss/app/app.component.scss: 
+See example: https://github.com/lamnhan/unistylus/blob/main/src/theming/app.component.scss: 
 
 ```scss
 @include register_app_icons($icon_groups);
-```
-
-- Or register component icons:
-
-Register css properties, see example: https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/scss/header/light.header.component.scss
-
-```scss
-@include register_component_icon_properties($icon_groups, $component_name);
-```
-
-Register css rules, see example: https://github.com/lamnhan/nguix-starter/blob/main/projects/starter/src/lib/components/header/header.component.scss
-
-```scss
-@include register_component_icon_rules($default_icons, $component_name);
 ```
 
 - To use registered icons, in component `.html`:
