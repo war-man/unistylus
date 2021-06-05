@@ -1,9 +1,9 @@
 {
   "name": "@lamnhan/unistylus",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "An SCSS theming system.",
   "author": "Lam Nhan",
-  "homepage": "https://lamnhan.com",
+  "homepage": "https://unistylus.lamnhan.com",
   "license": "MIT",
   "keywords": [
     "css",
