@@ -10,6 +10,7 @@
     "css": "sass ./projects/unistylus/src/scss:./dist/unistylus/css",
     "css-min": "echo '// TODO: ...'",
     "scss": "cpy scss ../../../dist/unistylus --cwd=projects/unistylus/src --parents",
+    "icons": "cpy icons ../../../dist/unistylus --cwd=projects/unistylus/src --parents",
     "build:lib": "ng build unistylus && npm run scss && npm run css && cpy README.md LICENSE dist/unistylus",
     "build:app": "ng build",
     "build": "npm run build:app && npm run build:lib",
