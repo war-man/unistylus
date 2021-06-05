@@ -6,11 +6,15 @@
  * ====================================================
  */
 
-// use light and dark theme
-@import '../projects/unistylus/src/scss/unistylus-light-dark';
+// register themes
+@import '../projects/unistylus/src/scss/themes/light-default';
+@import '../projects/unistylus/src/scss/themes/dark';
 
-// override unistylus theme values
-// :root, [data-theme="default"] {
+// customize themes
+// :root,
+// [data-theme="default"],
+// [data-theme="light"]
+// {
 //   --app-color-primary: ...;
 // }
 
@@ -61,7 +65,10 @@
   --app-font-code: 'Consolas', monospace;
 }
 
-// register app styles
+// register parts
+@import '../projects/unistylus/src/scss/full';
+
+// register app
 @import './theming/app.module';
 
 /**

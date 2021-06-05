@@ -17,8 +17,6 @@ An SCSS/CSS theming system.
 
 ### CDN
 
-**TO DO**: Support `.min.css` soon.
-
 Include to your html:
 
 `<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus@latest/css/unistylus.css">`
@@ -31,6 +29,8 @@ Choose built-in themes:
 - [`unistylus-light-dark.css`](https://unpkg.com/@lamnhan/unistylus@latest/css/unistylus-light-dark.css): Light theme default + dark theme.
 - [`unistylus-dark-light.css`](https://unpkg.com/@lamnhan/unistylus@latest/css/unistylus-dark-light.css): Dark theme default + light theme.
 
+**// TO DO**: Support `.min.css` soon.
+
 ### SCSS
 
 Install using npm:
@@ -42,7 +42,7 @@ npm install --save @lamnhan/unistylus
 Choose built-in theme:
 
 ```scss
-@import '~@lamnhan/unistylus/src/scss/unistylus';
+@import '~@lamnhan/unistylus/scss/unistylus';
 ```
 
 See usage example: https://github.com/lamnhan/unistylus/blob/main/src/styles.scss
@@ -50,24 +50,16 @@ See usage example: https://github.com/lamnhan/unistylus/blob/main/src/styles.scs
 To use minxins:
 
 ```scss
-@import '~@lamnhan/unistylus/src/mixins';
+@import '~@lamnhan/unistylus/scss/mixins';
 ```
 
-## Why, compared to Bootstrap?
+## Why?
 
-**It's recommended to use Bootstrap in most projects those don't need much customization!**
-
-But if you want to build app that small, clean and have total control or simply don't want to use Bootstrap. You may give Unistylus a try:
+If you want to build app that small, clean and have total control or simply don't want to use Bootstrap. You may give Unistylus a try:
 
 - Just standard HTML, CSS (SCSS) & JS (to change theme on the fly).
 - Supports multiple themes in app runtime (or in build time).
 - No icon font/library; just register whatever icons you need.
-- Component can override global theme.
-- Supports Angular component in mind.
-
-The disadvantage is it will take more time to build things from scratch.
-
-Another option is to use Bootstrap and Unistylus together.
 
 ## Tutorials
 
@@ -76,7 +68,7 @@ Another option is to use Bootstrap and Unistylus together.
 Add this to the global style file (ex.: [styles.scss](https://github.com/lamnhan/unistylus/blob/main/src/styles.scss) for Angular apps);
 
 ```scss
-[data-theme="theme-name"] {
+[data-theme="name"] {
   // add variables here
 }
 ```
@@ -87,10 +79,10 @@ By default, the `default/light` theme is used, to change theme in build time:
 
 ```html
 <!-- change global theme -->
-<body data-theme="theme-name"></body>
+<body data-theme="name"></body>
 
 <!-- change component theme (override global) -->
-<header data-theme="theme-name"></header>
+<header data-theme="name"></header>
 ```
 
 Change theme in runtime:
@@ -130,8 +122,6 @@ Sizes:
 - `--app-size-font`: body font size, default: **16px**
 - `--app-size-radius`: radius size, default: **3px**
 - `--app-size-border`: border size, default: **1px**
-- `--app-size-padding`: **1rem**
-- `--app-size-margin`: **1rem**
 
 Colors:
 

@@ -18,7 +18,7 @@
   <div class="cta">
     <a
       class="button-primary-xl"
-      [routerLink]="['/getting-started', 'install']"
+      [routerLink]="['/getting-started', 'usage']"
     >Use it now!</a>
     <a
       class="source-code button-outline-medium-xl"
@@ -29,5 +29,23 @@
       <span>Source code</span>
     </a>
   </div>
+
+  <section class="installation margin-top-5x">
+
+    <div class="title">
+      <h2>Installation</h2>
+    </div>
+
+    <div class="body">
+      <h3 class="margin-top-2x">SCSS</h3>
+      <p>Install using NPM.</p>
+      <app-code htmlCode="npm install -S @lamnhan/unistylus"></app-code>
+  
+      <h3 class="margin-top-2x">CDN</h3>
+      <p>Import css from a CDN.</p>
+      <app-code htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus@latest/css/unistylus.css&#x22;&#x3E;"></app-code>
+    </div>
+
+  </section>
 
 </div>

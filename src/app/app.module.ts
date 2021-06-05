@@ -11,6 +11,8 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { CodeComponentModule } from './components/code/code.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OopsComponent } from './pages/oops/oops.component';
@@ -32,6 +34,7 @@ import { MenuComponent } from './components/menu/menu.component';
     BrowserModule,
     AppRoutingModule,
     RouterLinkDirectiveModule,
+    CodeComponentModule,
   ],
   providers: [
     LocalstorageService,
